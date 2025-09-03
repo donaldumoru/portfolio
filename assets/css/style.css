@@ -24,8 +24,15 @@ p {
   color: #2b2b2b;
 }
 
-/******FONTS*******/
+/******MEDIA QUERIES********/
+@media only screen and (max-device-width: 481px) {
+  p {
+    font-size: 0.8rem;
+    letter-spacing: unset;
+  }
+}
 
+/******FONTS*******/
 /**ORBIT FONT FOR 'UNDER CONSTRUCTION'**/
 @font-face {
   font-family: "Orbit";
