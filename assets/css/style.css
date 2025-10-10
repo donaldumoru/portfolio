@@ -312,8 +312,20 @@ footer ul {
     letter-spacing: unset;
   }
 
-  svg {
+  /* svg {
     display: none;
+  } */
+
+  .test-vara {
+    width: unset;
+  }
+
+  .landing-page {
+    padding: 0 2rem;
+  }
+
+  .intro-text {
+    width: unset;
   }
 
   .projects {

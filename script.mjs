@@ -53,6 +53,13 @@ const aboutObsCallBack = function (entries) {
 const aboutObserver = new IntersectionObserver(aboutObsCallBack, options);
 aboutObserver.observe(aboutContainer);
 
+let fontSize = 64;
+
+if (screen.width <= 480) fontSize = 24;
+else if (screen.width < 900) fontSize = 32;
+else if (screen.width < 1200) fontSize = 40;
+else if (screen.width < 2000) fontSize = 48;
+
 const vara = new Vara(
   '.test-vara',
   'https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json',
@@ -66,7 +73,7 @@ const vara = new Vara(
     },
   ],
   {
-    fontSize: 60,
+    fontSize: fontSize,
   }
 );
 
