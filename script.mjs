@@ -56,7 +56,7 @@ aboutObserver.observe(aboutContainer);
 let fontSize = 64;
 
 const w = window.innerWidth;
-if (w < 600) fontSize = 24;
+if (w < 600) fontSize = 28;
 else if (w < 900) fontSize = 32;
 else if (w < 1200) fontSize = 40;
 else if (w < 2000) fontSize = 48;

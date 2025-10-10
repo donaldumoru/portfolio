@@ -314,7 +314,7 @@ footer ul {
 
   .test-vara {
     width: 80%;
-    min-height: 120px;
+    min-height: 10px;
     display: block;
     margin: 0 auto;
   }
