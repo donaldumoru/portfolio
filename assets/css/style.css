@@ -294,7 +294,7 @@ footer ul {
 }
 
 /******MEDIA QUERIES********/
-@media only screen and (max-device-width: 480px) {
+@media (max-width: 480px) {
   nav {
     padding: 1rem;
   }
@@ -312,12 +312,11 @@ footer ul {
     letter-spacing: unset;
   }
 
-  /* svg {
-    display: none;
-  } */
-
   .test-vara {
-    width: unset;
+    width: 80%;
+    min-height: 120px;
+    display: block;
+    margin: 0 auto;
   }
 
   .landing-page {
@@ -326,6 +325,7 @@ footer ul {
 
   .intro-text {
     width: unset;
+    display: none;
   }
 
   .projects {
