@@ -55,10 +55,11 @@ aboutObserver.observe(aboutContainer);
 
 let fontSize = 64;
 
-// if (screen.width < 600) fontSize = 24;
-// else if (screen.width < 900) fontSize = 32;
-// else if (screen.width < 1200) fontSize = 40;
-// else if (screen.width < 2000) fontSize = 48;
+const w = window.innerWidth;
+if (w < 600) fontSize = 24;
+else if (w < 900) fontSize = 32;
+else if (w < 1200) fontSize = 40;
+else if (w < 2000) fontSize = 48;
 
 const vara = new Vara(
   '.test-vara',
