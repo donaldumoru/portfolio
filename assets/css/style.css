@@ -233,8 +233,9 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-size: 0.75rem;
   font-family: var(--primary-font);
+  font-size: 0.85rem;
+  color: #c6c6c5;
 }
 
 .about-img-wrapper {
@@ -305,10 +306,12 @@ footer ul {
 
   nav ul li {
     padding: unset;
+    font-size: 1rem;
   }
 
   footer {
     padding: 1rem;
+    font-size: 1rem;
   }
 
   p {
@@ -346,6 +349,10 @@ footer ul {
 
   .about-wrapper {
     max-width: unset;
+  }
+
+  .about-text {
+    font-size: 1rem;
   }
 }
 
