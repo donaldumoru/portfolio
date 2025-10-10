@@ -299,6 +299,10 @@ footer ul {
     padding: 1rem;
   }
 
+  nav > a {
+    height: fit-content;
+  }
+
   nav ul li {
     padding: unset;
   }
