@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donald Umoru</title>
-    <link
+    <!-- <link
       rel="preload"
       href="assets/fonts/orbit/Orbit-Regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
-    />
+    /> -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/vara@1.4.0/lib/vara.min.js"
@@ -27,13 +27,8 @@
         </a>
 
         <ul>
-          <a href="#projects"
-            ><li><span class="li-arrows hide">>>></span>projects</li></a
-          >
-
-          <a href="">
-            <li><span class="li-arrows hide">>>></span>blog</li>
-          </a>
+          <li><a class="projects-link" href="" >projects<img src="assets/images/icons/projects.svg" alt=""></a></li>
+          <li><a class="about-link" href="#about">about<img src="assets/images/icons/fingerprint.svg" alt=""></a></li>
 
           <li>
             <img
@@ -47,71 +42,99 @@
     </header>
 
     <main>
-      <div class="landing-page">
+      <section class="landing-page">
         <div class="test-vara"></div>
         <div class="intro-text">
           javascript enthusiast with a knack for creative problem-solving and
           clean design
-        </div>
+        </section>
       </div>
 
-      <div class="projects" id="projects">
-        <div class="projects-wrapper">
-          <div class="project-header">
-            <h2>featured projects</h2>
-          </div>
+      <section class="projects" id="projects">
 
-          <div class="project-card">
-            <div class="project-description">
-              <div class="project-text">
-                <h4>arrayIpsum</h4>
-                <p>
-                  arrayIpsum is a browser-based generator for dummy arrays. It's
-                  built to help beginners and developers generate quick, safe
-                  test data for learning and prototyping.
-                </p>
+        <h2>featured projects</h2>
 
-                <span>#HTML5 #CSS #JAVASCRIPT</span>
+        <article class="project-card">
+              <h4>arrayIpsum</h4>
+              <p>
+               Array Ipsum is a browser-based generator for dummy arrays. 
+                I built it to solve my own need for quick, safe test data while learning and experimenting 
+                and I hope it makes that easier for others as well.
+              </p>
 
-                <a href="">view project</a>
+
+              <div class="tools-used">
+                <span>#HTML5 •</span>
+                <span>#CSS •</span>
+                <span>#JAVASCRIPT</span>
               </div>
-            </div>
-          </div>
 
-          <div class="project-card">
-            <div class="project-description">
-              <div class="project-text">
-                <h4>Runet-Software redesign</h4>
-                <p>
-                  Complete redesign and redevelopment of Runet Software’s
-                  website, focused on improving usability, content structure,
-                  and the overall customer experience.
-                </p>
 
-                <span>#HTML5 #CSS #JAVASCRIPT #JSL3 #NODE.JS</span>
-                <a href="">view project</a>
+              <a href="">view project</a>
+        </article>
+
+        <article class="project-card">
+              <h4>Runet-Software website redesign</h4>
+              <p>
+                Complete redesign and redevelopment of Runet-Software’s
+                website, focused on improving usability, content structure,
+                and the overall customer experience.
+              </p>
+
+              <div class="tools-used">
+                <span>#HTML5 •</span>
+                <span>#CSS •</span>
+                <span>#JAVASCRIPT •</span>
+                <span>#JSL3 •</span>
+                <span>#NODE.JS</span>
               </div>
-            </div>
-          </div>
 
-          <div class="project-card">
-            <div class="project-description">
-              <div class="project-text">
-                <h4>RawTenTik official website</h4>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
-                  voluptates quos maxime iusto at nemo iure necessitatibus
-                  impedit quaerat aliquam.
-                </p>
-                <span>#HTML5 #CSS #JAVASCRIPT</span>
+              <a href="">view project</a>
+        </article>
 
-                <a href="">view project</a>
+        <article class="project-card">
+              <h4>RawTenTik official website</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                voluptates quos maxime iusto at nemo iure necessitatibus
+                impedit quaerat aliquam.
+              </p>
+
+
+              <div class="tools-used">
+                <span>#HTML5 •</span>
+                <span>#CSS •</span>
+                <span>#JAVASCRIPT</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+              <a href="">view project</a>
+        </article>
+
+
+      </section>
     </main>
+
+
+    <section class="about" id="about">
+
+      <div class="about-wrapper">
+        <h2>about me</h2>
+
+
+        <div class="about-text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum natus ratione assumenda quos commodi. Aperiam, ea maxime dignissimos earum reiciendis impedit itaque quisquam</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum natus ratione assumenda quos commodi. Aperiam, ea maxime dignissimos earum reiciendis impedit itaque quisquam</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum natus ratione assumenda quos commodi. Aperiam, ea maxime dignissimos earum reiciendis impedit itaque quisquam</p>
+        </div>
+
+
+        <div class="about-img-wrapper">
+          <img src="assets/images/about.jpg" alt="">
+        </div>
+
+      </div>
+      
+    </section>
 
     <footer>
       <ul>

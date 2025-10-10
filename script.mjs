@@ -1,14 +1,19 @@
-const projectsContainer = document.querySelector('.projects');
 const introText = document.querySelector('.intro-text');
 const darkModeImg = document.querySelector('.dark-mode-img');
+const landingPage = document.querySelector('.landing-page');
+const projectsLink = document.querySelector('.projects-link');
+const projectsContainer = document.querySelector('.projects');
+const aboutLink = document.querySelector('.about-link');
+const aboutContainer = document.querySelector('.about');
 
 const colors = ['#0a0a0a', '#e4e2dd'];
 
 const options = {
   root: null,
-  threshold: 0.2,
+  threshold: 0.1,
 };
 
+////// PROJECT OBSERVER
 const obsCallBack = function (entries) {
   const [entry] = entries;
   if (entry.isIntersecting) {
@@ -19,14 +24,34 @@ const obsCallBack = function (entries) {
       block: 'center',
       inline: 'nearest',
     });
-    // liArrow.classList.remove("hide");
+    projectsLink.firstElementChild.classList.add('animate-icon');
   } else {
-    // liArrow.classList.add("hide");
+    projectsLink.firstElementChild.classList.remove('animate-icon');
   }
 };
 
 const observer = new IntersectionObserver(obsCallBack, options);
 observer.observe(projectsContainer);
+
+////// ABOUT OBSERVER
+const aboutObsCallBack = function (entries) {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    if (!entry.isIntersecting) return;
+
+    aboutContainer.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'nearest',
+    });
+    aboutLink.firstElementChild.classList.add('animate-icon');
+  } else {
+    aboutLink.firstElementChild.classList.remove('animate-icon');
+  }
+};
+
+const aboutObserver = new IntersectionObserver(aboutObsCallBack, options);
+aboutObserver.observe(aboutContainer);
 
 const vara = new Vara(
   '.test-vara',
@@ -83,4 +108,47 @@ darkModeImg.addEventListener('click', function () {
 
     isDark = true;
   }
+});
+
+/*******************MERGE BOTH LISTENERS AS ONE********************************/
+projectsLink.addEventListener('click', function (e) {
+  e.preventDefault();
+  projectsContainer.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'nearest',
+  });
+});
+
+aboutLink.addEventListener('click', function (e) {
+  e.preventDefault();
+  aboutContainer.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+    inline: 'nearest',
+  });
+});
+
+/// ABOUT ME VARA
+const aboutVara = new Vara(
+  '.about-img-wrapper',
+  'https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json',
+  [
+    {
+      text: 'hola!',
+      color: '#0a0a0a',
+      textAlign: 'left',
+      duration: 4000,
+      strokeWidth: 1,
+    },
+  ],
+  {
+    fontSize: 80,
+  }
+);
+
+aboutVara.ready(function () {
+  aboutVara.animationEnd(function (i, o) {
+    introText.style.opacity = 1;
+  });
 });
