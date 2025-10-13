@@ -328,6 +328,7 @@ footer ul {
 
   .landing-page {
     padding: 0 2rem;
+    height: calc(100%);
   }
 
   .intro-text {
