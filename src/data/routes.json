@@ -1,0 +1,14 @@
+{
+  "/": {
+    "label": "home",
+    "content": ""
+  },
+  "/projects": {
+    "label": "projects",
+    "content": ""
+  },
+  "/about": {
+    "label": "about",
+    "content": ""
+  }
+}

@@ -13,17 +13,13 @@ const options = {
   threshold: 0.1,
 };
 
+/**************************** MERGE BOTH OBSERVERS INTO ONE************************************************ */
 ////// PROJECT OBSERVER
 const obsCallBack = function (entries) {
   const [entry] = entries;
   if (entry.isIntersecting) {
     if (!entry.isIntersecting) return;
 
-    projectsContainer.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-      inline: 'nearest',
-    });
     projectsLink.firstElementChild.classList.add('animate-icon');
   } else {
     projectsLink.firstElementChild.classList.remove('animate-icon');
@@ -39,11 +35,6 @@ const aboutObsCallBack = function (entries) {
   if (entry.isIntersecting) {
     if (!entry.isIntersecting) return;
 
-    aboutContainer.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-      inline: 'nearest',
-    });
     aboutLink.firstElementChild.classList.add('animate-icon');
   } else {
     aboutLink.firstElementChild.classList.remove('animate-icon');
@@ -52,6 +43,7 @@ const aboutObsCallBack = function (entries) {
 
 const aboutObserver = new IntersectionObserver(aboutObsCallBack, options);
 aboutObserver.observe(aboutContainer);
+/**************************************************************************** */
 
 let fontSize = 64;
 
@@ -66,7 +58,7 @@ const vara = new Vara(
   'https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json',
   [
     {
-      text: "hey there, I'm Donald.",
+      text: "hi there, I'm Donald.",
       color: '#e4e2dd',
       textAlign: 'center',
       duration: 4000,
@@ -95,7 +87,7 @@ darkModeImg.addEventListener('click', function () {
       .querySelector(':root')
       .style.setProperty(`--background-color`, colors[1]);
 
-    darkModeImg.src = 'assets/images/icons/dark.svg';
+    darkModeImg.src = 'assets/icons/dark.svg';
 
     const root = document.documentElement;
     root.style.setProperty('--vara-stroke', colors[0]);
@@ -109,7 +101,7 @@ darkModeImg.addEventListener('click', function () {
       .querySelector(':root')
       .style.setProperty(`--background-color`, colors[0]);
 
-    darkModeImg.src = 'assets/images/icons/light.svg';
+    darkModeImg.src = 'assets/icons/light.svg';
 
     const root = document.documentElement;
     root.style.setProperty('--vara-stroke', colors[1]);

@@ -1,0 +1,35 @@
+{
+  "nav_bar": [
+    { "name": "donaldumoru", "link": "/", "image": "" },
+    {
+      "name": "projects",
+      "link": "/projects",
+      "image": "assets/icons/projects.svg"
+    },
+    {
+      "name": "about",
+      "link": "/about",
+      "image": "assets/icons/fingerprint.svg"
+    }
+  ],
+
+  "footer": [
+    { "name": "email", "link": "", "image": "" },
+
+    {
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/in/donald-umoru",
+      "image": "assets/icons/linkedin.svg"
+    },
+
+    {
+      "name": "github",
+      "link": "https://github.com/donaldumoru",
+      "image": "assets/icons/linkedin.svg"
+    }
+  ],
+
+  "main": {
+    "welcome_text": "hi there, I'm Donald/"
+  }
+}

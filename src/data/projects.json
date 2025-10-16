@@ -1,0 +1,78 @@
+{
+  "title": "featured projects",
+  "projects": {
+    "1": {
+      "name": "arrayIpsum",
+      "id": "arrayipsum",
+      "short_description": "Array Ipsum is a browser-based generator for dummy arrays. I built it to solve my own need for quick, safe test data while learning and experimenting and I hope it makes that easier for others as well.",
+      "tools_used": [
+        {
+          "name": "html5",
+          "category": "frontend"
+        },
+        {
+          "name": "css",
+          "category": "frontend"
+        },
+        {
+          "name": "javascript",
+          "category": "frontend"
+        }
+      ],
+
+      "link": ""
+    },
+
+    "2": {
+      "name": "Runet-Software website redesign",
+      "id": "runet",
+      "short_description": "Complete redesign and redevelopment of Runet-Software’s website, focused on improving usability, content structure, and the overall customer experience.",
+      "tools_used": [
+        {
+          "name": "html5",
+          "category": "frontend"
+        },
+        {
+          "name": "css",
+          "category": "frontend"
+        },
+        {
+          "name": "jsl3",
+          "category": "frontend"
+        },
+        {
+          "name": "javascript",
+          "category": "frontend"
+        },
+        {
+          "name": "node.js",
+          "category": "backend"
+        }
+      ],
+
+      "link": ""
+    },
+
+    "3": {
+      "name": "RawTenTik official website",
+      "id": "rawtentik",
+      "short_description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde voluptates quos maxime iusto at nemo iure necessitatibus impedit quaerat aliquam.",
+      "tools_used": [
+        {
+          "name": "html5",
+          "category": "frontend"
+        },
+        {
+          "name": "css",
+          "category": "frontend"
+        },
+        {
+          "name": "javascript",
+          "category": "frontend"
+        }
+      ],
+
+      "link": ""
+    }
+  }
+}
