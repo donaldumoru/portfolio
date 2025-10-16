@@ -10,7 +10,7 @@ const colors = ['#0a0a0a', '#e4e2dd'];
 
 const options = {
   root: null,
-  threshold: 0.1,
+  threshold: 0.5,
 };
 
 /**************************** MERGE BOTH OBSERVERS INTO ONE************************************************ */
