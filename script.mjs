@@ -8,7 +8,20 @@ const aboutContainer = document.querySelector('.about');
 
 const colors = ['#0a0a0a', '#e4e2dd'];
 
-const options = {
+let fontSize = 64;
+
+const w = window.innerWidth;
+if (w < 600) fontSize = 28;
+else if (w < 900) fontSize = 32;
+else if (w < 1200) fontSize = 40;
+else if (w < 2000) fontSize = 48;
+
+const projectOptions = {
+  root: null,
+  threshold: 0.1,
+};
+
+const aboutOptions = {
   root: null,
   threshold: 0.5,
 };
@@ -20,13 +33,20 @@ const obsCallBack = function (entries) {
   if (entry.isIntersecting) {
     if (!entry.isIntersecting) return;
 
+    if (w < 600) {
+      projectsContainer.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+
     projectsLink.firstElementChild.classList.add('animate-icon');
   } else {
     projectsLink.firstElementChild.classList.remove('animate-icon');
   }
 };
 
-const observer = new IntersectionObserver(obsCallBack, options);
+const observer = new IntersectionObserver(obsCallBack, projectOptions);
 observer.observe(projectsContainer);
 
 ////// ABOUT OBSERVER
@@ -41,17 +61,9 @@ const aboutObsCallBack = function (entries) {
   }
 };
 
-const aboutObserver = new IntersectionObserver(aboutObsCallBack, options);
+const aboutObserver = new IntersectionObserver(aboutObsCallBack, aboutOptions);
 aboutObserver.observe(aboutContainer);
 /**************************************************************************** */
-
-let fontSize = 64;
-
-const w = window.innerWidth;
-if (w < 600) fontSize = 28;
-else if (w < 900) fontSize = 32;
-else if (w < 1200) fontSize = 40;
-else if (w < 2000) fontSize = 48;
 
 const vara = new Vara(
   '.test-vara',
