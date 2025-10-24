@@ -5,38 +5,52 @@
     "nav_links": [
       {
         "name": "projects",
-        "link": "/projects",
-        "image": "assets/icons/projects.svg"
+        "link": "#projects",
+        "class": "projects-link",
+        "image": { "src": "assets/icons/projects.svg", "alt": "settings icon" }
       },
       {
         "name": "about",
-        "link": "/about",
-        "image": "assets/icons/fingerprint.svg"
+        "link": "#about",
+        "class": "about-link",
+        "image": {
+          "src": "assets/icons/fingerprint.svg",
+          "alt": "fingerprint icon"
+        }
       },
 
       {
         "name": "",
         "link": "",
-        "image": "assets/icons/light.svg"
+        "class": "dark-mode-img",
+        "image": { "src": "assets/icons/light.svg", "alt": "" }
       }
     ]
   },
 
-  "footer": [
-    { "name": "email", "link": "", "image": "" },
+  "footer_links": {
+    "group_one": [
+      {
+        "name": "email",
+        "link": "mailto:donaldumoru@gmail.com",
+        "image": { "src": "", "alt": "" }
+      },
 
-    {
-      "name": "linkedin",
-      "link": "https://www.linkedin.com/in/donald-umoru",
-      "image": "assets/icons/linkedin.svg"
-    },
+      {
+        "name": "linkedin",
+        "link": "https://www.linkedin.com/in/donald-umoru",
+        "image": { "src": "assets/icons/linkedin.svg", "alt": "" }
+      }
+    ],
 
-    {
-      "name": "github",
-      "link": "https://github.com/donaldumoru",
-      "image": "assets/icons/linkedin.svg"
-    }
-  ],
+    "group_two": [
+      {
+        "name": "github",
+        "link": "https://github.com/donaldumoru",
+        "image": { "src": "assets/icons/github.svg", "alt": "" }
+      }
+    ]
+  },
 
   "landing_page": {
     "opening_text": "hi there, I'm Donald.",

@@ -7,7 +7,7 @@
  * @param {string} - The path of the home JSON file.
  * @returns {Promise<Object>} A promise that resolves to the parsed JSON data.
  */
-const fetchNavigationData = async function (homeJSON) {
+const fetchLandingPageData = async function (homeJSON) {
   try {
     const response = await fetch(homeJSON);
 
@@ -23,4 +23,4 @@ const fetchNavigationData = async function (homeJSON) {
   }
 };
 
-export { fetchNavigationData };
+export { fetchLandingPageData };
