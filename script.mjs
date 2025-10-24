@@ -1,3 +1,4 @@
+const mainContainer = document.querySelector('main');
 const introText = document.querySelector('.intro-text');
 const darkModeImg = document.querySelector('.dark-mode-img');
 const landingPage = document.querySelector('.landing-page');
@@ -16,18 +17,14 @@ else if (w < 900) fontSize = 32;
 else if (w < 1200) fontSize = 40;
 else if (w < 2000) fontSize = 48;
 
-const projectOptions = {
+const obsOptions = {
   root: null,
   threshold: 0.1,
 };
 
-const aboutOptions = {
-  root: null,
-  threshold: 0.5,
-};
+// projectsLink.firstElementChild.classList.remove('animate-icon');
 
 /**************************** MERGE BOTH OBSERVERS INTO ONE************************************************ */
-////// PROJECT OBSERVER
 const obsCallBack = function (entries) {
   const [entry] = entries;
   if (entry.isIntersecting) {
@@ -40,29 +37,17 @@ const obsCallBack = function (entries) {
       });
     }
 
+    // console.log('project', entry);
+
     projectsLink.firstElementChild.classList.add('animate-icon');
   } else {
     projectsLink.firstElementChild.classList.remove('animate-icon');
   }
 };
 
-const observer = new IntersectionObserver(obsCallBack, projectOptions);
-observer.observe(projectsContainer);
+const observer = new IntersectionObserver(obsCallBack, obsOptions);
+observer.observe(mainContainer);
 
-////// ABOUT OBSERVER
-const aboutObsCallBack = function (entries) {
-  const [entry] = entries;
-  if (entry.isIntersecting) {
-    if (!entry.isIntersecting) return;
-
-    aboutLink.firstElementChild.classList.add('animate-icon');
-  } else {
-    aboutLink.firstElementChild.classList.remove('animate-icon');
-  }
-};
-
-const aboutObserver = new IntersectionObserver(aboutObsCallBack, aboutOptions);
-aboutObserver.observe(aboutContainer);
 /**************************************************************************** */
 
 const vara = new Vara(
@@ -147,7 +132,7 @@ const aboutVara = new Vara(
   'https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json',
   [
     {
-      text: 'hola!',
+      text: 'dah dah dah dah dah dah dah dah dah dah',
       color: '#0a0a0a',
       textAlign: 'left',
       duration: 4000,
@@ -155,7 +140,7 @@ const aboutVara = new Vara(
     },
   ],
   {
-    fontSize: 80,
+    fontSize: 60,
   }
 );
 

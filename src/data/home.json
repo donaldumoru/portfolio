@@ -1,17 +1,26 @@
 {
-  "nav_bar": [
-    { "name": "donaldumoru", "link": "/", "image": "" },
-    {
-      "name": "projects",
-      "link": "/projects",
-      "image": "assets/icons/projects.svg"
-    },
-    {
-      "name": "about",
-      "link": "/about",
-      "image": "assets/icons/fingerprint.svg"
-    }
-  ],
+  "nav_bar": {
+    "logo": { "name": "donaldumoru", "link": "/", "image": "" },
+
+    "nav_links": [
+      {
+        "name": "projects",
+        "link": "/projects",
+        "image": "assets/icons/projects.svg"
+      },
+      {
+        "name": "about",
+        "link": "/about",
+        "image": "assets/icons/fingerprint.svg"
+      },
+
+      {
+        "name": "",
+        "link": "",
+        "image": "assets/icons/light.svg"
+      }
+    ]
+  },
 
   "footer": [
     { "name": "email", "link": "", "image": "" },
@@ -29,7 +38,8 @@
     }
   ],
 
-  "main": {
-    "welcome_text": "hi there, I'm Donald/"
+  "landing_page": {
+    "opening_text": "hi there, I'm Donald.",
+    "welcome_text": "creative developer with a knack for problem-solving and clean design"
   }
 }

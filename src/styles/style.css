@@ -83,6 +83,7 @@ nav > a {
   /* color: black; */
   color: var(--text-color);
   text-decoration: none;
+  height: fit-content;
 }
 
 nav div span {
@@ -211,7 +212,7 @@ h1 {
 }
 
 .project-card p {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-family: monospace;
   color: #9f9f9e;
 }
@@ -235,7 +236,7 @@ h1 {
   gap: 12px;
   font-family: var(--primary-font);
   font-size: 0.85rem;
-  color: #c6c6c5;
+  color: #9f9f9e;
 }
 
 .about-img-wrapper {
@@ -342,6 +343,10 @@ footer ul {
 
   .project-card {
     max-width: unset;
+  }
+
+  .project-card p {
+    font-size: 1rem;
   }
 
   .about {
