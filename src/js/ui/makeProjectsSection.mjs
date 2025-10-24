@@ -1,16 +1,9 @@
 // import projectLink from '../displayProject.mjs';
 
-const url = new URL(
-  `${window.location}pages/project/index.html?name=${'runet'}`
-);
-
-let params = new URLSearchParams(url.search).get('name');
-
-const projectLink = url.href;
-console.log(params);
-
 export default async function (fn, path) {
   const data = await fn(path);
+
+  const url = '/project?name=';
 
   return ('main'.jsl.eof = SECTION(
     { class: 'projects', id: 'projects' },
@@ -36,9 +29,14 @@ export default async function (fn, path) {
 
         DIV(
           { class: 'project-btns' },
-          A({ href: project.link.demo, target: '_blank' }, 'Demo'),
+          A(
+            { href: project.link.demo, target: '_blank', rel: 'noopener' },
+            'Demo'
+          ),
 
-          project.link.read_more ? A({ href: projectLink }, 'Read more') : ''
+          project.link.read_more
+            ? A({ href: `${url}${project.id}` }, 'Read more')
+            : ''
         )
       )
     )
