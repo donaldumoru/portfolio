@@ -27,12 +27,12 @@ const INIT_INTERACTIONS = function () {
     if (entry.isIntersecting) {
       if (!entry.isIntersecting) return;
 
-      if (w < 600) {
-        projectsContainer.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-        });
-      }
+      // if (w < 600) {
+      //   projectsContainer.scrollIntoView({
+      //     behavior: 'smooth',
+      //     block: 'center',
+      //   });
+      // }
 
       // console.log('project', entry);
 

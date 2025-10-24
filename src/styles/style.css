@@ -203,12 +203,6 @@ h1 {
   gap: 12px;
 }
 
-.project-card span {
-  color: rgb(105, 105, 105);
-  font-family: monospace;
-  font-size: 0.7rem;
-}
-
 .project-card a {
   color: rgb(105, 105, 105);
   font-size: 0.8rem;
@@ -219,6 +213,24 @@ h1 {
   font-size: 0.85rem;
   font-family: monospace;
   color: #9f9f9e;
+}
+
+.tools-used {
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.tools-used span {
+  color: rgb(105, 105, 105);
+  font-family: monospace;
+  font-size: 0.7rem;
+  display: inline;
+}
+
+.project-btns {
+  width: fit-content;
+  display: flex;
+  gap: 20px;
 }
 
 /*******************ABOUT*********************/

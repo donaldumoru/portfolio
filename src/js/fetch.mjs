@@ -3,13 +3,12 @@
  * for the index page
  *
  * @async
- * @function fetchHomeData
- * @param {string} - The path of the home JSON file.
+ * @param {string} - The path of the JSON file.
  * @returns {Promise<Object>} A promise that resolves to the parsed JSON data.
  */
-const fetchLandingPageData = async function (homeJSON) {
+const fetchData = async function (json) {
   try {
-    const response = await fetch(homeJSON);
+    const response = await fetch(json);
 
     if (!response.ok) {
       throw new Error(`response status: ${response.status}`);
@@ -23,4 +22,4 @@ const fetchLandingPageData = async function (homeJSON) {
   }
 };
 
-export { fetchLandingPageData };
+export { fetchData };

@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donald Umoru</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <script src="https://jsl3.codemax.net/jsl3.1.js"></script>
   </head>
-  <body></body>
+  <body>
+    <script type="module">
+      import { fetchData } from '/src/js/fetch.mjs';
+      import paths from '/src/js/paths.mjs';
+      import {
+        MAKE_NAV_AND_FOOTER,
+        MAKE_WELCOME_TEXT,
+      } from '/src/js/ui/makeLandingPage.mjs';
+
+      await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
+    </script>
+
+    <header></header>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>

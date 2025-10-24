@@ -13,112 +13,32 @@
   </head>
   <body>
     <script type="module">
-      import { fetchLandingPageData } from '/src/js/home.mjs';
+      import { fetchData } from '/src/js/fetch.mjs';
       import paths from '/src/js/paths.mjs';
       import {
         MAKE_NAV_AND_FOOTER,
         MAKE_WELCOME_TEXT,
       } from '/src/js/ui/makeLandingPage.mjs';
       import MAKE_VARA from '/src/js/ui/vara.mjs';
-
+      import MAKE_PROJECTS_SECTION from '/src/js/ui/makeProjectsSection.mjs';
+      import MAKE_ABOUT_SECTION from '/src/js/ui/makeAboutSection.mjs';
       import { INIT_INTERACTIONS } from '/script.mjs';
 
-      await MAKE_NAV_AND_FOOTER(fetchLandingPageData, paths.homeJSONFile);
+      await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
 
       MAKE_WELCOME_TEXT();
 
-      await MAKE_VARA(fetchLandingPageData, paths.homeJSONFile);
+      await MAKE_VARA(fetchData, paths.homeJSONFile);
 
-      // INIT_INTERACTIONS()
+      await MAKE_PROJECTS_SECTION(fetchData, paths.projectsJSONFile);
+      await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
+
+      // INIT_INTERACTIONS();
     </script>
+
     <header></header>
 
-    <main>
-      <section class="projects" id="projects">
-        <h2>featured projects</h2>
-
-        <article class="project-card">
-          <h4>arrayIpsum</h4>
-          <p>
-            Array Ipsum is a browser-based generator for dummy arrays. I built
-            it to solve my own need for quick, safe test data while learning and
-            experimenting and I hope it makes that easier for others as well.
-          </p>
-
-          <div class="tools-used">
-            <span>#HTML5 •</span>
-            <span>#CSS •</span>
-            <span>#JAVASCRIPT</span>
-          </div>
-
-          <a href="">view project</a>
-        </article>
-
-        <article class="project-card">
-          <h4>Runet-Software website redesign</h4>
-          <p>
-            Complete redesign and redevelopment of Runet-Software’s website,
-            focused on improving usability, content structure, and the overall
-            customer experience.
-          </p>
-
-          <div class="tools-used">
-            <span>#HTML5 •</span>
-            <span>#CSS •</span>
-            <span>#JAVASCRIPT •</span>
-            <span>#JSL3 •</span>
-            <span>#NODE.JS</span>
-          </div>
-
-          <a href="">view project</a>
-        </article>
-
-        <article class="project-card">
-          <h4>RawTenTik official website</h4>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
-            voluptates quos maxime iusto at nemo iure necessitatibus impedit
-            quaerat aliquam.
-          </p>
-
-          <div class="tools-used">
-            <span>#HTML5 •</span>
-            <span>#CSS •</span>
-            <span>#JAVASCRIPT</span>
-          </div>
-
-          <a href="">view project</a>
-        </article>
-      </section>
-
-      <section class="about" id="about">
-        <div class="about-wrapper">
-          <h2>about me</h2>
-
-          <div class="about-text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              natus ratione assumenda quos commodi. Aperiam, ea maxime
-              dignissimos earum reiciendis impedit itaque quisquam
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              natus ratione assumenda quos commodi. Aperiam, ea maxime
-              dignissimos earum reiciendis impedit itaque quisquam
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              natus ratione assumenda quos commodi. Aperiam, ea maxime
-              dignissimos earum reiciendis impedit itaque quisquam
-            </p>
-          </div>
-
-          <div class="about-img-wrapper">
-            <img src="assets/images/about.jpg" alt="" />
-          </div>
-        </div>
-      </section>
-    </main>
+    <main></main>
 
     <footer></footer>
   </body>

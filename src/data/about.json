@@ -1,5 +1,5 @@
 {
   "title": "about",
-  "image": "",
-  "bio": ""
+  "image": { "src": "assets/images/about.jpg", "alt": "" },
+  "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum natus ratione assumenda quos commodi. Aperiam, ea maxime dignissimos earum reiciendis impedit itaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum natus ratione assumenda quos commodi. Aperiam, ea maxime dignissimos earum reiciendis impedit itaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum natus ratione assumenda quos commodi. Aperiam, ea maxime dignissimos earum reiciendis impedit itaque quisquam"
 }
