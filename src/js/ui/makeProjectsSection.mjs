@@ -1,6 +1,8 @@
 // import projectLink from '../displayProject.mjs';
 
-const url = new URL(`${window.location}project.html?name=${'runet'}`);
+const url = new URL(
+  `${window.location}pages/project/index.html?name=${'runet'}`
+);
 
 let params = new URLSearchParams(url.search).get('name');
 
