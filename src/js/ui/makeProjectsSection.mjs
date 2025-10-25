@@ -1,9 +1,9 @@
-// import projectLink from '../displayProject.mjs';
-
 export default async function (fn, path) {
   const data = await fn(path);
 
-  const url = '/project?id=';
+  const url = '/project.html?id=';
+
+  console.log(new URL(import.meta.url));
 
   return ('main'.jsl.eof = SECTION(
     { class: 'projects', id: 'projects' },
@@ -29,15 +29,29 @@ export default async function (fn, path) {
 
         DIV(
           { class: 'project-btns' },
+
           A(
             { href: project.link.demo, target: '_blank', rel: 'noopener' },
+            IMG({ src: 'assets/icons/external.svg' }),
             'Demo'
           ),
 
-          project.link.read_more
-            ? A({ href: `${url}${project.id}` }, 'Read more')
+          project.link.github
+            ? A(
+                {
+                  href: project.link.github,
+                  target: '_blank',
+                  rel: 'noopener',
+                },
+                IMG({ src: 'assets/icons/external.svg' }),
+                'Github'
+              )
             : ''
-        )
+        ),
+
+        project.link.read_more
+          ? A({ href: `${url}${project.id}` }, 'Read more')
+          : ''
       )
     )
   ));

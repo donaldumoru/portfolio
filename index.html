@@ -10,36 +10,11 @@
       src="https://cdn.jsdelivr.net/npm/vara@1.4.0/lib/vara.min.js"
       type="text/javascript"
     ></script>
+    <script type="module" src="/src/js/index.mjs"></script>
   </head>
   <body>
-    <script type="module">
-      import { fetchData } from '/src/js/fetch.mjs';
-      import paths from '/src/js/paths.mjs';
-      import {
-        MAKE_NAV_AND_FOOTER,
-        MAKE_WELCOME_TEXT,
-      } from '/src/js/ui/makeLandingPage.mjs';
-      import MAKE_VARA from '/src/js/ui/vara.mjs';
-      import MAKE_PROJECTS_SECTION from '/src/js/ui/makeProjectsSection.mjs';
-      import MAKE_ABOUT_SECTION from '/src/js/ui/makeAboutSection.mjs';
-      import { INIT_INTERACTIONS } from '/script.mjs';
-
-      await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
-
-      MAKE_WELCOME_TEXT();
-
-      await MAKE_VARA(fetchData, paths.homeJSONFile);
-
-      await MAKE_PROJECTS_SECTION(fetchData, paths.projectsJSONFile);
-      await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
-
-      // INIT_INTERACTIONS();
-    </script>
-
     <header></header>
-
     <main></main>
-
     <footer></footer>
   </body>
 </html>

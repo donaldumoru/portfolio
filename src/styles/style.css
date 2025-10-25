@@ -46,8 +46,6 @@ body {
   height: 100%;
   scroll-snap-type: y mandatory;
   scroll-padding: var(--header-h) 0 var(--footer-h);
-  /* background-color: #e4e2dd; */
-  /* background: #0b0b0d; */
   color: var(--text-color);
   background: var(--background-color);
 }
@@ -201,6 +199,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  position: relative;
+  z-index: 2;
 }
 
 .project-card a {
@@ -231,6 +231,15 @@ h1 {
   width: fit-content;
   display: flex;
   gap: 20px;
+}
+
+.project-btns a {
+  display: flex;
+  gap: 5px;
+}
+
+.project-btns img {
+  width: 15px;
 }
 
 /*******************ABOUT*********************/
