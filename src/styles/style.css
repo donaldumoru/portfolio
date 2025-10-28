@@ -1,6 +1,7 @@
 :root {
+  --titles: 'Satisfy';
   --primary-font: 'Orbit';
-  --handwritten: 'Satisfy';
+  --lg-text: 'Space Grotesk';
   --li-font-size: 0.75rem;
   --padding-nav-items: 1rem 5rem;
   --header-h: 150px;
@@ -46,17 +47,25 @@ body {
   height: 100%;
   scroll-snap-type: y mandatory;
   scroll-padding: var(--header-h) 0 var(--footer-h);
-  color: var(--text-color);
   background: var(--background-color);
 }
 
 h2 {
-  font-family: var(--handwritten);
+  font-family: var(--titles);
   font-size: 2.1rem;
+  color: var(--text-color);
 }
 
 button {
   cursor: pointer;
+}
+
+.section-wrapper {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .hide {
@@ -76,9 +85,6 @@ nav {
 
 nav > a {
   font-size: 1.3rem;
-  /* font-weight: bold; */
-  font-family: monospace;
-  /* color: black; */
   color: var(--text-color);
   text-decoration: none;
   height: fit-content;
@@ -148,8 +154,6 @@ nav ul a {
   scroll-snap-type: y proximity;
   padding: 0 10rem;
   margin-bottom: 50px;
-  /* background-image: url(/assets/images/main.png);
-  background-position: center; */
 }
 
 .intro-text {
@@ -195,23 +199,21 @@ h1 {
 }
 
 .project-card {
-  max-width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.5rem;
   position: relative;
   z-index: 2;
 }
 
 .project-card a {
-  color: rgb(105, 105, 105);
-  font-size: 0.8rem;
   text-transform: capitalize;
 }
 
 .project-card p {
   font-size: 0.85rem;
-  font-family: monospace;
+  font-family: var(--lg-text);
   color: #9f9f9e;
 }
 
@@ -230,28 +232,40 @@ h1 {
 .project-btns {
   width: fit-content;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.85rem;
 }
 
-.project-btns a {
+.external-links {
+  display: flex;
+  align-items: flex-end;
+  font-family: var(--lg-text);
+  gap: 1rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.external-links a {
   display: flex;
   gap: 5px;
+  color: rgb(105, 105, 105);
 }
 
 .project-btns img {
-  width: 15px;
+  width: 0.8rem;
+}
+
+.read-more-btn {
+  font-family: var(--lg-text);
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #9f9f9e;
 }
 
 /*******************ABOUT*********************/
-.about-wrapper {
-  max-width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-}
 
-.about-wrapper img {
+.about img {
   width: 100%;
 }
 
@@ -259,7 +273,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-family: var(--primary-font);
+  font-family: var(--lg-text);
   font-size: 0.85rem;
   color: #9f9f9e;
 }
@@ -341,7 +355,7 @@ footer ul {
   }
 
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: unset;
   }
 
@@ -361,6 +375,10 @@ footer ul {
     width: unset;
   }
 
+  .section-wrapper {
+    max-width: 100%;
+  }
+
   .projects {
     padding: 0 2rem;
     gap: 20px;
@@ -374,8 +392,16 @@ footer ul {
     font-size: 1rem;
   }
 
+  .project-btns {
+    font-size: 1rem;
+  }
+
   .about {
     padding: 0 2rem;
+  }
+
+  .about {
+    margin-top: 2rem;
   }
 
   .about-wrapper {
@@ -383,11 +409,13 @@ footer ul {
   }
 
   .about-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
 /******FONTS*******/
+
+/*****ORBIT****/
 @font-face {
   font-family: 'Orbit';
   src: url('/assets/fonts/orbit/Orbit-Regular.woff2') format('woff2'),
@@ -397,11 +425,63 @@ footer ul {
   font-display: swap;
 }
 
+/*****SATISFY****/
 @font-face {
   font-family: 'Satisfy';
   src: url('/assets/fonts/satisfy/Satisfy-Regular.woff2') format('woff2'),
     url('/assets/fonts/satisfy/Satisfy-Regular.woff') format('woff');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*****Space Grotesk****/
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff2')
+      format('woff2'),
+    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff2')
+      format('woff2'),
+    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff2')
+      format('woff2'),
+    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff2')
+      format('woff2'),
+    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff2') format('woff2'),
+    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }

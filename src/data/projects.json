@@ -23,7 +23,7 @@
       "link": {
         "demo": "https://arrayipsum.netlify.app",
         "github": "https://github.com/donaldumoru/array-ipsum",
-        "read_more": false
+        "read_more": true
       }
     },
 
@@ -83,7 +83,7 @@
       "link": {
         "demo": "https://rawtentik.com",
         "github": "",
-        "read_more": false
+        "read_more": true
       }
     }
   ]
