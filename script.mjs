@@ -88,7 +88,7 @@ const INIT_INTERACTIONS = function () {
   const options = {
     root: null,
     threshold: 1,
-    rootMargin: '-5% 0px -2% 0px',
+    rootMargin: '-8% 0px -2% 0px',
   };
 
   const intersectionCallback = entries => {
