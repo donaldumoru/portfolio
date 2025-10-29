@@ -29,7 +29,7 @@ export default async function (fn, path) {
       {
         text: openingText,
         color: '#e4e2dd',
-        textAlign: 'justify',
+        textAlign: 'center',
         duration: 4000,
         strokeWidth: 1,
         fontSize: fontSize,
