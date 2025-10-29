@@ -13,7 +13,7 @@ export default async function (fn, path) {
   const w = window.innerWidth;
 
   if (w < 600) {
-    fontSize = 48;
+    fontSize = 50;
   } else if (w < 900) {
     fontSize = 32;
   } else if (w < 1200) {
@@ -35,9 +35,6 @@ export default async function (fn, path) {
         fontSize: fontSize,
       },
     ]
-    // {
-
-    // }
   );
 
   vara.ready(function () {

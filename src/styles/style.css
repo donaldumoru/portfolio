@@ -340,7 +340,7 @@ footer ul {
   .landing-page {
     gap: 1rem;
     align-items: unset;
-    padding: 0 2rem;
+    padding: 0 2rem 0 1rem;
     height: calc(100%);
   }
 
