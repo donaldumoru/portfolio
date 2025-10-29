@@ -372,6 +372,10 @@ footer ul {
     max-width: unset;
   }
 
+  .project-card p {
+    font-size: clamp(0.75rem, 0.8rem, 1rem);
+  }
+
   .project-btns {
     font-size: 1rem;
   }
