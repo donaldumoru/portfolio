@@ -9,18 +9,18 @@ export default async function (fn, path) {
     DIV(
       { class: 'section-wrapper' },
 
-      H2(data.title),
+      H2({ 'data-blur-on-scroll': true }, data.title),
 
       data.projects.map(project =>
         ARTICLE(
           { class: 'project-card' },
 
-          H4(project.name),
+          H4({ 'data-blur-on-scroll': true }, project.name),
 
-          P(project.short_description),
+          P({ 'data-blur-on-scroll': true }, project.short_description),
 
           DIV(
-            { class: 'tools-used' },
+            { class: 'tools-used', 'data-blur-on-scroll': true },
             project?.tools_used.map((tool, i) =>
               i === project.tools_used.length - 1
                 ? SPAN(`#${tool.name}`)
@@ -29,7 +29,7 @@ export default async function (fn, path) {
           ),
 
           DIV(
-            { class: 'project-btns' },
+            { class: 'project-btns', 'data-blur-on-scroll': true },
 
             DIV(
               { class: 'external-links' },
@@ -48,14 +48,18 @@ export default async function (fn, path) {
                       rel: 'noopener',
                     },
                     IMG({ src: 'assets/icons/external.svg' }),
-                    'Github'
+                    'Repo'
                   )
                 : ''
             ),
 
             project.link.read_more
               ? A(
-                  { href: `${url}${project.id}`, class: 'read-more-btn' },
+                  {
+                    href: `${url}${project.id}`,
+                    class: 'read-more-btn',
+                    'data-blur-on-scroll': true,
+                  },
                   'Read more'
                 )
               : ''

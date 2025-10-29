@@ -61,8 +61,8 @@ const MAKE_WELCOME_TEXT = function () {
   return ('main'.jsl.bof = SECTION(
     { class: 'landing-page' },
 
-    DIV({ class: 'welcome-text' }),
-    H1({ class: 'intro-text' })
+    DIV({ class: 'welcome-text', 'data-blur-on-scroll': true }),
+    H1({ class: 'intro-text', 'data-blur-on-scroll': true })
   ));
 };
 

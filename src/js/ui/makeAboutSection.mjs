@@ -18,14 +18,18 @@ export default async function (fn, path) {
     DIV(
       { class: 'section-wrapper' },
 
-      H2(data.title),
+      H2({ 'data-blur-on-scroll': true }, data.title),
       DIV(
         { class: 'about-text' },
-        stringArray.map(str => P(str))
+        stringArray.map(str => P({ 'data-blur-on-scroll': true }, str))
       ),
       DIV(
         { class: 'about-img-wrapper' },
-        IMG({ src: data.image.src, alt: data.image.alt })
+        IMG({
+          src: data.image.src,
+          alt: data.image.alt,
+          'data-blur-on-scroll': true,
+        })
       )
     )
   ));

@@ -8,8 +8,10 @@ const INIT_INTERACTIONS = function () {
   const aboutLink = document.querySelector('.about-link');
   const aboutContainer = document.querySelector('.about');
   const nav = document.querySelector('nav');
+  const header = document.querySelector('header');
 
   const body = document.querySelector('body');
+  const elementsToBlur = document.querySelectorAll('[data-blur-on-scroll]');
 
   // console.log(body);
 
@@ -84,6 +86,30 @@ const INIT_INTERACTIONS = function () {
   //   }
   // });
 
+  const options = {
+    root: null,
+    threshold: 1,
+    rootMargin: '-10% 0px -8% 0px',
+  };
+
+  const intersectionCallback = entries => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.remove('blurred');
+      } else {
+        el.classList.add('blurred');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(intersectionCallback, options);
+
+  elementsToBlur.forEach(el => {
+    el.classList.add('transition');
+    observer.observe(el);
+  });
+
   /*******************MERGE BOTH LISTENERS AS ONE********************************/
   projectsLink.addEventListener('click', function (e) {
     e.preventDefault();
@@ -92,9 +118,6 @@ const INIT_INTERACTIONS = function () {
       block: 'start',
       inline: 'nearest',
     });
-
-    console.log(landingPage.getBoundingClientRect());
-    console.log(projectsContainer.getBoundingClientRect());
   });
 
   aboutLink.addEventListener('click', function (e) {
