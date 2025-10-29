@@ -5,7 +5,7 @@ export default async function (fn, path) {
 
   const bioText = data.bio;
   let sliceStart = 0;
-  const CHARACTER_LIMIT = 200;
+  const CHARACTER_LIMIT = 100;
 
   const stringArray = createParagraphs({
     text: bioText,

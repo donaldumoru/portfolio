@@ -12,6 +12,8 @@ const INIT_INTERACTIONS = function () {
 
   // console.log(body);
 
+  console.log(darkModeImg.getBoundingClientRect());
+
   const colors = ['#0a0a0a', '#e4e2dd'];
 
   // const obsOptions = {
@@ -86,7 +88,7 @@ const INIT_INTERACTIONS = function () {
     e.preventDefault();
     projectsContainer.scrollIntoView({
       behavior: 'smooth',
-      block: 'center',
+      block: 'start',
       inline: 'nearest',
     });
   });
@@ -95,7 +97,7 @@ const INIT_INTERACTIONS = function () {
     e.preventDefault();
     aboutContainer.scrollIntoView({
       behavior: 'smooth',
-      block: 'center',
+      block: 'start',
       inline: 'nearest',
     });
   });
