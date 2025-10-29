@@ -89,7 +89,7 @@ const INIT_INTERACTIONS = function () {
   const options = {
     root: null,
     threshold: 1,
-    rootMargin: '-10% 0px -8% 0px',
+    rootMargin: '-10% 0px -2% 0px',
   };
 
   const intersectionCallback = entries => {
@@ -105,10 +105,10 @@ const INIT_INTERACTIONS = function () {
 
   const observer = new IntersectionObserver(intersectionCallback, options);
 
-  elementsToBlur.forEach(el => {
-    el.classList.add('transition');
-    observer.observe(el);
-  });
+  // elementsToBlur.forEach(el => {
+  //   el.classList.add('transition');
+  //   observer.observe(el);
+  // });
 
   /*******************MERGE BOTH LISTENERS AS ONE********************************/
   projectsLink.addEventListener('click', function (e) {

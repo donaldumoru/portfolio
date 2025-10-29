@@ -28,7 +28,7 @@ export default async function (fn, path) {
         IMG({
           src: data.image.src,
           alt: data.image.alt,
-          'data-blur-on-scroll': true,
+          // 'data-blur-on-scroll': true,
         })
       )
     )
