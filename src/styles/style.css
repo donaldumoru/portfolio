@@ -323,7 +323,7 @@ footer ul {
   }
 
   h4 {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
   }
 
   nav {
@@ -394,7 +394,7 @@ footer ul {
   }
 
   .project-card p {
-    font-size: clamp(0.75rem, 0.8rem, 1rem);
+    font-size: clamp(0.85rem, 1rem, 1.1rem);
   }
 
   .project-btns {
