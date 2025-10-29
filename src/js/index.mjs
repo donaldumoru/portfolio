@@ -7,7 +7,7 @@ import {
 import MAKE_VARA from './ui/vara.mjs';
 import MAKE_PROJECTS_SECTION from './ui/makeProjectsSection.mjs';
 import MAKE_ABOUT_SECTION from './ui/makeAboutSection.mjs';
-// import { INIT_INTERACTIONS } from '/script.mjs';
+import { INIT_INTERACTIONS } from '/script.mjs';
 
 await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
 
@@ -17,3 +17,4 @@ await MAKE_VARA(fetchData, paths.homeJSONFile);
 
 await MAKE_PROJECTS_SECTION(fetchData, paths.projectsJSONFile);
 await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
+INIT_INTERACTIONS();

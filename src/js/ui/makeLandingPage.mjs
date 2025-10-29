@@ -62,7 +62,7 @@ const MAKE_WELCOME_TEXT = function () {
     { class: 'landing-page' },
 
     DIV({ class: 'welcome-text' }),
-    DIV({ class: 'intro-text' })
+    H1({ class: 'intro-text' })
   ));
 };
 

@@ -12,10 +12,15 @@ export default async function (fn, path) {
 
   const w = window.innerWidth;
 
-  if (w < 600) fontSize = 28;
-  else if (w < 900) fontSize = 32;
-  else if (w < 1200) fontSize = 40;
-  else if (w < 2000) fontSize = 48;
+  if (w < 600) {
+    fontSize = 48;
+  } else if (w < 900) {
+    fontSize = 32;
+  } else if (w < 1200) {
+    fontSize = 40;
+  } else if (w < 2000) {
+    fontSize = 64;
+  }
 
   const vara = new Vara(
     '.welcome-text',
@@ -24,14 +29,15 @@ export default async function (fn, path) {
       {
         text: openingText,
         color: '#e4e2dd',
-        textAlign: 'center',
+        textAlign: 'justify',
         duration: 4000,
         strokeWidth: 1,
+        fontSize: fontSize,
       },
-    ],
-    {
-      fontSize: fontSize,
-    }
+    ]
+    // {
+
+    // }
   );
 
   vara.ready(function () {

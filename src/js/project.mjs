@@ -1,12 +1,9 @@
 import { fetchData } from '/src/js/fetch.mjs';
 import paths from '/src/js/paths.mjs';
-import {
-  MAKE_NAV_AND_FOOTER,
-  MAKE_WELCOME_TEXT,
-} from '/src/js/ui/makeLandingPage.mjs';
+import { MAKE_NAV_AND_FOOTER } from '/src/js/ui/makeLandingPage.mjs';
 
-import display from '/src/js/displayProject.mjs';
+import { displayProject } from './displayProject.mjs';
 
-display();
+displayProject();
 
 await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);

@@ -10,76 +10,76 @@ const INIT_INTERACTIONS = function () {
 
   const body = document.querySelector('body');
 
-  console.log(body);
+  // console.log(body);
 
   const colors = ['#0a0a0a', '#e4e2dd'];
 
-  const obsOptions = {
-    root: null,
-    threshold: 0.1,
-  };
+  // const obsOptions = {
+  //   root: null,
+  //   threshold: 0.1,
+  // };
 
   // projectsLink.firstElementChild.classList.remove('animate-icon');
 
   /**************************** MERGE BOTH OBSERVERS INTO ONE************************************************ */
-  const obsCallBack = function (entries) {
-    const [entry] = entries;
-    if (entry.isIntersecting) {
-      if (!entry.isIntersecting) return;
+  // const obsCallBack = function (entries) {
+  //   const [entry] = entries;
+  //   if (entry.isIntersecting) {
+  //     if (!entry.isIntersecting) return;
 
-      // if (w < 600) {
-      //   projectsContainer.scrollIntoView({
-      //     behavior: 'smooth',
-      //     block: 'center',
-      //   });
-      // }
+  //     // if (w < 600) {
+  //     //   projectsContainer.scrollIntoView({
+  //     //     behavior: 'smooth',
+  //     //     block: 'center',
+  //     //   });
+  //     // }
 
-      // console.log('project', entry);
+  //     // console.log('project', entry);
 
-      projectsLink.firstElementChild.classList.add('animate-icon');
-    } else {
-      projectsLink.firstElementChild.classList.remove('animate-icon');
-    }
-  };
+  //     projectsLink.firstElementChild.classList.add('animate-icon');
+  //   } else {
+  //     projectsLink.firstElementChild.classList.remove('animate-icon');
+  //   }
+  // };
 
-  const observer = new IntersectionObserver(obsCallBack, obsOptions);
-  observer.observe(mainContainer);
+  // const observer = new IntersectionObserver(obsCallBack, obsOptions);
+  // observer.observe(mainContainer);
 
   /**************************************************************************** */
 
-  let isDark = true;
+  // let isDark = true;
 
-  darkModeImg.addEventListener('click', function () {
-    if (isDark) {
-      document
-        .querySelector(':root')
-        .style.setProperty(`--text-color`, colors[0]);
-      document
-        .querySelector(':root')
-        .style.setProperty(`--background-color`, colors[1]);
+  // darkModeImg.addEventListener('click', function () {
+  //   if (isDark) {
+  //     document
+  //       .querySelector(':root')
+  //       .style.setProperty(`--text-color`, colors[0]);
+  //     document
+  //       .querySelector(':root')
+  //       .style.setProperty(`--background-color`, colors[1]);
 
-      darkModeImg.src = 'assets/icons/dark.svg';
+  //     darkModeImg.src = 'assets/icons/dark.svg';
 
-      const root = document.documentElement;
-      root.style.setProperty('--vara-stroke', colors[0]);
+  //     const root = document.documentElement;
+  //     root.style.setProperty('--vara-stroke', colors[0]);
 
-      isDark = false;
-    } else {
-      document
-        .querySelector(':root')
-        .style.setProperty(`--text-color`, colors[1]);
-      document
-        .querySelector(':root')
-        .style.setProperty(`--background-color`, colors[0]);
+  //     isDark = false;
+  //   } else {
+  //     document
+  //       .querySelector(':root')
+  //       .style.setProperty(`--text-color`, colors[1]);
+  //     document
+  //       .querySelector(':root')
+  //       .style.setProperty(`--background-color`, colors[0]);
 
-      darkModeImg.src = 'assets/icons/light.svg';
+  //     darkModeImg.src = 'assets/icons/light.svg';
 
-      const root = document.documentElement;
-      root.style.setProperty('--vara-stroke', colors[1]);
+  //     const root = document.documentElement;
+  //     root.style.setProperty('--vara-stroke', colors[1]);
 
-      isDark = true;
-    }
-  });
+  //     isDark = true;
+  //   }
+  // });
 
   /*******************MERGE BOTH LISTENERS AS ONE********************************/
   projectsLink.addEventListener('click', function (e) {

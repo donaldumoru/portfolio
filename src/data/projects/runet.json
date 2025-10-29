@@ -1,0 +1,41 @@
+{
+  "id": "runet-software",
+  "title": "Runet-Software website redesign",
+
+  "link": {
+    "Demo": "https://runet-web-test.codemax.net/",
+    "Github": ""
+  },
+
+  "role": ["User Research", "UX Design", "Full stack Development"],
+
+  "overview": {
+    "summary": "",
+    "objective": ""
+  },
+
+  "challenge": {
+    "title": "",
+    "description": "",
+    "goals": []
+  },
+
+  "research": {
+    "methods": [],
+    "findings": []
+  },
+
+  "process": {},
+
+  "solutions": {},
+
+  "results": {},
+
+  "key_learnings": {},
+
+  "tech_stack": {
+    "frontend": ["HTML", "CSS", "JavaScript (JSL3)"],
+    "backend": ["Node.js", "Express"],
+    "tools": ["Justinmind", "Git"]
+  }
+}
