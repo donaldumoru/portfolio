@@ -13,7 +13,7 @@ export default async function (fn, path) {
   const w = window.innerWidth;
 
   if (w < 600) {
-    fontSize = fontSize;
+    fontSize = 28;
   } else if (w < 900) {
     fontSize = 32;
   } else if (w < 1200) {
