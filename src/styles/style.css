@@ -208,7 +208,6 @@ nav ul a {
 .project-card p {
   font-family: var(--lg-text);
   color: #9f9f9e;
-  font-weight: lighter;
   font-size: clamp(0.75rem, 1rem, 1.2rem);
 }
 
