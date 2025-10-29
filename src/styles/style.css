@@ -208,6 +208,7 @@ nav ul a {
 .project-card p {
   font-family: var(--lg-text);
   color: #9f9f9e;
+  font-size: clamp(0.75rem, 1rem, 1.2rem);
 }
 
 .tools-used {
@@ -372,7 +373,8 @@ footer ul {
   }
 
   .project-card p {
-    font-size: 1rem;
+    /* font-size: 1rem; */
+    font-size: clamp(1rem, 5vw, 2rem);
   }
 
   .project-btns {
