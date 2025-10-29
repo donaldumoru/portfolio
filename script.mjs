@@ -7,12 +7,13 @@ const INIT_INTERACTIONS = function () {
   const projectsContainer = document.querySelector('.projects');
   const aboutLink = document.querySelector('.about-link');
   const aboutContainer = document.querySelector('.about');
+  const nav = document.querySelector('nav');
 
   const body = document.querySelector('body');
 
   // console.log(body);
 
-  console.log(darkModeImg.getBoundingClientRect());
+  // console.log(nav.getBoundingClientRect());
 
   const colors = ['#0a0a0a', '#e4e2dd'];
 
@@ -91,6 +92,9 @@ const INIT_INTERACTIONS = function () {
       block: 'start',
       inline: 'nearest',
     });
+
+    console.log(landingPage.getBoundingClientRect());
+    console.log(projectsContainer.getBoundingClientRect());
   });
 
   aboutLink.addEventListener('click', function (e) {

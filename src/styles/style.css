@@ -375,13 +375,19 @@ footer ul {
   .section-wrapper {
     max-width: 100%;
     align-items: flex-start;
-    /* margin-block-start: 122px; */
   }
 
   .projects {
     padding: 0 2rem 0 1rem;
     gap: 20px;
-    /* margin-block-end: 200px; */
+    position: relative;
+    top: 122px;
+    /* margin-block-start: 122px; */
+  }
+
+  .projects,
+  .about {
+    min-height: unset;
   }
 
   .project-card {
@@ -398,10 +404,7 @@ footer ul {
 
   .about {
     padding: 0 1rem;
-  }
-
-  .about {
-    margin-top: 2rem;
+    margin-block: 2rem;
   }
 
   .about-wrapper {
