@@ -376,6 +376,7 @@ footer ul {
   .section-wrapper {
     max-width: 100%;
     align-items: flex-start;
+    margin-block-start: 100px;
   }
 
   .projects {
