@@ -380,8 +380,7 @@ footer ul {
   .projects {
     padding: 0 2rem 0 1rem;
     gap: 20px;
-    position: relative;
-    top: 122px;
+    /* top: 122px; */
     /* margin-block-start: 122px; */
   }
 
