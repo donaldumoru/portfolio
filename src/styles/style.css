@@ -361,7 +361,8 @@ footer ul {
   .welcome-text {
     width: 80%;
     min-height: 10px;
-    display: block;
+    /* display: block; */
+    display: none;
     /* margin: 0 auto; */
   }
 
@@ -369,6 +370,7 @@ footer ul {
     width: unset;
     text-align: start;
     font-size: 1rem;
+    display: none;
   }
 
   .section-wrapper {
