@@ -270,6 +270,7 @@ footer.is-visible {
   width: fit-content;
   text-transform: uppercase;
   cursor: default;
+  display: none;
 }
 
 .tools-used span {
