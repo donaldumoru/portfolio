@@ -401,9 +401,9 @@ footer ul {
     height: unset;
   }
 
-  /* footer:not(.footer-home) {
+  footer:not(.footer-home) {
     position: unset;
-  } */
+  }
 
   h2 {
     font-size: 1.3rem;
