@@ -24,6 +24,8 @@
         import { fadeInPage } from './src/js/utils.mjs';
         import MAKE_PROJECTS_SECTION from './src/js/ui/makeProjectsSection.mjs';
         import {MAKE_NAV_AND_FOOTER} from './src/js//ui/makeLandingPage.mjs';
+        import { INIT_INTERACTIONS } from '/script.mjs';
+
 
         await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
         await MAKE_PROJECTS_SECTION(fetchData, paths.projectsJSONFile);
@@ -33,6 +35,8 @@
         const footer = document.querySelector('footer');
         // fadeInPage([projectSection,nav,footer]);
         fadeInPage(projectSection);
+
+        INIT_INTERACTIONS()
 
     </script>
 

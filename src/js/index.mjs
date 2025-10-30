@@ -16,9 +16,5 @@ MAKE_WELCOME_TEXT();
 
 await MAKE_VARA(fetchData, paths.homeJSONFile);
 
-const nav = document.querySelector('nav');
-const footer = document.querySelector('footer');
-
-fadeInPage([nav, footer]);
 // await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
 INIT_INTERACTIONS();

@@ -1,7 +1,7 @@
 export default async function (fn, path) {
   const data = await fn(path);
 
-  const url = '/project.html?id=';
+  const url = '/project?name=';
 
   return ('main'.jsl.eof = SECTION(
     { class: 'projects', id: 'projects' },

@@ -94,18 +94,20 @@ button {
 }
 
 /*******************HEADER*******************/
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: var(--padding-nav-items);
+
+header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  /* opacity: 0; */
   transition: opacity 0.7s ease-in-out;
-  /* backdrop-filter: blur(1px); */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-nav-items);
 }
 
 nav > a {
@@ -365,8 +367,14 @@ footer ul {
     font-size: 1.2rem !important;
   }
 
+  header {
+    position: sticky;
+    top: 0;
+  }
+
   nav {
     padding: 1rem;
+    position: unset;
   }
 
   nav > a {
@@ -457,7 +465,7 @@ footer ul {
 
   .about {
     padding: 0 1rem;
-    margin: 4rem 0 2rem 0;
+    margin-block-end: 2rem;
   }
 
   .about-wrapper {

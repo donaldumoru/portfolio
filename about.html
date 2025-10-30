@@ -22,6 +22,7 @@
       import { fadeInPage } from './src/js/utils.mjs';
       import MAKE_ABOUT_SECTION from './src/js/ui/makeAboutSection.mjs';
       import { MAKE_NAV_AND_FOOTER } from './src/js/ui/makeLandingPage.mjs';
+      import { INIT_INTERACTIONS } from '/script.mjs';
 
       await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
       await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
@@ -32,6 +33,8 @@
 
       //   fadeInPage([aboutSection, nav, footer]);
       fadeInPage(aboutSection);
+
+      INIT_INTERACTIONS();
     </script>
 
     <header></header>
