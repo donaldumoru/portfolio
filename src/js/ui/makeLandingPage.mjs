@@ -12,9 +12,9 @@ const MAKE_NAV_AND_FOOTER = async function (fn, path) {
       A(
         { href: navData.logo.link },
         DIV(
-          'D',
+          firstName,
 
-          SPAN({ class: 'last-name' }, 'U')
+          SPAN({ class: 'last-name' }, lastName)
         )
       ),
 
@@ -25,7 +25,11 @@ const MAKE_NAV_AND_FOOTER = async function (fn, path) {
               ? A(
                   { class: link.class, href: link.link },
                   link.name,
-                  IMG({ src: link.image.src, alt: link.image.alt })
+                  IMG({
+                    class: `${link.name}-link-img`,
+                    src: link.image.src,
+                    alt: link.image.alt,
+                  })
                 )
               : link._comment
               ? IMG({
@@ -64,7 +68,11 @@ const MAKE_WELCOME_TEXT = function () {
     { class: 'landing-page' },
 
     DIV({ class: 'welcome-text', 'data-blur-on-scroll': true }),
-    H1({ class: 'intro-text', 'data-blur-on-scroll': true })
+
+    DIV(
+      { class: 'intro' },
+      H1({ class: 'intro-text', 'data-blur-on-scroll': true })
+    )
   ));
 };
 

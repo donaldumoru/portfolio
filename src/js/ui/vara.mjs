@@ -5,8 +5,8 @@ export default async function (fn, path) {
 
   const introTextContainer = document.querySelector('.intro-text');
   const openingText = landingPageData?.opening_text;
-  const introText = landingPageData?.welcome_text;
-  introTextContainer.textContent = introText;
+  // const introText = landingPageData?.welcome_text;
+  // introTextContainer.textContent = introText;
 
   let fontSize = 64;
 
@@ -19,7 +19,7 @@ export default async function (fn, path) {
   } else if (w < 1200) {
     fontSize = 40;
   } else if (w < 2000) {
-    fontSize = 64;
+    fontSize = 50;
   }
 
   const vara = new Vara(
@@ -39,7 +39,7 @@ export default async function (fn, path) {
 
   vara.ready(function () {
     vara.animationEnd(function (i, o) {
-      introTextContainer.classList.add('opacity-1');
+      // introTextContainer.classList.add('opacity-1');
     });
   });
 }
