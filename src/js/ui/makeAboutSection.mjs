@@ -19,20 +19,20 @@ export default async function (fn, path) {
 
       H2({ 'data-blur-on-scroll': true }, data.title),
 
-      // DIV(
-      //   { class: 'about-text-wrapper' },
-      //   stringArray.map(str =>
-      //     P({ class: 'about-text', 'data-blur-on-scroll': true }, str)
-      //   )
-      // ),
-      // DIV(
-      //   { class: 'about-img-wrapper' },
-      //   IMG({
-      //     src: data.image.src,
-      //     alt: data.image.alt,
-      //     // 'data-blur-on-scroll': true,
-      //   })
-      // )
+      DIV(
+        { class: 'about-text-wrapper' },
+        stringArray.map(str =>
+          P({ class: 'about-text', 'data-blur-on-scroll': true }, str)
+        )
+      ),
+      DIV(
+        { class: 'about-img-wrapper' },
+        IMG({
+          src: data.image.src,
+          alt: data.image.alt,
+          // 'data-blur-on-scroll': true,
+        })
+      ),
 
       SECTION(
         { class: 'section-chatbox' },
