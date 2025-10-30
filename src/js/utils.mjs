@@ -62,15 +62,13 @@ const createParagraphs = function ({ text, charLimit }) {
   return arr;
 };
 
-const fadeInPage = function (elements) {
-  elements.forEach(el => {
-    el.classList.remove('is-visible');
-    //force reflow so browser paints opacity:0 first
-    void el.offsetWidth;
+const fadeInPage = function (el) {
+  el.classList.remove('is-visible');
+  //force reflow so browser paints opacity:0 first
+  void el.offsetWidth;
 
-    requestAnimationFrame(() => {
-      el.classList.add('is-visible');
-    });
+  requestAnimationFrame(() => {
+    el.classList.add('is-visible');
   });
 };
 

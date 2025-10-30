@@ -27,11 +27,13 @@ const MAKE_NAV_AND_FOOTER = async function (fn, path) {
                   link.name,
                   IMG({ src: link.image.src, alt: link.image.alt })
                 )
-              : IMG({
+              : link._comment
+              ? IMG({
                   class: link.class,
                   src: link.image.src,
                   alt: link.image.alt,
                 })
+              : ''
           )
         )
       ),
