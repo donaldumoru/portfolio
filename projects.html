@@ -29,7 +29,9 @@
         await MAKE_PROJECTS_SECTION(fetchData, paths.projectsJSONFile);
 
         const projectSection = document.querySelector('.projects');
-        fadeInPage(projectSection);
+        const nav = document.querySelector('nav');
+        const footer = document.querySelector('footer');
+        fadeInPage([projectSection,nav,footer]);
 
     </script>
 

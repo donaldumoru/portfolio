@@ -27,7 +27,10 @@
       await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
 
       const aboutSection = document.querySelector('.about');
-      fadeInPage(aboutSection);
+      const nav = document.querySelector('nav');
+      const footer = document.querySelector('footer');
+
+      fadeInPage([aboutSection, nav, footer]);
     </script>
 
     <header></header>

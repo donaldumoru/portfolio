@@ -103,6 +103,8 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   /* backdrop-filter: blur(1px); */
 }
 
@@ -206,7 +208,9 @@ nav ul a {
 }
 
 .about.is-visible,
-.projects.is-visible {
+.projects.is-visible,
+nav.is-visible,
+footer.is-visible {
   opacity: 1;
 }
 
@@ -313,6 +317,8 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   font-size: var(--li-font-size);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   /* backdrop-filter: blur(1px); */
 }
 

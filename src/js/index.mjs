@@ -1,5 +1,6 @@
 import { fetchData } from './fetch.mjs';
 import paths from './paths.mjs';
+import { fadeInPage } from './utils.mjs';
 import {
   MAKE_NAV_AND_FOOTER,
   MAKE_WELCOME_TEXT,
@@ -15,5 +16,9 @@ MAKE_WELCOME_TEXT();
 
 await MAKE_VARA(fetchData, paths.homeJSONFile);
 
+const nav = document.querySelector('nav');
+const footer = document.querySelector('footer');
+
+fadeInPage([nav, footer]);
 // await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
 INIT_INTERACTIONS();
