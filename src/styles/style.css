@@ -436,7 +436,7 @@ footer ul {
 
   footer {
     /* position: unset; */
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 1rem;
   }
 
@@ -488,7 +488,7 @@ footer ul {
   .projects,
   .about {
     min-height: unset;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
 
   .project-card {
