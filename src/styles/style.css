@@ -45,10 +45,11 @@
   transition: filter 0.3s ease;
 } */
 
-/* [data-blur-on-scroll].blurred {
-  filter: blur(3px);
-  transition: filter 0.5s;
-} */
+[data-blur-on-scroll].blurred {
+  /* filter: blur(3px); */
+  /* transition: filter 0.5s; */
+  opacity: 0.3;
+}
 
 .transition {
   transition: 0.2s ease-in;
@@ -100,7 +101,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(1px); */
 }
 
 nav > a {
@@ -300,7 +301,7 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   font-size: var(--li-font-size);
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(1px); */
 }
 
 footer ul li {
