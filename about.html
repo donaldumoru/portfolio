@@ -24,8 +24,8 @@
       import { MAKE_NAV_AND_FOOTER } from './src/js/ui/makeLandingPage.mjs';
       import { INIT_INTERACTIONS } from '/script.mjs';
 
-      await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
       await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
+      await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
 
       const aboutSection = document.querySelector('.about');
       const nav = document.querySelector('nav');
