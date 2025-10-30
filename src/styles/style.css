@@ -363,7 +363,8 @@ footer ul {
     display: flex;
   }
 
-  header:not(.header-home) {
+  header:not(.header-home),
+  footer:not(.footer-home) {
     position: sticky;
     top: 0;
   }
