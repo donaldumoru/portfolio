@@ -2,32 +2,6 @@
   "title": "featured projects",
   "projects": [
     {
-      "name": "arrayIpsum",
-      "id": "arrayipsum",
-      "short_description": "Array Ipsum is a browser-based generator for dummy arrays for quick, safe test data while experimenting.",
-      "tools_used": [
-        {
-          "name": "html5",
-          "category": "frontend"
-        },
-        {
-          "name": "css",
-          "category": "frontend"
-        },
-        {
-          "name": "javascript",
-          "category": "frontend"
-        }
-      ],
-
-      "link": {
-        "demo": "https://arrayipsum.netlify.app",
-        "github": "https://github.com/donaldumoru/array-ipsum",
-        "read_more": true
-      }
-    },
-
-    {
       "name": "Runet-Software website redesign",
       "id": "runet",
       "short_description": "Complete redesign and redevelopment of Runet-Software’s website, focused on improving usability, content structure, and the overall customer experience.",
@@ -57,6 +31,32 @@
       "link": {
         "demo": "https://runet-web-test.codemax.net/",
         "github": "",
+        "read_more": true
+      }
+    },
+
+    {
+      "name": "arrayIpsum",
+      "id": "arrayipsum",
+      "short_description": "Array Ipsum is a browser-based generator for dummy arrays for quick, safe test data while experimenting.",
+      "tools_used": [
+        {
+          "name": "html5",
+          "category": "frontend"
+        },
+        {
+          "name": "css",
+          "category": "frontend"
+        },
+        {
+          "name": "javascript",
+          "category": "frontend"
+        }
+      ],
+
+      "link": {
+        "demo": "https://arrayipsum.netlify.app",
+        "github": "https://github.com/donaldumoru/array-ipsum",
         "read_more": true
       }
     },

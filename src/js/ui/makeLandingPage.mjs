@@ -61,10 +61,12 @@ const MAKE_WELCOME_TEXT = function () {
 
     DIV({ class: 'welcome-text', 'data-blur-on-scroll': true }),
 
-    DIV(
-      { class: 'intro' },
-      H1({ class: 'intro-text', 'data-blur-on-scroll': true })
-    )
+    // DIV(
+    //   { class: 'intro' },
+    //   H1({ class: 'intro-text', 'data-blur-on-scroll': true })
+    // ),
+
+    CODE({ id: 'code', class: 'code-block language-javascript language-css"' })
   ));
 };
 

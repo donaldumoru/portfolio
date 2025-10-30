@@ -3,7 +3,7 @@
   --primary-font: 'Orbit';
   --lg-text: 'Space Grotesk';
   --li-font-size: 1rem;
-  --padding-nav-items: 1rem 5rem 0 5rem;
+  --padding-nav-items: 1rem 5rem;
   --header-h: 150px;
   --footer-h: 140px;
   /* --background-color: #0a0a0a; */
@@ -111,6 +111,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: var(--padding-nav-items);
+  padding-bottom: 0;
 }
 
 nav > a {
@@ -416,7 +417,7 @@ footer ul {
 
   nav {
     padding: 1rem 2rem;
-    background-color: #171717d9;
+    backdrop-filter: blur(3px);
   }
 
   nav > a {
@@ -761,4 +762,32 @@ footer ul {
   -webkit-mask: radial-gradient(100% 100% at 0 0, #0000 99%, #000 102%) 0
       calc(100% - var(--s)) / var(--s) var(--s) no-repeat border-box,
     linear-gradient(#000 0 0) padding-box;
+}
+
+#code {
+  cursor: default;
+  white-space: pre-wrap;
+  color: var(--text-color);
+  /* font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', monospace; */
+  font-family: monospace;
+  background-color: var(--background-color);
+  font-weight: 100;
+}
+
+#code::after {
+  content: '';
+  display: inline-block;
+  width: 0.6ch;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -2px;
+  background: currentColor;
+  opacity: 0.8;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
