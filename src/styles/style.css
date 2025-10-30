@@ -62,7 +62,7 @@
 
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   scroll-snap-type: y mandatory;
   scroll-padding: var(--header-h) 0 var(--footer-h);
   background: var(--background-color);
@@ -358,6 +358,12 @@ footer ul {
 
 /******MEDIA QUERIES********/
 @media (max-width: 480px) {
+  .body-home {
+    height: 100%;
+  }
+  html {
+    height: 100%;
+  }
   main {
     height: 100%;
     display: flex;
