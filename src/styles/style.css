@@ -399,7 +399,7 @@ footer ul {
   }
 
   footer {
-    position: unset;
+    /* position: unset; */
     padding: 1rem;
     font-size: 1rem;
   }
@@ -448,10 +448,10 @@ footer ul {
     /* margin-block-start: 122px; */
   }
 
-  /* .projects,
+  .projects,
   .about {
     min-height: unset;
-  } */
+  }
 
   .project-card {
     max-width: unset;
