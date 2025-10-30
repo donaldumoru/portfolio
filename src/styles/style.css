@@ -66,7 +66,7 @@ html,
 body {
   height: 100%;
   /* scroll-snap-type: y mandatory; */
-  scroll-padding: var(--header-h) 0 var(--footer-h);
+  /* scroll-padding: var(--header-h) 0 var(--footer-h); */
   background: var(--background-color);
 }
 
@@ -183,7 +183,7 @@ nav ul a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  scroll-snap-type: y proximity;
+  /* scroll-snap-type: y proximity; */
   padding: 0 10rem;
   /* margin-bottom: 50px; */
 }
