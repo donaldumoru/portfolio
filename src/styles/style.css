@@ -45,10 +45,10 @@
   transition: filter 0.3s ease;
 } */
 
-[data-blur-on-scroll].blurred {
+/* [data-blur-on-scroll].blurred {
   filter: blur(3px);
   transition: filter 0.5s;
-}
+} */
 
 .transition {
   transition: 0.2s ease-in;
@@ -100,6 +100,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
+  backdrop-filter: blur(2px);
 }
 
 nav > a {
@@ -195,9 +196,9 @@ nav ul a {
 .projects,
 .about {
   display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: center; */
   min-height: 100vh;
 }
 
@@ -215,6 +216,11 @@ nav ul a {
   flex-direction: column;
   gap: 0.5rem;
   position: relative;
+  margin-block-end: 1rem;
+}
+
+.project-card:not(:last-child) {
+  margin-block-end: 1rem;
 }
 
 .project-card p {
@@ -294,6 +300,7 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   font-size: var(--li-font-size);
+  backdrop-filter: blur(2px);
 }
 
 footer ul li {
@@ -345,7 +352,13 @@ footer ul {
 
   nav > a {
     height: fit-content;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+  nav > a > div {
+    display: flex;
+    gap: 5px;
   }
 
   nav ul li {

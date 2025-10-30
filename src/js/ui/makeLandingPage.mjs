@@ -12,9 +12,9 @@ const MAKE_NAV_AND_FOOTER = async function (fn, path) {
       A(
         { href: navData.logo.link },
         DIV(
-          firstName,
+          'D',
 
-          SPAN({ class: 'last-name' }, lastName)
+          SPAN({ class: 'last-name' }, 'U')
         )
       ),
 
