@@ -62,8 +62,8 @@
 
 html,
 body {
-  /* height: 100%; */
-  scroll-snap-type: y mandatory;
+  height: 100%;
+  /* scroll-snap-type: y mandatory; */
   scroll-padding: var(--header-h) 0 var(--footer-h);
   background: var(--background-color);
 }
@@ -374,6 +374,10 @@ footer ul {
     top: 0;
   }
 
+  html:not(.home-html) {
+    height: unset;
+  }
+
   /* footer:not(.footer-home) {
     position: unset;
   } */
@@ -426,7 +430,7 @@ footer ul {
     /* gap: 1rem; */
     /* align-items: unset; */
     min-height: unset;
-    padding: 0 2rem 0 1rem;
+    padding: 0 1rem;
     /* height: calc(100%); */
   }
 
