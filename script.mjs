@@ -87,7 +87,7 @@ const INIT_INTERACTIONS = function () {
 
   const options = {
     root: null,
-    threshold: 1,
+    threshold: 0.4,
     rootMargin: '-8% 0px -2% 0px',
   };
 

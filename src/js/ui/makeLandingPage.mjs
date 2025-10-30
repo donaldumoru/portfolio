@@ -21,23 +21,15 @@ const MAKE_NAV_AND_FOOTER = async function (fn, path) {
       UL(
         navData?.nav_links.map(link =>
           LI(
-            link.name
-              ? A(
-                  { class: link.class, href: link.link },
-                  link.name,
-                  IMG({
-                    class: `${link.name}-link-img`,
-                    src: link.image.src,
-                    alt: link.image.alt,
-                  })
-                )
-              : link._comment
-              ? IMG({
-                  class: link.class,
-                  src: link.image.src,
-                  alt: link.image.alt,
-                })
-              : ''
+            A(
+              { class: link.class, href: link.link },
+              link.name,
+              IMG({
+                class: `${link.name}-link-img`,
+                src: link.image.src,
+                alt: link.image.alt,
+              })
+            )
           )
         )
       ),

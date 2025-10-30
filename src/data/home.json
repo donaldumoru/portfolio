@@ -17,14 +17,6 @@
           "src": "assets/icons/fingerprint.svg",
           "alt": "fingerprint icon"
         }
-      },
-
-      {
-        "_comment": "",
-        "name": "",
-        "link": "",
-        "class": "dark-mode-img",
-        "image": { "src": "assets/icons/light.svg", "alt": "" }
       }
     ]
   },

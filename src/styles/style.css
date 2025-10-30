@@ -3,7 +3,7 @@
   --primary-font: 'Orbit';
   --lg-text: 'Space Grotesk';
   --li-font-size: 1rem;
-  --padding-nav-items: 1rem 5rem;
+  --padding-nav-items: 1rem 5rem 0 5rem;
   --header-h: 150px;
   --footer-h: 140px;
   /* --background-color: #0a0a0a; */
@@ -416,6 +416,7 @@ footer ul {
 
   nav {
     padding: 1rem 2rem;
+    background-color: #171717d9;
   }
 
   nav > a {
