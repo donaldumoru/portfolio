@@ -361,9 +361,9 @@ footer ul {
   .body-home {
     height: 100%;
   }
-  html {
+  /* html {
     height: 100%;
-  }
+  } */
   main {
     height: 100%;
     display: flex;
@@ -374,9 +374,9 @@ footer ul {
     top: 0;
   }
 
-  footer:not(.footer-home) {
+  /* footer:not(.footer-home) {
     position: unset;
-  }
+  } */
 
   h2 {
     font-size: 1.3rem;
@@ -461,6 +461,7 @@ footer ul {
   .projects,
   .about {
     min-height: unset;
+    margin-bottom: 8rem;
   }
 
   .project-card {
@@ -482,7 +483,6 @@ footer ul {
 
   .about {
     padding: 0 1rem;
-    margin-block-end: 2rem;
   }
 
   .about-wrapper {
