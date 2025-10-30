@@ -363,10 +363,13 @@ footer ul {
     display: flex;
   }
 
-  header:not(.header-home),
-  footer:not(.footer-home) {
+  header:not(.header-home) {
     position: sticky;
     top: 0;
+  }
+
+  footer:not(.footer-home) {
+    position: unset;
   }
 
   h2 {
