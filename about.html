@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donald Umoru</title>
+    <link
+      rel="preload"
+      href="assets/fonts/orbit/Orbit-Regular.woff2"
+      as="font"
+      type="font/woff"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <script src="https://jsl3.codemax.net/jsl3.1.js"></script>
+    <!-- <script type="module" src="/src/js/index.mjs"></script> -->
+  </head>
+  <body>
+    <script type="module">
+      import { fetchData } from './src/js/fetch.mjs';
+      import paths from './src/js/paths.mjs';
+      import { fadeInPage } from './src/js/utils.mjs';
+      import MAKE_ABOUT_SECTION from './src/js/ui/makeAboutSection.mjs';
+      import { MAKE_NAV_AND_FOOTER } from './src/js/ui/makeLandingPage.mjs';
+
+      await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
+      await MAKE_ABOUT_SECTION(fetchData, paths.aboutJSONFile);
+
+      const aboutSection = document.querySelector('.about');
+      fadeInPage(aboutSection);
+    </script>
+
+    <header></header>
+    <main></main>
+    <footer></footer>
+
+    <script defer></script>
+  </body>
+</html>

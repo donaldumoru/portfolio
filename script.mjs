@@ -110,23 +110,23 @@ const INIT_INTERACTIONS = function () {
   });
 
   /*******************MERGE BOTH LISTENERS AS ONE********************************/
-  projectsLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    projectsContainer.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
-  });
+  // projectsLink.addEventListener('click', function (e) {
+  //   e.preventDefault();
+  //   projectsContainer.scrollIntoView({
+  //     behavior: 'smooth',
+  //     block: 'start',
+  //     inline: 'nearest',
+  //   });
+  // });
 
-  aboutLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    aboutContainer.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
-  });
+  // aboutLink.addEventListener('click', function (e) {
+  //   e.preventDefault();
+  //   aboutContainer.scrollIntoView({
+  //     behavior: 'smooth',
+  //     block: 'start',
+  //     inline: 'nearest',
+  //   });
+  // });
 };
 
 export { INIT_INTERACTIONS };

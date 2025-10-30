@@ -4,7 +4,6 @@ export default async function (fn, path) {
   const data = await fn(path);
 
   const bioText = data.bio;
-  let sliceStart = 0;
   const CHARACTER_LIMIT = 100;
 
   const stringArray = createParagraphs({
@@ -20,8 +19,10 @@ export default async function (fn, path) {
 
       H2({ 'data-blur-on-scroll': true }, data.title),
       DIV(
-        { class: 'about-text' },
-        stringArray.map(str => P({ 'data-blur-on-scroll': true }, str))
+        { class: 'about-text-wrapper' },
+        stringArray.map(str =>
+          P({ class: 'about-text', 'data-blur-on-scroll': true }, str)
+        )
       ),
       DIV(
         { class: 'about-img-wrapper' },

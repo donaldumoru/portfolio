@@ -23,7 +23,7 @@ const MAKE_NAV_AND_FOOTER = async function (fn, path) {
           LI(
             link.name
               ? A(
-                  { class: link.class, href: link.link },
+                  { class: link.class, href: `${link.link}.html` },
                   link.name,
                   IMG({ src: link.image.src, alt: link.image.alt })
                 )

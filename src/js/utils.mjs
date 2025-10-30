@@ -62,4 +62,14 @@ const createParagraphs = function ({ text, charLimit }) {
   return arr;
 };
 
-export { createParagraphs };
+const fadeInPage = function (el) {
+  el.classList.remove('is-visible');
+  //force reflow so browser paints opacity:0 first
+  void el.offsetWidth;
+
+  requestAnimationFrame(() => {
+    el.classList.add('is-visible');
+  });
+};
+
+export { createParagraphs, fadeInPage };

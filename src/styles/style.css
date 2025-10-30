@@ -12,6 +12,7 @@
   --text-color: #e4e2dd;
   --text-color-grey-title: #d7d7d6;
   --vara-stroke: #e4e2dd;
+  --transition: 0.2s ease-in;
 }
 
 .welcome-text {
@@ -83,6 +84,7 @@ button {
   max-width: 40%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1.5rem;
 }
@@ -197,10 +199,15 @@ nav ul a {
 .projects,
 .about {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
-  /* align-items: center; */
   min-height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.about.is-visible,
+.projects.is-visible {
+  opacity: 1;
 }
 
 .projects h4 {
@@ -281,13 +288,18 @@ nav ul a {
   /* display: none; */
 }
 
-.about-text {
+.about-text-wrapper {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.about-text {
+  /* opacity: 0; */
   font-family: var(--lg-text);
   font-weight: lighter;
   color: #9f9f9e;
+  /* transition: 1s ease-in-out; */
 }
 
 /*******************FOOTER*******************/
@@ -446,7 +458,7 @@ footer ul {
     max-width: unset;
   }
 
-  .about-text {
+  .about-text-wrapper {
     font-size: 1rem;
   }
 }

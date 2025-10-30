@@ -5,13 +5,13 @@
     "nav_links": [
       {
         "name": "projects",
-        "link": "#projects",
+        "link": "projects",
         "class": "projects-link",
         "image": { "src": "assets/icons/projects.svg", "alt": "settings icon" }
       },
       {
         "name": "about",
-        "link": "#about",
+        "link": "about",
         "class": "about-link",
         "image": {
           "src": "assets/icons/fingerprint.svg",
