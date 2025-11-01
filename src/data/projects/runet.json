@@ -1,7 +1,7 @@
 {
   "id": "runet",
   "title": "Runet-Software website redesign",
-  "overview": "Runet-Software is a company that develops high level structural engineering software based on the Eurocodes, with over 50,000 installations worldwide. Their website plays a key role in how users discover products, compare options, and make purchases but over time, the website had become very difficult to navigate and visually outdated. When I joined Ambianti B.V for an internship, my task was to redesign and rebuild the entire platform. The goal was to create a modern, intuitive, and efficient platform that not only improves the user experience for engineers, architects, and other potential customers but also aligns with Runet Software’s business goals.",
+  "overview": "Runet-Software is a company that develops high level structural engineering software based on the Eurocodes, with over 50,000 installations worldwide. Their website plays a key role in how users discover products, compare options, and make purchases but over time, the website had become very difficult to navigate and visually outdated. When I joined Ambianti B.V for an internship, my task was to redesign and redevelop the entire platform. The goal was to create a modern, intuitive, and efficient platform that not only improves the user experience for engineers, architects, and other potential customers but also aligns with Runet-Software’s business goals.",
   "tools_used": ["html5", "css", "jsl3", "javascript", "node.js", "Justinmind"],
 
   "img": "assets/images/projects/runet/original/runet-home.png",
