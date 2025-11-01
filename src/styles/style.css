@@ -570,6 +570,10 @@ footer ul {
   .about-text-wrapper {
     font-size: 1rem;
   }
+
+  .project-main {
+    margin-top: 2rem;
+  }
 }
 
 /******FONTS*******/
