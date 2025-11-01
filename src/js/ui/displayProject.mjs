@@ -3,7 +3,7 @@ import paths from '../paths.mjs';
 import { fetchData } from '../fetch.mjs';
 import { projectPath } from '../project.mjs';
 
-const makeOverview = function (data) {
+const renderOverview = function (data) {
   return ARTICLE(
     { class: 'project-card' },
     H4('Overview'),
@@ -45,39 +45,72 @@ const makeOverview = function (data) {
             )
           : ''
       )
-    ),
-
-    DIV(
-      { class: 'other' },
-
-      IMG({ src: data.img }),
-      P(data.overview),
-
-      IMG({ src: data.img }),
-      P(data.overview),
-
-      IMG({ src: data.img }),
-      P(data.overview),
-
-      IMG({ src: data.img }),
-      P(data.overview),
-
-      IMG({ src: data.img }),
-      P(data.overview),
-      IMG({ src: data.img }),
-
-      P(data.overview)
     )
   );
 };
 
-const makeProcess = function (data) {};
+const renderInDepthDetails = function (data) {
+  if (!data?.in_depth_details.section_exists) {
+    return;
+  }
+
+  const researchData = data?.in_depth_details?.research;
+
+  const renderResearchSection = data =>
+    SECTION(
+      { class: 'section-project-details' },
+      H4('Research'),
+
+      ARTICLE(
+        { class: 'project-card' },
+        P({ class: 'research-question' }, data?.question?.question)
+      ),
+
+      researchData?.methods.map(method => {
+        return [
+          ARTICLE(
+            { class: 'project-card' },
+            H5(method.name),
+
+            P(method.purpose),
+
+            H6(method.methodology.title),
+
+            P(method.methodology.description),
+
+            UL(
+              method?.findings.map(finding =>
+                LI(`${finding.title} ${finding.description}`)
+              )
+            )
+          ),
+        ];
+      })
+    );
+
+  const recurse = function (data) {
+    // if(){}
+  };
+
+  recurse(researchData);
+
+  return [renderResearchSection(researchData)];
+
+  // console.log(inDepthDetailsData);
+  // return inDepthDetailsData.map(section =>
+  //   ARTICLE(
+  //     { class: 'project-card' },
+
+  //     H4(section[0].split('_').join(' '))
+  //   )
+  // );
+};
 
 const MAKE_RELEVANT_PROJECT_PAGE = async function (fn, path) {
   const projectData = await fn(path);
   document.title = projectData.title;
 
-  console.log(projectData);
+  // console.log(projectData);
 
   return ('main'.jsl.eof = SECTION(
     { class: 'project-container' },
@@ -86,7 +119,9 @@ const MAKE_RELEVANT_PROJECT_PAGE = async function (fn, path) {
       { class: 'section-wrapper project-wrapper' },
       H2({ 'data-blur-on-scroll': true }, projectData.title),
 
-      makeOverview(projectData)
+      renderOverview(projectData),
+
+      renderInDepthDetails(projectData)
     )
   ));
 };

@@ -226,7 +226,7 @@ nav ul a {
 /*******************PROJECTS*******************/
 
 .project-main {
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 
 .projects,
@@ -336,6 +336,10 @@ footer.visible {
 
 /********************INDIVIDUAL PROJECT PAGE****************/
 
+.project-container {
+  color: var(--text-color-grey-title);
+  font-family: var(--lg-text);
+}
 .project-wrapper {
   margin-bottom: 10rem;
 }
@@ -348,11 +352,34 @@ footer.visible {
   font-size: 2rem;
 }
 
-.project-container h4 {
-  font-family: var(--lg-text);
+.project-container h4,
+.project-container h5,
+.project-container h6 {
   font-size: 1.25rem;
-  color: var(--text-color-grey-title);
   font-weight: 400;
+  text-transform: capitalize;
+}
+
+.project-container h5 {
+  margin-top: 1rem;
+  font-size: 1.1rem !important;
+}
+
+.project-container h6 {
+  margin-top: 0.8rem;
+  font-size: 1rem !important;
+}
+
+.project-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 1rem 0rem 1rem 1rem;
+}
+
+.project-container li {
+  line-height: 25px;
+  color: #9f9f9e;
 }
 
 .tools-used {
@@ -378,14 +405,19 @@ footer.visible {
   animation-timeline: scroll(root);
 }
 
-.other {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.research-question {
+  margin-top: 0.5rem;
+  padding: 10px 5px 10px 20px;
+  background-color: var(--text-color-grey-title);
+  color: #3e3e3e !important;
+  font-style: italic;
+  border-left: 0.25rem solid var(--color-titles-dark);
 }
 
-.other img {
-  max-width: 100%;
+.section-project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /*******************FOOTER*******************/
@@ -606,6 +638,11 @@ footer ul {
 
   .progress-bar-container {
     height: 3px;
+  }
+
+  .research-question {
+    padding: 10px 15px 10px 15px;
+    font-size: 0.85rem;
   }
 }
 

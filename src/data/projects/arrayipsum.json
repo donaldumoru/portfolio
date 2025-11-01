@@ -9,5 +9,9 @@
     "github": "https://github.com/donaldumoru/array-ipsum"
   },
 
-  "role": ["Development"]
+  "role": ["Development"],
+
+  "in_depth_details": {
+    "section_exists": false
+  }
 }

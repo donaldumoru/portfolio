@@ -14,17 +14,83 @@
   "role": ["User Research", "UX Design", "Full stack Development"],
 
   "in_depth_details": {
-    "research": {},
+    "section_exists": true,
 
-    "challenge": {
-      "title": "",
-      "description": "",
-      "goals": []
+    "research": {
+      "question": {
+        "title": "Research Question",
+        "question": "How can Runet Software’s website be redesigned to enhance user engagement, improve usability, and optimize the sales process to effectively communicate its value to both new and existing clients?"
+      },
+
+      "methods": [
+        {
+          "name": "Heuristic Evaluation",
+          "purpose": "After the initial meeting with stakeholders to understand the current sales process, learn more about their concerns, business goals, vision, and expectations for the website redesign, I conducted a heuristic evaluation following Jakob Nielsen’s 10 Usability Heuristics to assess the overall usability and navigation of the existing website. The goal was to uncover issues that might affect user experience and identify areas for improvement. The evaluation was carried out with three usability experts who specialize in frontend development and user experience design.",
+
+          "methodology": {
+            "title": "Current Website",
+            "description": "After analyzing the existing website through a heuristic evaluation with three usability experts, several usability and design issues were identified. Below are some of the key findings that highlight the main pain points and opportunities for improvement"
+          },
+
+          "findings": [
+            {
+              "title": "Checkout flow lacks user control.",
+              "description": "Users can’t modify orders before submitting, and there are no confirmation steps or total price visibility."
+            },
+
+            {
+              "title": "Navigation feels disorganized.",
+              "description": "Product categories are unclear, and users have to scroll excessively to find important content."
+            },
+            {
+              "title": "No search functionality.",
+              "description": "Users can’t quickly find specific products or information across the website."
+            },
+            {
+              "title": "Unclear bundle pricing.",
+              "description": "Discount structures aren’t communicated clearly and this causes confusion."
+            },
+            {
+              "title": "Outdated design.",
+              "description": "The visual style feels dated and lacks the modern cues users expect from technical software brands."
+            }
+          ]
+        },
+        {
+          "name": "Usability Test on current website",
+          "purpose": "After conducting the heuristic evaluation, I conducted usability tests to evaluate the current website’s usability with real users. The test was conducted with engineers, architects, and engineering students to understand how effectively the platform supports its core audience in finding and purchasing software.",
+          "methodology": {
+            "title": "Current Website",
+            "description": "Usability tests were conducted both in-person and remotely, allowing participants to complete a series of tasks while thinking aloud. The goal was to identify navigation challenges, measure task completion success, and capture user perceptions of clarity and ease of use. To assess performance, I measured effectiveness, efficiency, and satisfaction using task completion rates, time on task, and a System Usability Scale (SUS) questionnaire."
+          },
+          "findings": [
+            {
+              "title": "Navigation and content are hard to find.",
+              "description": "Users struggled to locate manuals, updates, pricing, and student discounts."
+            },
+
+            {
+              "title": "Trust and credibility are low.",
+              "description": "The outdated visuals made the site feel unreliable and unsafe for payments."
+            },
+            {
+              "title": "Checkout flow is confusing",
+              "description": "Users couldn’t edit orders or clearly see discounts, which led to frustration."
+            },
+            {
+              "title": "Pricing information lacks clarity.",
+              "description": "Bundled discounts and individual pricing were hard to compare."
+            },
+            {
+              "title": "Content feels overwhelming.",
+              "description": "Heavy text and weak content hierarchy made reading difficult."
+            }
+          ]
+        }
+      ]
     },
 
-    "process": {},
-
-    "solutions": {},
+    "implementation": {},
 
     "results": {},
 
