@@ -1,6 +1,6 @@
 const makeProgressbar = function () {
   return ('header'.jsl.bof = DIV(
-    { class: 'progress-bar-container' },
+    { class: 'progress-bar-container progress' },
     DIV({ class: 'progress-bar' })
   ));
 };

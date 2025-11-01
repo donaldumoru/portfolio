@@ -75,7 +75,7 @@ const MAKE_RELEVANT_PROJECT_PAGE = async function (fn, path) {
     { class: 'project-container' },
 
     SECTION(
-      { class: 'section-wrapper' },
+      { class: 'section-wrapper project-wrapper' },
       H2({ 'data-blur-on-scroll': true }, projectData.title),
 
       makeOverview(projectData)
