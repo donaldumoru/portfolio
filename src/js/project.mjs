@@ -1,9 +1,13 @@
-import { fetchData } from '/src/js/fetch.mjs';
 import paths from '/src/js/paths.mjs';
-import { MAKE_NAV_AND_FOOTER } from '/src/js/ui/makeLandingPage.mjs';
 
-import { displayProject } from './displayProject.mjs';
+const getProjectIdAndUrl = function () {
+  let url = new URL(window.location);
+  let params = new URLSearchParams(url.search).get('name');
 
-displayProject();
+  return params;
+};
 
-await MAKE_NAV_AND_FOOTER(fetchData, paths.homeJSONFile);
+const projectId = getProjectIdAndUrl();
+const projectPath = paths.projects[projectId];
+
+export { projectPath };

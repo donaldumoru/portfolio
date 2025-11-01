@@ -4,10 +4,11 @@ export default async function (fn, path) {
   const landingPageData = data?.landing_page;
 
   const introTextContainer = document.querySelector('.intro-text');
-  const codeBlock = document.querySelector('.code-block');
-  codeBlock.textContent = data.landing_page.humor_code;
 
-  const code = data.landing_page.humor_code;
+  const codeBlock = document.querySelector('.code-block');
+
+  const code = data.landing_page.humor_code_2;
+  console.log(code);
   const node = document.querySelector('#code');
 
   function typeText(node, text, cps = 60) {
@@ -49,7 +50,7 @@ export default async function (fn, path) {
 
   typeText(node, code, 8);
 
-  const openingText = landingPageData?.opening_text;
+  // const openingText = landingPageData?.opening_text;
   // const introText = landingPageData?.welcome_text;
   // introTextContainer.textContent = introText;
 
@@ -67,24 +68,24 @@ export default async function (fn, path) {
     fontSize = 50;
   }
 
-  const vara = new Vara(
-    '.welcome-text',
-    'https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json',
-    [
-      {
-        text: openingText,
-        color: '#e4e2dd',
-        textAlign: 'center',
-        duration: 4000,
-        strokeWidth: 1,
-        fontSize: fontSize,
-      },
-    ]
-  );
+  // const vara = new Vara(
+  //   '.welcome-text',
+  //   'https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json',
+  //   [
+  //     {
+  //       // text: openingText,
+  //       color: '#e4e2dd',
+  //       textAlign: 'center',
+  //       duration: 4000,
+  //       strokeWidth: 1,
+  //       fontSize: fontSize,
+  //     },
+  //   ]
+  // );
 
-  vara.ready(function () {
-    vara.animationEnd(function (i, o) {
-      // introTextContainer.classList.add('opacity-1');
-    });
-  });
+  // vara.ready(function () {
+  //   vara.animationEnd(function (i, o) {
+  //     // introTextContainer.classList.add('opacity-1');
+  //   });
+  // });
 }

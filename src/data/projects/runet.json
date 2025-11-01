@@ -1,37 +1,35 @@
 {
-  "id": "runet-software",
+  "id": "runet",
   "title": "Runet-Software website redesign",
+  "overview": "Runet-Software is a company that develops high level structural engineering software based on the Eurocodes, with over 50,000 installations worldwide. Their website plays a key role in how users discover products, compare options, and make purchases but over time, the website had become very difficult to navigate and visually outdated. When I joined Ambianti B.V for an internship, my task was to redesign and rebuild the entire platform. The goal was to make the website feel modern, intuitive, and credible, improve usability, content structure, and the checkout experience while aligning it with Runet-Software's business goals.",
+  "tools_used": ["html5", "css", "jsl3", "javascript", "node.js", "Justinmind"],
+
+  "img": "assets/images/projects/runet/original/runet-home.png",
 
   "link": {
-    "Demo": "https://runet-web-test.codemax.net/",
-    "Github": ""
+    "demo": "https://runet-web-test.codemax.net/",
+    "github": ""
   },
 
   "role": ["User Research", "UX Design", "Full stack Development"],
 
-  "overview": {
-    "summary": "",
-    "objective": ""
+  "in_depth_details": {
+    "research": {},
+
+    "challenge": {
+      "title": "",
+      "description": "",
+      "goals": []
+    },
+
+    "process": {},
+
+    "solutions": {},
+
+    "results": {},
+
+    "key_learnings": {}
   },
-
-  "challenge": {
-    "title": "",
-    "description": "",
-    "goals": []
-  },
-
-  "research": {
-    "methods": [],
-    "findings": []
-  },
-
-  "process": {},
-
-  "solutions": {},
-
-  "results": {},
-
-  "key_learnings": {},
 
   "tech_stack": {
     "frontend": ["HTML", "CSS", "JavaScript (JSL3)"],

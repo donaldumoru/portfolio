@@ -19,14 +19,14 @@ export default async function (fn, path) {
 
           P({ 'data-blur-on-scroll': true }, project.short_description),
 
-          DIV(
-            { class: 'tools-used', 'data-blur-on-scroll': true },
-            project?.tools_used.map((tool, i) =>
-              i === project.tools_used.length - 1
-                ? SPAN(`#${tool.name}`)
-                : SPAN(`#${tool.name} • `)
-            )
-          ),
+          // DIV(
+          //   { class: 'tools-used', 'data-blur-on-scroll': true },
+          //   project?.tools_used.map((tool, i) =>
+          //     i === project.tools_used.length - 1
+          //       ? SPAN(`#${tool.name}`)
+          //       : SPAN(`#${tool.name} • `)
+          //   )
+          // ),
 
           DIV(
             { class: 'project-btns', 'data-blur-on-scroll': true },

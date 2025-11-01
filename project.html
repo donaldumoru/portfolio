@@ -6,11 +6,29 @@
     <title>Donald Umoru</title>
     <link rel="stylesheet" href="src/styles/style.css" />
     <script src="https://jsl3.codemax.net/jsl3.1.js"></script>
-    <script type="module" src="/src/js/project.mjs"></script>
+    <script type="module" src="/src/js/ui/displayProject.mjs"></script>
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <script type="module">
+      import { fetchData } from './src/js/fetch.mjs';
+      import paths from './src/js/paths.mjs';
+      import { fadeInPage } from './src/js/utils.mjs';
+      import { projectPath } from './src/js/project.mjs';
+      import { MAKE_RELEVANT_PROJECT_PAGE } from './src/js/ui/displayProject.mjs';
+      import { MAKE_NAV_AND_FOOTER } from './src/js//ui/landingPage.mjs';
+      import { INIT_INTERACTIONS } from '/script.mjs';
+
+      await MAKE_RELEVANT_PROJECT_PAGE(fetchData, projectPath);
+      await MAKE_NAV_AND_FOOTER(fetchData, paths.general.home);
+
+      const projectSection = document.querySelector('.project-container');
+
+      fadeInPage(projectSection);
+
+      INIT_INTERACTIONS();
+    </script>
+    <header class="project-header"></header>
+    <main class="project-main"></main>
     <footer></footer>
   </body>
 </html>

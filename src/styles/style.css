@@ -14,11 +14,12 @@
   --vara-stroke: #e4e2dd;
   --transition: 0.2s ease-in;
   --color-titles: #dfff56;
+  --color-titles-dark: #51690b;
 }
 
 .welcome-text {
   width: 80%;
-  display: none;
+  /* display: none; */
 }
 
 /* .welcome-text
@@ -194,8 +195,8 @@ nav ul a {
   aspect-ratio: 1; */
   /* border: 0.5px solid var(--color-titles); */
   text-align: center;
-  /* opacity: 0; */
-  opacity: 1;
+  opacity: 0;
+  /* opacity: 1; */
   transition: 1s ease-in-out;
   font-family: var(--primary-font);
   color: var(--text-color);
@@ -223,8 +224,14 @@ nav ul a {
 }
 
 /*******************PROJECTS*******************/
+
+.project-main {
+  margin-top: 10rem;
+}
+
 .projects,
-.about {
+.about,
+.project-container {
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -232,10 +239,11 @@ nav ul a {
   transition: opacity 1s ease-in-out;
 }
 
-.about.is-visible,
-.projects.is-visible,
-nav.is-visible,
-footer.is-visible {
+.about.visible,
+.projects.visible,
+.project-container.visible,
+nav.visible,
+footer.visible {
   opacity: 1;
 }
 
@@ -265,13 +273,7 @@ footer.is-visible {
   color: #9f9f9e;
   font-size: clamp(0.75rem, 1rem, 1.2rem);
   cursor: default;
-}
-
-.tools-used {
-  width: fit-content;
-  text-transform: uppercase;
-  cursor: default;
-  display: none;
+  line-height: 25px;
 }
 
 .tools-used span {
@@ -330,6 +332,46 @@ footer.is-visible {
   font-weight: lighter;
   color: #9f9f9e;
   /* transition: 1s ease-in-out; */
+}
+
+/********************INDIVIDUAL PROJECT PAGE****************/
+.project-header {
+  backdrop-filter: blur(3px);
+}
+
+.project-container h2 {
+  font-size: 2rem;
+}
+
+.project-container a {
+}
+
+.project-container h4 {
+  font-family: var(--lg-text);
+  font-size: 1.25rem;
+  color: var(--text-color-grey-title);
+  font-weight: 400;
+}
+
+.tools-used {
+  width: fit-content;
+  text-transform: uppercase;
+  cursor: default;
+  margin-top: 1.2rem;
+  /* display: none; */
+}
+
+.progress-bar-container {
+  position: absolute;
+  top: 0;
+  height: 5px;
+  width: 20%;
+  transition: var(--transition);
+  background-color: var(--color-titles-dark);
+}
+
+.other img {
+  max-width: 100%;
 }
 
 /*******************FOOTER*******************/
@@ -407,7 +449,7 @@ footer ul {
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
     text-transform: capitalize;
   }
 
@@ -481,16 +523,18 @@ footer ul {
   }
 
   .projects {
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
     gap: 20px;
     /* top: 122px; */
     /* margin-block-start: 122px; */
   }
 
   .projects,
-  .about {
+  .about,
+  .project-container {
     min-height: unset;
     margin-bottom: 4rem;
+    margin-top: 2rem;
   }
 
   .project-card {
@@ -508,6 +552,10 @@ footer ul {
 
   .project-btns {
     font-size: 1rem;
+  }
+
+  .project-container {
+    padding: 0 2rem;
   }
 
   .about {
@@ -735,7 +783,6 @@ footer ul {
   border: var(--s) solid #0000;
   border-radius: calc(var(--r) + var(--s));
   border-bottom-right-radius: 0;
-
   background: border-box linear-gradient(45deg, #075e54, #075e54); /* the coloration */
   -webkit-mask: radial-gradient(100% 100% at 100% 0, #0000 99%, #000 102%) 100%
       calc(100% - var(--s)) / var(--s) var(--s) no-repeat border-box,
@@ -751,7 +798,6 @@ footer ul {
 .tooltip2 {
   --s: 0.5em; /* triangle size */
   --r: 0.5em; /*  the radius */
-
   padding: 1em;
   border: var(--s) solid #0000;
   border-radius: calc(var(--r) + var(--s));

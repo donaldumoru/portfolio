@@ -48,6 +48,7 @@
   "landing_page": {
     "opening_text": "hi there, I'm Donald",
     "welcome_text": "creative developer with a knack for problem-solving and clean design",
-    "humor_code": "const user = {\n  name: \"Donald Umoru\",\n  role: \"Frontend Developer\",\n  skills: [\"HTML\", \"CSS\", \"JavaScript\", \"JSL3\", \"UX Research\", \"Usability Testing\"],\n  currentLocation: \"127.0.0.1\",\n};"
+    "humor_code": "const user = {\n  name: \"Donald Umoru\",\n  role: \"Frontend Developer\",\n  skills: [\"HTML\", \"CSS\", \"JavaScript\", \"JSL3\", \"UX Research\", \"Usability Testing\"],\n  currentLocation: \"127.0.0.1\",\n};",
+    "humor_code_2": "const self = {\n name: \"donaldumoru\",\n accessLevel: \"builder\",\n currentLocation: \"Eindhoven, NL\",\n isOnline: true,\n};"
   }
 }

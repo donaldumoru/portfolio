@@ -1,6 +1,5 @@
 /**
- * Fetch data from a json file that contains all the data
- * for the index page
+ * Fetch data from a json file
  *
  * @async
  * @param {string} - The path of the JSON file.
