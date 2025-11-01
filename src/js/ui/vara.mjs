@@ -8,7 +8,6 @@ export default async function (fn, path) {
   const codeBlock = document.querySelector('.code-block');
 
   const code = data.landing_page.humor_code_2;
-  console.log(code);
   const node = document.querySelector('#code');
 
   function typeText(node, text, cps = 60) {

@@ -1,7 +1,19 @@
+const makeProgressbar = function () {
+  return ('header'.jsl.bof = DIV(
+    { class: 'progress-bar-container' },
+    DIV({ class: 'progress-bar' })
+  ));
+};
+
 const MAKE_NAV_AND_FOOTER = async function (fn, path) {
   const data = await fn(path);
   const navData = data?.nav_bar;
   const footerData = data?.footer_links;
+  const url = new URL(window.location);
+
+  if (url.pathname === '/project') {
+    makeProgressbar();
+  }
 
   const renderNavBar = function () {
     const name = navData.logo.name;

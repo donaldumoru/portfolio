@@ -3,15 +3,6 @@ import paths from '../paths.mjs';
 import { fetchData } from '../fetch.mjs';
 import { projectPath } from '../project.mjs';
 
-const makeProgressbar = function () {
-  return ('header'.jsl.bof = DIV(
-    { class: 'progress-bar-container' },
-    DIV({ class: 'progress-bar' })
-  ));
-};
-
-makeProgressbar();
-
 const makeOverview = function (data) {
   return ARTICLE(
     { class: 'project-card' },
