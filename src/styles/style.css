@@ -589,6 +589,14 @@ footer ul {
   .project-main {
     margin-top: 2rem;
   }
+
+  .project-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .project-container {
+    margin-bottom: unset;
+  }
 }
 
 /******FONTS*******/
