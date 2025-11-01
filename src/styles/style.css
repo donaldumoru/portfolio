@@ -378,6 +378,12 @@ footer.visible {
   animation-timeline: scroll(root);
 }
 
+.other {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .other img {
   max-width: 100%;
 }

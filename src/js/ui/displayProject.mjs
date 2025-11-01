@@ -51,9 +51,17 @@ const makeOverview = function (data) {
       { class: 'other' },
 
       IMG({ src: data.img }),
+      P(data.overview),
+
       IMG({ src: data.img }),
+      P(data.overview),
+
       IMG({ src: data.img }),
+      P(data.overview),
+
       IMG({ src: data.img }),
+      P(data.overview),
+
       IMG({ src: data.img }),
       P(data.overview),
       IMG({ src: data.img }),
