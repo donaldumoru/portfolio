@@ -597,6 +597,10 @@ footer ul {
   .project-container {
     margin-bottom: unset;
   }
+
+  .progress-bar-container {
+    height: 3px;
+  }
 }
 
 /******FONTS*******/
