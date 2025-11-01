@@ -24,6 +24,28 @@ const INIT_INTERACTIONS = function () {
     el.classList.add('transition');
     observer.observe(el);
   });
+
+  const bar = document.querySelector('.progress-bar-container');
+  const projectContainer = document.querySelector('.project-container');
+
+  const containerHeight = projectContainer.getBoundingClientRect().height;
+
+  console.log(projectContainer.getBoundingClientRect());
+  console.log(projectContainer.offsetHeight);
+
+  window.addEventListener('scroll', () => console.log(window.scrollY));
+
+  const makeProgressBar = function () {
+    window.addEventListener('scroll', function () {
+      const currentScrollHeight = window.scrollY;
+
+      const widthPercentage = (currentScrollHeight / containerHeight) * 100;
+
+      bar.style.width = `${widthPercentage}%`;
+    });
+  };
+
+  makeProgressBar();
 };
 
 export { INIT_INTERACTIONS };
