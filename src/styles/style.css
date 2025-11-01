@@ -370,7 +370,7 @@ footer.visible {
   width: 100%;
   z-index: 10;
   transition: var(--transition);
-  background-color: var(--color-titles-dark);
+  background-color: var(--color-titles);
 }
 
 .progress {
