@@ -31,7 +31,8 @@
       "link": {
         "demo": "https://runet-web-test.codemax.net/",
         "github": "",
-        "read_more": true
+        "read_more": true,
+        "read_more_btn": "View Case Study"
       }
     },
 
@@ -57,7 +58,8 @@
       "link": {
         "demo": "https://arrayipsum.netlify.app",
         "github": "https://github.com/donaldumoru/array-ipsum",
-        "read_more": true
+        "read_more": true,
+        "read_more_btn": "View Project"
       }
     },
 
@@ -83,7 +85,8 @@
       "link": {
         "demo": "https://rawtentik.com",
         "github": "",
-        "read_more": true
+        "read_more": true,
+        "read_more_btn": "View Project"
       }
     }
   ]

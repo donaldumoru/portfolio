@@ -885,6 +885,10 @@ footer ul {
     linear-gradient(#000 0 0) padding-box;
 }
 
+.code-block {
+  font-size: 1rem !important;
+}
+
 #code {
   cursor: default;
   white-space: pre-wrap;

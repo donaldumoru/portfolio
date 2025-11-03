@@ -60,7 +60,7 @@ export default async function (fn, path) {
                     class: 'read-more-btn',
                     'data-blur-on-scroll': true,
                   },
-                  'Read more'
+                  project.link.read_more_btn
                 )
               : ''
           )
