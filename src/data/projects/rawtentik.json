@@ -1,6 +1,14 @@
 {
   "title": "RawTenTik Official website",
-  "description": "",
+  "overview": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde voluptates quos maxime iusto at nemo iure necessitatibus impedit quaerat aliquam.",
+  "tools_used": ["html5", "css", "javascript"],
+
+  "link": {
+    "demo": "https://rawtentik.com",
+    "github": ""
+  },
+
+  "role": ["Development"],
 
   "in_depth_details": {
     "section_exists": false

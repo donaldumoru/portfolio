@@ -1,13 +1,13 @@
 import paths from '/src/js/paths.mjs';
 
-const getProjectIdAndUrl = function () {
+const getProjectPath = function () {
   let url = new URL(window.location);
   let params = new URLSearchParams(url.search).get('name');
 
-  return params;
+  const projectId = params;
+  const projectPath = paths.projects[projectId];
+
+  return projectPath;
 };
 
-const projectId = getProjectIdAndUrl();
-const projectPath = paths.projects[projectId];
-
-export { projectPath };
+export default getProjectPath();

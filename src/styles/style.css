@@ -237,6 +237,7 @@ nav ul a {
   min-height: 100vh;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  position: relative;
 }
 
 .about.visible,
@@ -393,7 +394,7 @@ footer.visible {
 .progress-bar-container {
   position: absolute;
   top: 0;
-  height: 5px;
+  height: 2px;
   width: 100%;
   z-index: 10;
   transition: var(--transition);
@@ -903,7 +904,7 @@ footer ul {
 #code::after {
   content: '';
   display: inline-block;
-  width: 0.6ch;
+  width: 0.2ch;
   height: 1em;
   margin-left: 2px;
   vertical-align: -2px;

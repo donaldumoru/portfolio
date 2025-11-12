@@ -1,7 +1,7 @@
 import { MAKE_NAV_AND_FOOTER } from '/src/js/ui/landingPage.mjs';
 import paths from '../paths.mjs';
 import { fetchData } from '../fetch.mjs';
-import { projectPath } from '../project.mjs';
+// import { projectPath } from '../project.mjs';
 
 const renderOverview = function (data) {
   return ARTICLE(

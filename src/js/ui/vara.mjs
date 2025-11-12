@@ -41,7 +41,7 @@ export default async function (fn, path) {
         console.log(Prism);
         Prism.highlightElement(node);
 
-        //////// SET TO SESSION STORAGE TO AVOID RUNNING THIS EVERY TIME USER GOES HOME
+        //////// TODO:::: SET TO SESSION STORAGE TO AVOID RUNNING THIS EVERY TIME USER CLICKS HOME
       }
     }
     requestAnimationFrame(frame);
