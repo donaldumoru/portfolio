@@ -248,6 +248,14 @@ footer.visible {
   opacity: 1;
 }
 
+.project-img-wrapper {
+  position: absolute;
+}
+
+.project-img-wrapper img {
+  width: 400px;
+}
+
 .projects h4 {
   font-size: 1.25rem;
   font-weight: 400;

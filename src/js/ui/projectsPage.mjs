@@ -7,6 +7,11 @@ export default async function (fn, path) {
     { class: 'projects', id: 'projects' },
 
     DIV(
+      { class: 'project-img-wrapper' },
+      IMG({ src: 'assets/images/about.jpg' })
+    ),
+
+    DIV(
       { class: 'section-wrapper' },
 
       H2({ 'data-blur-on-scroll': true }, data.title),
