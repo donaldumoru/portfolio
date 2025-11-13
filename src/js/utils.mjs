@@ -62,7 +62,7 @@ const createParagraphs = function ({ text, charLimit }) {
   return arr;
 };
 
-const fadeInPage = function (el) {
+const fadeIn = function (el) {
   el.classList.remove('visible');
   //force reflow so browser paints opacity:0 first
   void el.offsetWidth;
@@ -72,4 +72,39 @@ const fadeInPage = function (el) {
   });
 };
 
-export { createParagraphs, fadeInPage };
+const INIT_DISPLAY_PROJECT_IMAGE = async function (data) {
+  const result = await data;
+  const projects = result.projects;
+
+  const getImageSrc = function (elementid) {
+    return projects.find(project => project.id === elementid).image.loadimg.src;
+  };
+
+  const projectCards = document.querySelectorAll('article');
+  const imageContainer = document.querySelector('.project-img-wrapper');
+
+  const displayRelevantProjectImage = function (e) {
+    const imageSrc = getImageSrc(e.target.id);
+
+    const projectCardTopPosition =
+      e.target.firstChild.getBoundingClientRect().top;
+
+    imageContainer.style.top = `${projectCardTopPosition - 20}px`;
+    imageContainer.firstChild.src = imageSrc;
+
+    fadeIn(imageContainer.firstChild);
+  };
+
+  projectCards.forEach(card =>
+    card.addEventListener('mouseenter', displayRelevantProjectImage)
+  );
+
+  projectCards.forEach(card =>
+    card.addEventListener('mouseleave', function () {
+      imageContainer.firstChild.classList.remove('visible');
+      imageContainer.firstChild.src = '';
+    })
+  );
+};
+
+export { createParagraphs, fadeIn, INIT_DISPLAY_PROJECT_IMAGE };

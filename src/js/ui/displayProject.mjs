@@ -1,21 +1,17 @@
-import { MAKE_NAV_AND_FOOTER } from '/src/js/ui/landingPage.mjs';
-import paths from '../paths.mjs';
-import { fetchData } from '../fetch.mjs';
-// import { projectPath } from '../project.mjs';
-
 const renderOverview = function (data) {
+  const overviewData = data.overview;
   return ARTICLE(
     { class: 'project-card' },
-    H4('Overview'),
+    H4(overviewData.title),
 
-    P({ 'data-blur-on-scroll': true }, data.overview),
+    P({ 'data-blur-on-scroll': true }, overviewData.description),
 
     DIV({ class: 'role-container' }),
 
     DIV(
       { class: 'tools-used' },
-      data?.tools_used.map((tool, i) =>
-        i === data.tools_used.length - 1
+      overviewData.tools_used.map((tool, i) =>
+        i === overviewData.tools_used.length - 1
           ? SPAN(`#${tool}`)
           : SPAN(`#${tool} • `)
       )
@@ -28,19 +24,20 @@ const renderOverview = function (data) {
         { class: 'external-links' },
 
         A(
-          { href: data.link.demo, target: '_blank', rel: 'noopener' },
-          IMG({ src: 'assets/icons/external.svg' }),
+          { href: overviewData.link.demo, target: '_blank', rel: 'noopener' },
+
+          IMG({ loading: 'lazy', src: 'assets/icons/external.svg' }),
           'Demo'
         ),
 
-        data.link.github
+        overviewData.link.github
           ? A(
               {
-                href: data.link.github,
+                href: overviewData.link.github,
                 target: '_blank',
                 rel: 'noopener',
               },
-              IMG({ src: 'assets/icons/external.svg' }),
+              IMG({ loading: 'lazy', src: 'assets/icons/external.svg' }),
               'Repo'
             )
           : ''
@@ -55,32 +52,86 @@ const renderInDepthDetails = function (data) {
   }
 
   const researchData = data?.in_depth_details?.research;
+  const implementationData = data?.in_depth_details?.implementation;
 
   const renderResearchSection = data =>
     SECTION(
       { class: 'section-project-details' },
-      H4('Research'),
 
-      ARTICLE(
-        { class: 'project-card' },
-        P({ class: 'research-question' }, data?.question?.question)
-      ),
-
-      researchData?.methods.map(method => {
+      data?.methods.map(method => {
         return [
           ARTICLE(
             { class: 'project-card' },
-            H5(method.name),
-
+            H4(method.name),
             P(method.purpose),
-
-            H6(method.methodology.title),
-
-            P(method.methodology.description),
 
             UL(
               method?.findings.map(finding =>
-                LI(`${finding.title} ${finding.description}`)
+                LI(
+                  `${finding.title ? finding.title + ' ' : ''}${
+                    finding.description
+                  }`
+                )
+              )
+            )
+          ),
+        ];
+      }),
+
+      data?.results
+        ? ARTICLE(
+            { class: 'result-article' },
+
+            data?.results?.system_usability_scale
+              ? (DIV({ class: '' }),
+                DIV({ class: 'circular-bar' }, DIV({ class: 'score' }, 0)))
+              : ''
+          )
+        : ''
+    );
+
+  const renderImplementationSection = data =>
+    SECTION(
+      { class: 'section-project-details' },
+      data?.results.map(result => {
+        return [
+          SECTION(
+            { class: 'project-card result-card' },
+            H4(result.name),
+            P(result.description),
+
+            UL(
+              result?.findings.map((finding, index) =>
+                LI(
+                  SPAN(index + 1 < 10 ? `0${index + 1}` : index + 1),
+                  P(
+                    `${finding.title ? finding.title + ' ' : ''}${
+                      finding.description
+                    }`
+                  ),
+
+                  DIV(
+                    { class: 'slider-container' },
+                    DIV(
+                      { class: 'image-container' },
+                      finding?.pictures.map(picture =>
+                        IMG({
+                          loading: 'lazy',
+                          src: picture?.image?.loadimg.src,
+                          alt: picture?.image?.loadimg.alt,
+                          // 'data-blur-on-scroll': true,
+                        })
+                      )
+                    ),
+
+                    finding?.pictures.length > 1
+                      ? [
+                          I({ class: 'fas fa-angle-double-left btn prev' }),
+                          I({ class: 'fas fa-angle-double-right btn next' }),
+                        ]
+                      : ''
+                  )
+                )
               )
             )
           ),
@@ -88,29 +139,15 @@ const renderInDepthDetails = function (data) {
       })
     );
 
-  const recurse = function (data) {
-    // if(){}
-  };
-
-  recurse(researchData);
-
-  return [renderResearchSection(researchData)];
-
-  // console.log(inDepthDetailsData);
-  // return inDepthDetailsData.map(section =>
-  //   ARTICLE(
-  //     { class: 'project-card' },
-
-  //     H4(section[0].split('_').join(' '))
-  //   )
-  // );
+  return [
+    renderResearchSection(researchData),
+    renderImplementationSection(implementationData),
+  ];
 };
 
 const MAKE_RELEVANT_PROJECT_PAGE = async function (fn, path) {
   const projectData = await fn(path);
   document.title = projectData.title;
-
-  // console.log(projectData);
 
   return ('main'.jsl.eof = SECTION(
     { class: 'project-container' },

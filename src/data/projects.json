@@ -28,6 +28,17 @@
         }
       ],
 
+      "image": {
+        "lazy-img": {
+          "src": "assets/images/projects/runet/lazy/homepage-lazy.png",
+          "alt": ""
+        },
+        "loadimg": {
+          "src": "assets/images/projects/runet/original/runet-home.png",
+          "alt": ""
+        }
+      },
+
       "link": {
         "demo": "https://runet-web-test.codemax.net/",
         "github": "",
@@ -55,6 +66,17 @@
         }
       ],
 
+      "image": {
+        "lazy-img": {
+          "src": "assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
+          "alt": ""
+        },
+        "loadimg": {
+          "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
+          "alt": ""
+        }
+      },
+
       "link": {
         "demo": "https://arrayipsum.netlify.app",
         "github": "https://github.com/donaldumoru/array-ipsum",
@@ -81,6 +103,17 @@
           "category": "frontend"
         }
       ],
+
+      "image": {
+        "lazy-img": {
+          "src": "assets/images/projects/rawtentik/lazy/rawtentik-lazy.jpg",
+          "alt": ""
+        },
+        "loadimg": {
+          "src": "assets/images/projects/rawtentik/original/rawtentik-home.png",
+          "alt": ""
+        }
+      },
 
       "link": {
         "demo": "https://rawtentik.com",

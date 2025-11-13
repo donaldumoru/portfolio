@@ -1,6 +1,6 @@
 import { fetchData } from './fetch.mjs';
 import paths from './paths.mjs';
-import { fadeInPage } from './utils.mjs';
+import { fadeIn } from './utils.mjs';
 import { MAKE_NAV_AND_FOOTER, MAKE_WELCOME_TEXT } from './ui/landingPage.mjs';
 import MAKE_VARA from './ui/vara.mjs';
 import MAKE_PROJECTS_SECTION from './ui/projectsPage.mjs';

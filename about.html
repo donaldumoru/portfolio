@@ -19,7 +19,7 @@
     <script type="module">
       import { fetchData } from './src/js/fetch.mjs';
       import paths from './src/js/paths.mjs';
-      import { fadeInPage } from './src/js/utils.mjs';
+      import { fadeIn } from './src/js/utils.mjs';
       import MAKE_ABOUT_SECTION from './src/js/ui/aboutPage.mjs';
       import { MAKE_NAV_AND_FOOTER } from './src/js/ui/landingPage.mjs';
       import { INIT_INTERACTIONS } from '/script.mjs';
@@ -31,8 +31,8 @@
       const nav = document.querySelector('nav');
       const footer = document.querySelector('footer');
 
-      //   fadeInPage([aboutSection, nav, footer]);
-      fadeInPage(aboutSection);
+      //   fadeIn([aboutSection, nav, footer]);
+      fadeIn(aboutSection);
 
       INIT_INTERACTIONS();
 

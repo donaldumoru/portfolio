@@ -1,6 +1,11 @@
 {
   "title": "about",
-  "image": { "src": "assets/images/about.jpg", "alt": "" },
+
+  "image": {
+    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+    "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
+  },
+
   "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet sed elit a tristique. Donec felis quam, fermentum ac nisl at, molestie accumsan orci. Phasellus dolor libero, tempor ut dui at, maximus luctus erat. Maecenas fringilla ex turpis, quis hendrerit nulla vestibulum quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.  Maecenas fringilla ex turpis, quis hendrerit nulla vestibulum quis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
 
   "chatbox": [

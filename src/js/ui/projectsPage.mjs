@@ -6,10 +6,7 @@ export default async function (fn, path) {
   return ('main'.jsl.eof = SECTION(
     { class: 'projects', id: 'projects' },
 
-    DIV(
-      { class: 'project-img-wrapper' },
-      IMG({ src: 'assets/images/about.jpg' })
-    ),
+    DIV({ class: 'project-img-wrapper' }, IMG({ src: '' })),
 
     DIV(
       { class: 'section-wrapper' },
@@ -18,7 +15,7 @@ export default async function (fn, path) {
 
       data.projects.map(project =>
         ARTICLE(
-          { class: 'project-card' },
+          { class: 'project-card', id: project.id },
 
           H4({ 'data-blur-on-scroll': true }, project.name),
 

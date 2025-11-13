@@ -28,7 +28,7 @@ export default async function (fn, path) {
       DIV(
         { class: 'about-img-wrapper' },
         IMG({
-          src: data.image.src,
+          src: data.image.loadimg.src,
           alt: data.image.alt,
           // 'data-blur-on-scroll': true,
         })
