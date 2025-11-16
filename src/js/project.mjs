@@ -145,21 +145,15 @@ allPrevEl.forEach(prevEl =>
 
 const sectionsToObserve = document.querySelectorAll('.project-section');
 const header = document.querySelector('header');
-const headerHeight = header.getBoundingClientRect().height;
-
-console.log(headerHeight);
 
 const options = {
   root: null,
   threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 1],
 };
 
-// console.log(sectionsToObserve);
-
 const observerCallback = entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      // console.log(entry);
       return;
     }
 
