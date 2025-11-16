@@ -47,32 +47,52 @@ let InitialValue = 0;
 let finaleValue = 20.83;
 let speed = 50;
 
-let timer = setInterval(() => {
-  InitialValue += 1;
+const susOptions = {
+  root: null,
+  threshold: 1,
+};
 
-  const progressColor = decideColor(susColors, InitialValue);
+const susObserverCallback = entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    }
 
-  CircularBar.style.background = `conic-gradient(${progressColor} ${
-    (InitialValue / 100) * 360
-  }deg, var(--text-color-grey-title) 0deg)`;
+    let timer = setInterval(() => {
+      InitialValue += 1;
 
-  PercentValue.textContent =
-    InitialValue < finaleValue ? InitialValue : finaleValue;
+      const progressColor = decideColor(susColors, InitialValue);
 
-  if (InitialValue >= finaleValue) {
-    clearInterval(timer);
-  }
-}, speed);
+      CircularBar.style.background = `conic-gradient(${progressColor} ${
+        (InitialValue / 100) * 360
+      }deg, var(--text-color-grey-title) 0deg)`;
+
+      PercentValue.textContent =
+        InitialValue < finaleValue ? InitialValue : finaleValue;
+
+      if (InitialValue >= finaleValue) {
+        clearInterval(timer);
+      }
+    }, speed);
+
+    susObserver.unobserve(CircularBar);
+  });
+};
+
+const susObserver = new IntersectionObserver(susObserverCallback, susOptions);
+
+susObserver.observe(CircularBar);
 
 ///// IMAGE SLIDER
 const allNextEl = document.querySelectorAll('.next');
 const allPrevEl = document.querySelectorAll('.prev');
 const allImageContainers = document.querySelectorAll('.image-container');
+
 allImageContainers.forEach(
   container => (container.style.transform = 'translateX(0%)')
 );
 
-function updateImg(container, images, current) {
+const updateImg = function (container, images, current) {
   if (current > images.length) {
     current = 1;
   } else if (current < 1) {
@@ -80,7 +100,7 @@ function updateImg(container, images, current) {
   }
 
   container.style.transform = `translateX(-${(current - 1) * 100}%)`;
-}
+};
 
 const slideImage = function (e, btn) {
   const imageContainerEl =
@@ -117,4 +137,67 @@ allPrevEl.forEach(prevEl =>
     slider();
   })
 );
-// export default getProjectPath();
+
+const sectionsToObserve = document.querySelectorAll('.project-section');
+const header = document.querySelector('header');
+const headerHeight = header.getBoundingClientRect().height;
+
+console.log(headerHeight);
+
+const options = {
+  root: null,
+  threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 1],
+};
+
+// console.log(sectionsToObserve);
+
+const observerCallback = entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      // console.log(entry);
+      return;
+    }
+
+    if (
+      entry.isIntersecting &&
+      entry.target.id === 'overview' &&
+      entry.intersectionRatio > 0.5
+    ) {
+      const allTimelineNavLinks =
+        document.querySelectorAll('.timeline-nav-link');
+
+      const arrayOfLinks = [...allTimelineNavLinks];
+      arrayOfLinks.forEach(link => link.classList.remove('current-link'));
+      allTimelineNavLinks[0].classList.add('current-link');
+    }
+
+    if (entry.boundingClientRect.top < 0 && entry.intersectionRatio < 0.4) {
+      const sections = [...sectionsToObserve];
+
+      const indexOfCurrentSection = sections.findIndex(
+        section => entry.target.id === section.id
+      );
+
+      const indexOfNextSection = indexOfCurrentSection + 1;
+
+      const sectionToUpdate = sections[indexOfNextSection];
+
+      const allTimelineNavLinks =
+        document.querySelectorAll('.timeline-nav-link');
+
+      const arrayOfLinks = [...allTimelineNavLinks];
+
+      const linkToUpdate = arrayOfLinks.find(
+        link => link.textContent === sectionToUpdate.id
+      );
+
+      arrayOfLinks.forEach(link => link.classList.remove('current-link'));
+
+      linkToUpdate.classList.add('current-link');
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, options);
+
+sectionsToObserve.forEach(section => observer.observe(section));

@@ -70,23 +70,24 @@
       }
     },
 
-    "results": {
+    "improvements": {
       "results": [
         {
-          "name": "Results",
+          "name": "Improvements",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 
           "findings": [
             {
               "title": "",
               "description": "Streamlined navigation based on insights from user-centered card-sorting sessions.",
+
               "pictures": [
                 {
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
                     "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
                   },
-                  "caption": ""
+                  "caption": "This is a picture that belongs here ---- me"
                 },
                 {
                   "image": {
@@ -99,7 +100,7 @@
                       "alt": ""
                     }
                   },
-                  "caption": ""
+                  "caption": "Another picture that belongs here --- arrayipsum"
                 },
 
                 {
@@ -140,7 +141,9 @@
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
                     "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
-                  }
+                  },
+
+                  "caption": ""
                 },
                 {
                   "image": {
@@ -232,8 +235,8 @@
 
       "system_usability_scale": {
         "title": "System Usability Scale score",
-        "system_usability_score": 20.83,
-        "interpretation": "Worst Imaginable"
+        "system_usability_score": 70.71,
+        "interpretation": "Good"
       }
     }
   }

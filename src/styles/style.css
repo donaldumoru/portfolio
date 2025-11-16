@@ -446,12 +446,12 @@ footer.visible {
 
 .result-card ul {
   padding: unset;
-  gap: 100px;
+  gap: 50px;
   margin-top: 40px;
 }
 
 .result-card span {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: var(--primary-font);
   color: var(--color-titles-dark);
 }
@@ -495,6 +495,7 @@ footer.visible {
 
 .timeline-nav-link {
   cursor: pointer;
+  transition: var(--transition);
 }
 
 .timeline-bar {
@@ -506,9 +507,20 @@ footer.visible {
 
 .short-timeline-bar {
   display: flex;
-  width: 20px;
+  width: 18px;
   height: 1.5px;
   background: #9f9f9e;
+}
+
+#overview,
+#research,
+#improvements {
+  scroll-margin-top: 8rem;
+}
+
+.current-link {
+  font-size: 1rem;
+  color: var(--text-color) !important;
 }
 
 /**CIRCULAR PROGRESS**/

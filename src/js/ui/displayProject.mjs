@@ -1,7 +1,9 @@
+import { getImageCaption } from '../utils.mjs';
+
 const renderOverview = function (data) {
   const overviewData = data.project_details.overview;
   return ARTICLE(
-    { class: 'project-card', id: 'overview' },
+    { class: 'project-card project-section', id: 'overview' },
     H4(overviewData.title),
 
     P({ 'data-blur-on-scroll': true }, overviewData.description),
@@ -48,7 +50,7 @@ const renderOverview = function (data) {
 
 const renderInDepthDetails = function (data) {
   const researchData = data?.project_details?.research;
-  const resultsData = data?.project_details?.results;
+  const resultsData = data?.project_details?.improvements;
 
   const renderResearchSection = data => {
     if (!Object.keys(researchData).length) {
@@ -56,7 +58,7 @@ const renderInDepthDetails = function (data) {
     }
 
     return SECTION(
-      { class: 'section-project-details', id: 'research' },
+      { class: 'section-project-details project-section', id: 'research' },
 
       data?.methods.map(method => {
         return [
@@ -97,7 +99,7 @@ const renderInDepthDetails = function (data) {
     }
 
     return SECTION(
-      { class: 'section-project-details', id: 'results' },
+      { class: 'section-project-details project-section', id: 'improvements' },
       data?.results.map(result => {
         return [
           SECTION(
@@ -170,6 +172,8 @@ const makeProjectGauge = function (data) {
               heading,
               SPAN({ class: 'timeline-bar' })
             ),
+            LI(SPAN({ class: 'short-timeline-bar' })),
+            LI(SPAN({ class: 'short-timeline-bar' })),
             LI(SPAN({ class: 'short-timeline-bar' })),
             LI(SPAN({ class: 'short-timeline-bar' })),
             LI(SPAN({ class: 'short-timeline-bar' })),
