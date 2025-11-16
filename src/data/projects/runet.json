@@ -29,7 +29,7 @@
       "methods": [
         {
           "name": "Research on the Current Website",
-          "purpose": "Through a heuristic evaluation with three UX and frontend experts, followed by usability testing with engineers and engineering students, several key issues became clear.",
+          "purpose": "Through a heuristic evaluation with three UX and frontend experts, followed by usability testing with engineers and engineering students using task-based metrics and a System Usability Scale (SUS), several key issues became clear.",
 
           "findings": [
             {
@@ -74,7 +74,7 @@
       "results": [
         {
           "name": "Improvements",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "description": "After identifying major issues with navigation, content clarity, trustworthiness, and the checkout flow, I designed and developed improvements that addressed these problems at their core. This involved rethinking how users search for information, how they find the right software for their engineering needs, and how they complete a purchase. The improvements below summarize the key changes made.",
 
           "findings": [
             {
@@ -82,41 +82,6 @@
               "description": "Streamlined navigation based on insights from user-centered card-sorting sessions.",
 
               "pictures": [
-                {
-                  "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
-                    "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
-                  },
-                  "caption": "This is a picture that belongs here ---- me"
-                },
-                {
-                  "image": {
-                    "lazy-img": {
-                      "src": "assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
-                      "alt": ""
-                    },
-                    "loadimg": {
-                      "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
-                      "alt": ""
-                    }
-                  },
-                  "caption": "Another picture that belongs here --- arrayipsum"
-                },
-
-                {
-                  "image": {
-                    "lazy-img": {
-                      "src": "assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
-                      "alt": ""
-                    },
-                    "loadimg": {
-                      "src": "assets/images/projects/rawtentik/original/rawtentik-home.png",
-                      "alt": ""
-                    }
-                  },
-                  "caption": ""
-                },
-
                 {
                   "image": {
                     "lazy-img": {
@@ -135,16 +100,39 @@
 
             {
               "title": "",
-              "description": "Site-wide search that helps users quickly find products, manuals, updates, and other key information.",
+              "description": "A use-case search system that lets users filter and find the exact software they need based on what they want to design",
               "pictures": [
                 {
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
-                    "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
+                    "loadimg": {
+                      "src": "assets/images/projects/runet/original/runet-use-case.png",
+                      "alt": ""
+                    }
                   },
 
                   "caption": ""
                 },
+
+                {
+                  "image": {
+                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "loadimg": {
+                      "src": "assets/images/projects/runet/original/runet-use-case-found.png",
+                      "alt": ""
+                    }
+                  },
+
+                  "caption": ""
+                }
+              ]
+            },
+
+            {
+              "title": "",
+              "description": "Multilingual support with a centralized i18n dictionary, making it easy to maintain translations and serve users in multiple languages.",
+
+              "pictures": [
                 {
                   "image": {
                     "lazy-img": {
@@ -152,10 +140,45 @@
                       "alt": ""
                     },
                     "loadimg": {
-                      "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
+                      "src": "assets/images/projects/runet/original/runet-greece.png",
                       "alt": ""
                     }
                   },
+                  "caption": ""
+                },
+
+                {
+                  "image": {
+                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "loadimg": {
+                      "src": "assets/images/projects/runet/original/runet-english.png",
+                      "alt": ""
+                    }
+                  },
+
+                  "caption": ""
+                },
+
+                {
+                  "image": {
+                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "loadimg": {
+                      "src": "assets/images/projects/runet/original/runet-beton-greece.png",
+                      "alt": ""
+                    }
+                  },
+
+                  "caption": ""
+                },
+                {
+                  "image": {
+                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "loadimg": {
+                      "src": "assets/images/projects/runet/original/runet-beton-english.png",
+                      "alt": ""
+                    }
+                  },
+
                   "caption": ""
                 }
               ]
@@ -168,7 +191,10 @@
                 {
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
-                    "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
+                    "loadimg": {
+                      "src": "assets/images/projects/runet/original/runet-add-to-cart.png",
+                      "alt": ""
+                    }
                   },
                   "caption": ""
                 },
@@ -180,7 +206,7 @@
                       "alt": ""
                     },
                     "loadimg": {
-                      "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
+                      "src": "assets/images/projects/runet/original/runet-checkout.png",
                       "alt": ""
                     }
                   },
@@ -196,7 +222,10 @@
                 {
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
-                    "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
+                    "loadimg": {
+                      "src": "assets/images/projects/runet/original/runet-bundle-suggestion.png",
+                      "alt": ""
+                    }
                   },
                   "caption": ""
                 },
@@ -207,23 +236,9 @@
                       "alt": ""
                     },
                     "loadimg": {
-                      "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
+                      "src": "assets/images/projects/runet/original/runet-bundle-cart.png",
                       "alt": ""
                     }
-                  },
-                  "caption": ""
-                }
-              ]
-            },
-
-            {
-              "title": "",
-              "description": "Integrated automated payment flow for smooth, secure purchasing across different countries.",
-              "pictures": [
-                {
-                  "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
-                    "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
                   },
                   "caption": ""
                 }
