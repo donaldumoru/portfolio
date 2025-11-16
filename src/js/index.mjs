@@ -5,7 +5,7 @@ import { MAKE_NAV_AND_FOOTER, MAKE_WELCOME_TEXT } from './ui/landingPage.mjs';
 import MAKE_VARA from './ui/vara.mjs';
 import MAKE_PROJECTS_SECTION from './ui/projectsPage.mjs';
 import MAKE_ABOUT_SECTION from './ui/aboutPage.mjs';
-import { INIT_INTERACTIONS } from '/script.mjs';
+import { INIT_INTERACTIONS } from '/src/js/script.mjs';
 
 await MAKE_NAV_AND_FOOTER(fetchData, paths.general.home);
 

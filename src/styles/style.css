@@ -119,7 +119,7 @@ nav {
 
 nav > a {
   font-family: var(--primary-font);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text-color);
   text-decoration: none;
   height: fit-content;
@@ -404,8 +404,7 @@ footer.visible {
   width: fit-content;
   text-transform: uppercase;
   cursor: default;
-  margin-top: 1.2rem;
-  /* display: none; */
+  margin-top: 0.5rem;
 }
 
 .progress-bar-container {
@@ -432,12 +431,6 @@ footer.visible {
   border-left: 0.25rem solid var(--color-titles-dark);
 }
 
-/* .result-article {
-  width: 100%;
-  height: 200px;
-  background-color: var(--text-color-grey-title);
-} */
-
 .section-project-details {
   display: flex;
   flex-direction: column;
@@ -461,6 +454,61 @@ footer.visible {
   font-size: 3rem;
   font-family: var(--primary-font);
   color: var(--color-titles-dark);
+}
+
+/********PROJECT TIMELINE********/
+.project-timeline-container {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: var(--padding-nav-items);
+  height: 350px;
+  font-family: var(--primary-font);
+  font-size: 0.85rem;
+}
+
+.project-timeline {
+  height: 100%;
+  background: #9f9f9e;
+  width: 1px;
+}
+
+.project-timeline-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project-timeline-wrapper li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  text-transform: lowercase;
+  color: #9f9f9e;
+}
+
+.timeline-nav-link {
+  cursor: pointer;
+}
+
+.timeline-bar {
+  display: flex;
+  width: 30px;
+  height: 1px;
+  background: #9f9f9e;
+}
+
+.short-timeline-bar {
+  display: flex;
+  width: 20px;
+  height: 1.5px;
+  background: #9f9f9e;
 }
 
 /**CIRCULAR PROGRESS**/
@@ -770,9 +818,8 @@ footer ul {
     height: 3px;
   }
 
-  .research-question {
-    padding: 10px 15px 10px 15px;
-    font-size: 0.85rem;
+  .project-timeline-container {
+    display: none;
   }
 }
 

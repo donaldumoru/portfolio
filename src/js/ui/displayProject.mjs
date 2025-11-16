@@ -1,7 +1,7 @@
 const renderOverview = function (data) {
-  const overviewData = data.overview;
+  const overviewData = data.project_details.overview;
   return ARTICLE(
-    { class: 'project-card' },
+    { class: 'project-card', id: 'overview' },
     H4(overviewData.title),
 
     P({ 'data-blur-on-scroll': true }, overviewData.description),
@@ -47,16 +47,16 @@ const renderOverview = function (data) {
 };
 
 const renderInDepthDetails = function (data) {
-  if (!data?.in_depth_details.section_exists) {
-    return;
-  }
+  const researchData = data?.project_details?.research;
+  const resultsData = data?.project_details?.results;
 
-  const researchData = data?.in_depth_details?.research;
-  const implementationData = data?.in_depth_details?.implementation;
+  const renderResearchSection = data => {
+    if (!Object.keys(researchData).length) {
+      return;
+    }
 
-  const renderResearchSection = data =>
-    SECTION(
-      { class: 'section-project-details' },
+    return SECTION(
+      { class: 'section-project-details', id: 'research' },
 
       data?.methods.map(method => {
         return [
@@ -89,10 +89,15 @@ const renderInDepthDetails = function (data) {
           )
         : ''
     );
+  };
 
-  const renderImplementationSection = data =>
-    SECTION(
-      { class: 'section-project-details' },
+  const renderResultsSection = data => {
+    if (!Object.keys(resultsData).length) {
+      return;
+    }
+
+    return SECTION(
+      { class: 'section-project-details', id: 'results' },
       data?.results.map(result => {
         return [
           SECTION(
@@ -138,29 +143,77 @@ const renderInDepthDetails = function (data) {
         ];
       })
     );
+  };
 
   return [
     renderResearchSection(researchData),
-    renderImplementationSection(implementationData),
+    renderResultsSection(resultsData),
   ];
+};
+
+const makeProjectGauge = function (data) {
+  const projectHeadings = Object.keys(data);
+
+  return DIV(
+    { class: 'project-timeline-container' },
+
+    UL(
+      { class: 'project-timeline-wrapper' },
+
+      projectHeadings.map((heading, index, arr) => {
+        const result = [];
+
+        if (index < arr.length - 1) {
+          result.push([
+            LI(
+              { class: 'timeline-nav-link' },
+              heading,
+              SPAN({ class: 'timeline-bar' })
+            ),
+            LI(SPAN({ class: 'short-timeline-bar' })),
+            LI(SPAN({ class: 'short-timeline-bar' })),
+            LI(SPAN({ class: 'short-timeline-bar' })),
+          ]);
+        } else {
+          result.push(
+            { href: `#${heading}` },
+            LI(
+              { class: 'timeline-nav-link' },
+              heading,
+              SPAN({ class: 'timeline-bar' })
+            )
+          );
+        }
+
+        return result;
+      })
+    ),
+
+    DIV({ class: 'project-timeline' })
+  );
 };
 
 const MAKE_RELEVANT_PROJECT_PAGE = async function (fn, path) {
   const projectData = await fn(path);
   document.title = projectData.title;
 
-  return ('main'.jsl.eof = SECTION(
-    { class: 'project-container' },
+  return ('main'.jsl.eof = [
+    [
+      SECTION(
+        { class: 'project-container' },
 
-    SECTION(
-      { class: 'section-wrapper project-wrapper' },
-      H2({ 'data-blur-on-scroll': true }, projectData.title),
+        SECTION(
+          { class: 'section-wrapper project-wrapper' },
+          H2({ 'data-blur-on-scroll': true }, projectData.title),
 
-      renderOverview(projectData),
+          renderOverview(projectData),
 
-      renderInDepthDetails(projectData)
-    )
-  ));
+          renderInDepthDetails(projectData)
+        )
+      ),
+      makeProjectGauge(projectData.project_details),
+    ],
+  ]);
 };
 
 export { MAKE_RELEVANT_PROJECT_PAGE };

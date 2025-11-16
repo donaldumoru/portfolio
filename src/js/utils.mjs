@@ -107,4 +107,21 @@ const INIT_DISPLAY_PROJECT_IMAGE = async function (data) {
   );
 };
 
-export { createParagraphs, fadeIn, INIT_DISPLAY_PROJECT_IMAGE };
+const scrollSectionsIntoView = function () {
+  const allSectionNavLinks = document.querySelectorAll('.timeline-nav-link');
+
+  // console.log(allSectionNavLinks);
+
+  allSectionNavLinks.forEach(navLink => {
+    navLink.addEventListener('click', () => {
+      const section = document.querySelector(`#${navLink.textContent}`);
+      section.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+};
+export {
+  createParagraphs,
+  fadeIn,
+  INIT_DISPLAY_PROJECT_IMAGE,
+  scrollSectionsIntoView,
+};

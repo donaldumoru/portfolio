@@ -1,37 +1,31 @@
 {
   "id": "runet",
   "title": "Runet-Software website redesign",
-  "overview": {
-    "title": "Overview",
-    "description": "Runet-Software develops advanced structural engineering tools used worldwide, but their website had become outdated and difficult to navigate. During my internship at Ambianti B.V, my task was to create a modern, intuitive, and efficient platform that not only improves the user experience for engineers, architects, and other potential customers but also aligns with Runet-Software’s business goals.",
-    "tools_used": [
-      "html5",
-      "css",
-      "jsl3",
-      "javascript",
-      "node.js",
-      "Justinmind"
-    ],
 
-    "img": "assets/images/projects/runet/original/runet-home.png",
+  "project_details": {
+    "overview": {
+      "title": "Overview",
+      "description": "Runet-Software develops advanced structural engineering tools used worldwide, but their website had become outdated and difficult to navigate. During my internship at Ambianti B.V, my task was to create a modern, intuitive, and efficient platform that not only improves the user experience for engineers, architects, and other potential customers but also aligns with Runet-Software’s business goals.",
+      "tools_used": [
+        "html5",
+        "css",
+        "jsl3",
+        "javascript",
+        "node.js",
+        "Justinmind"
+      ],
 
-    "link": {
-      "demo": "https://runet-web-test.codemax.net/",
-      "github": ""
-    },
+      "img": "assets/images/projects/runet/original/runet-home.png",
 
-    "role": ["User Research", "UX Design", "Full stack Development"]
-  },
-
-  "in_depth_details": {
-    "section_exists": true,
-
-    "research": {
-      "question": {
-        "title": "Research Question",
-        "question": "How can Runet Software’s website be redesigned to enhance user engagement, improve usability, and optimize the sales process to effectively communicate its value to both new and existing clients?"
+      "link": {
+        "demo": "https://runet-web-test.codemax.net/",
+        "github": ""
       },
 
+      "role": ["User Research", "UX Design", "Full stack Development"]
+    },
+
+    "research": {
       "methods": [
         {
           "name": "Research on the Current Website",
@@ -76,10 +70,10 @@
       }
     },
 
-    "implementation": {
+    "results": {
       "results": [
         {
-          "name": "Implementation",
+          "name": "Results",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 
           "findings": [
@@ -91,7 +85,8 @@
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
                     "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
-                  }
+                  },
+                  "caption": ""
                 },
                 {
                   "image": {
@@ -103,7 +98,8 @@
                       "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
                       "alt": ""
                     }
-                  }
+                  },
+                  "caption": ""
                 },
 
                 {
@@ -116,7 +112,8 @@
                       "src": "assets/images/projects/rawtentik/original/rawtentik-home.png",
                       "alt": ""
                     }
-                  }
+                  },
+                  "caption": ""
                 },
 
                 {
@@ -129,7 +126,8 @@
                       "src": "assets/images/projects/runet/original/runet-home.png",
                       "alt": ""
                     }
-                  }
+                  },
+                  "caption": ""
                 }
               ]
             },
@@ -154,7 +152,8 @@
                       "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
                       "alt": ""
                     }
-                  }
+                  },
+                  "caption": ""
                 }
               ]
             },
@@ -167,8 +166,10 @@
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
                     "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
-                  }
+                  },
+                  "caption": ""
                 },
+
                 {
                   "image": {
                     "lazy-img": {
@@ -179,7 +180,8 @@
                       "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
                       "alt": ""
                     }
-                  }
+                  },
+                  "caption": ""
                 }
               ]
             },
@@ -192,7 +194,8 @@
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
                     "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
-                  }
+                  },
+                  "caption": ""
                 },
                 {
                   "image": {
@@ -204,7 +207,8 @@
                       "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
                       "alt": ""
                     }
-                  }
+                  },
+                  "caption": ""
                 }
               ]
             },
@@ -217,7 +221,8 @@
                   "image": {
                     "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
                     "loadimg": { "src": "assets/images/about.jpg", "alt": "" }
-                  }
+                  },
+                  "caption": ""
                 }
               ]
             }
@@ -231,11 +236,5 @@
         "interpretation": "Worst Imaginable"
       }
     }
-  },
-
-  "tech_stack": {
-    "frontend": ["HTML", "CSS", "JavaScript (JSL3)"],
-    "backend": ["Node.js", "Express"],
-    "tools": ["Justinmind", "Git"]
   }
 }
