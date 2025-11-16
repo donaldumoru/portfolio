@@ -85,8 +85,24 @@ const renderInDepthDetails = function (data) {
             { class: 'result-article' },
 
             data?.results?.system_usability_scale
-              ? (DIV({ class: '' }),
-                DIV({ class: 'circular-bar' }, DIV({ class: 'score' }, 0)))
+              ? // DIV({ class: '' }),
+                [
+                  DIV(
+                    { class: 'sus-info' },
+                    H5(data?.results?.system_usability_scale?.title),
+                    P(data?.results?.system_usability_scale?.interpretation)
+                  ),
+
+                  DIV(
+                    {
+                      class: 'circular-bar',
+                      'data-sus-score':
+                        data?.results?.system_usability_scale
+                          .system_usability_score,
+                    },
+                    DIV({ class: 'score' }, 0)
+                  ),
+                ]
               : ''
           )
         : ''
@@ -143,7 +159,31 @@ const renderInDepthDetails = function (data) {
             )
           ),
         ];
-      })
+      }),
+
+      data?.system_usability_scale
+        ? ARTICLE(
+            { class: 'result-article' },
+
+            data?.system_usability_scale
+              ? [
+                  DIV(
+                    { class: 'sus-info' },
+                    H5(data?.system_usability_scale?.title),
+                    P(data?.system_usability_scale?.interpretation)
+                  ),
+                  DIV(
+                    {
+                      class: 'circular-bar',
+                      'data-sus-score':
+                        data?.system_usability_scale.system_usability_score,
+                    },
+                    DIV({ class: 'score' }, 0)
+                  ),
+                ]
+              : ''
+          )
+        : ''
     );
   };
 

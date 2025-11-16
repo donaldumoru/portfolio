@@ -40,8 +40,9 @@ const decideColor = function (arr, num) {
   return susColors.find(item => num <= item.max).color;
 };
 
-let CircularBar = document.querySelector('.circular-bar');
-let PercentValue = document.querySelector('.score');
+let circularBars = document.querySelectorAll('.circular-bar');
+
+// let PercentValue = document.querySelector('.score');
 
 let InitialValue = 0;
 let finaleValue = 20.83;
@@ -58,30 +59,34 @@ const susObserverCallback = entries => {
       return;
     }
 
+    const circularBar = entry.target;
+    let percentValue = circularBar.firstElementChild;
+
+    let susScore = +circularBar.dataset.susScore;
+
     let timer = setInterval(() => {
       InitialValue += 1;
 
       const progressColor = decideColor(susColors, InitialValue);
 
-      CircularBar.style.background = `conic-gradient(${progressColor} ${
+      circularBar.style.background = `conic-gradient(${progressColor} ${
         (InitialValue / 100) * 360
       }deg, var(--text-color-grey-title) 0deg)`;
 
-      PercentValue.textContent =
-        InitialValue < finaleValue ? InitialValue : finaleValue;
+      percentValue.textContent =
+        InitialValue < susScore ? InitialValue : susScore;
 
-      if (InitialValue >= finaleValue) {
+      if (InitialValue >= susScore) {
         clearInterval(timer);
       }
     }, speed);
 
-    susObserver.unobserve(CircularBar);
+    susObserver.unobserve(circularBar);
   });
 };
 
 const susObserver = new IntersectionObserver(susObserverCallback, susOptions);
-
-susObserver.observe(CircularBar);
+circularBars.forEach(bar => susObserver.observe(bar));
 
 ///// IMAGE SLIDER
 const allNextEl = document.querySelectorAll('.next');
@@ -172,6 +177,11 @@ const observerCallback = entries => {
     }
 
     if (entry.boundingClientRect.top < 0 && entry.intersectionRatio < 0.4) {
+      if (entry.target.id === 'improvements') {
+        observer.unobserve(entry.target);
+        return;
+      }
+
       const sections = [...sectionsToObserve];
 
       const indexOfCurrentSection = sections.findIndex(

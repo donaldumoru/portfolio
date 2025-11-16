@@ -119,7 +119,6 @@ const scrollSectionsIntoView = function () {
 };
 
 const getImageCaption = function (index, caption) {
-  console.log(caption);
   return caption;
 };
 

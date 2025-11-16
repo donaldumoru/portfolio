@@ -528,8 +528,15 @@ footer.visible {
 .result-article {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   padding: 20px;
+}
+
+.sus-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .circular-bar {
