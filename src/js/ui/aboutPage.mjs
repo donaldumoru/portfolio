@@ -4,7 +4,7 @@ export default async function (fn, path) {
   const data = await fn(path);
 
   const bioText = data.bio;
-  const CHARACTER_LIMIT = 100;
+  const CHARACTER_LIMIT = 150;
 
   const stringArray = createParagraphs({
     text: bioText,
