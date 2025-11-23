@@ -67,7 +67,7 @@ export default async function (fn, path) {
                 )
               ),
 
-              A({ href: '#' }, IMG({ src: 'assets/icons/send.svg' }))
+              A({ href: '#' }, IMG({ src: 'src/assets/icons/send.svg' }))
             )
           )
         )

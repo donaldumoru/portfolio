@@ -15,7 +15,7 @@
         "Justinmind"
       ],
 
-      "img": "assets/images/projects/runet/original/runet-home.png",
+      "img": "src/assets/images/projects/runet/original/runet-home.png",
 
       "link": {
         "demo": "https://runet-web-test.codemax.net/",
@@ -85,11 +85,11 @@
                 {
                   "image": {
                     "lazy-img": {
-                      "src": "assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
+                      "src": "src//images/projects/arrayipsum/lazy/homepage-lazy.jpg",
                       "alt": ""
                     },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-home.png",
+                      "src": "src/assets/images/projects/runet/original/runet-home.png",
                       "alt": ""
                     }
                   },
@@ -104,9 +104,12 @@
               "pictures": [
                 {
                   "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "lazy-img": {
+                      "src": "src/assets/images/about.jpg",
+                      "alt": ""
+                    },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-use-case.png",
+                      "src": "src/assets/images/projects/runet/original/runet-use-case.png",
                       "alt": ""
                     }
                   },
@@ -116,9 +119,12 @@
 
                 {
                   "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "lazy-img": {
+                      "src": "src/assets/images/about.jpg",
+                      "alt": ""
+                    },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-use-case-found.png",
+                      "src": "src/assets/images/projects/runet/original/runet-use-case-found.png",
                       "alt": ""
                     }
                   },
@@ -136,11 +142,11 @@
                 {
                   "image": {
                     "lazy-img": {
-                      "src": "assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
+                      "src": "src/assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
                       "alt": ""
                     },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-greece.png",
+                      "src": "src/assets/images/projects/runet/original/runet-greece.png",
                       "alt": ""
                     }
                   },
@@ -149,9 +155,12 @@
 
                 {
                   "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "lazy-img": {
+                      "src": "src/assets/images/about.jpg",
+                      "alt": ""
+                    },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-english.png",
+                      "src": "src/assets/images/projects/runet/original/runet-english.png",
                       "alt": ""
                     }
                   },
@@ -161,9 +170,12 @@
 
                 {
                   "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "lazy-img": {
+                      "src": "src/assets/images/about.jpg",
+                      "alt": ""
+                    },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-beton-greece.png",
+                      "src": "src/assets/images/projects/runet/original/runet-beton-greece.png",
                       "alt": ""
                     }
                   },
@@ -172,9 +184,12 @@
                 },
                 {
                   "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "lazy-img": {
+                      "src": "src/assets/images/about.jpg",
+                      "alt": ""
+                    },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-beton-english.png",
+                      "src": "src/assets/images/projects/runet/original/runet-beton-english.png",
                       "alt": ""
                     }
                   },
@@ -190,9 +205,12 @@
               "pictures": [
                 {
                   "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "lazy-img": {
+                      "src": "src/assets/images/about.jpg",
+                      "alt": ""
+                    },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-add-to-cart.png",
+                      "src": "src/assets/images/projects/runet/original/runet-add-to-cart.png",
                       "alt": ""
                     }
                   },
@@ -202,11 +220,11 @@
                 {
                   "image": {
                     "lazy-img": {
-                      "src": "assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
+                      "src": "src/assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
                       "alt": ""
                     },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-checkout.png",
+                      "src": "src/assets/images/projects/runet/original/runet-checkout.png",
                       "alt": ""
                     }
                   },
@@ -221,9 +239,12 @@
               "pictures": [
                 {
                   "image": {
-                    "lazy-img": { "src": "assets/images/about.jpg", "alt": "" },
+                    "lazy-img": {
+                      "src": "src/assets/images/about.jpg",
+                      "alt": ""
+                    },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-bundle-suggestion.png",
+                      "src": "src/assets/images/projects/runet/original/runet-bundle-suggestion.png",
                       "alt": ""
                     }
                   },
@@ -232,11 +253,11 @@
                 {
                   "image": {
                     "lazy-img": {
-                      "src": "assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
+                      "src": "src/assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
                       "alt": ""
                     },
                     "loadimg": {
-                      "src": "assets/images/projects/runet/original/runet-bundle-cart.png",
+                      "src": "src/assets/images/projects/runet/original/runet-bundle-cart.png",
                       "alt": ""
                     }
                   },

@@ -38,7 +38,7 @@ export default async function (fn, path) {
 
               A(
                 { href: project.link.demo, target: '_blank', rel: 'noopener' },
-                IMG({ src: 'assets/icons/external.svg' }),
+                IMG({ src: 'src/assets/icons/external.svg' }),
                 'Demo'
               ),
 
@@ -49,7 +49,7 @@ export default async function (fn, path) {
                       target: '_blank',
                       rel: 'noopener',
                     },
-                    IMG({ src: 'assets/icons/external.svg' }),
+                    IMG({ src: 'src/assets/icons/external.svg' }),
                     'Repo'
                   )
                 : ''

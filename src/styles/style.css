@@ -842,79 +842,6 @@ footer ul {
   }
 }
 
-/******FONTS*******/
-
-/*****ORBIT****/
-@font-face {
-  font-family: 'Orbit';
-  src: url('/assets/fonts/orbit/Orbit-Regular.woff2') format('woff2'),
-    url('/assets/fonts/orbit/Orbit-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/*****SATISFY****/
-@font-face {
-  font-family: 'Satisfy';
-  src: url('/assets/fonts/satisfy/Satisfy-Regular.woff2') format('woff2'),
-    url('/assets/fonts/satisfy/Satisfy-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/*****Space Grotesk****/
-
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff2')
-      format('woff2'),
-    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff2')
-      format('woff2'),
-    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff2')
-      format('woff2'),
-    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff2')
-      format('woff2'),
-    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff2') format('woff2'),
-    url('/assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 /*******CHAT*****/
 
 .section-chatbox {
@@ -1111,4 +1038,79 @@ footer ul {
   50% {
     opacity: 0;
   }
+}
+
+/******FONTS*******/
+
+/*****ORBIT****/
+@font-face {
+  font-family: 'Orbit';
+  src: url('../assets/fonts/orbit/Orbit-Regular.woff2') format('woff2'),
+    url('../assets/fonts/orbit/Orbit-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*****SATISFY****/
+@font-face {
+  font-family: 'Satisfy';
+  src: url('../assets/fonts/satisfy/Satisfy-Regular.woff2') format('woff2'),
+    url('../assets/fonts/satisfy/Satisfy-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*****Space Grotesk****/
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff2')
+      format('woff2'),
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff2')
+      format('woff2'),
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff2')
+      format('woff2'),
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff2')
+      format('woff2'),
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff')
+      format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff2')
+      format('woff2'),
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }

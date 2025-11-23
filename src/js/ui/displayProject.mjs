@@ -28,7 +28,7 @@ const renderOverview = function (data) {
         A(
           { href: overviewData.link.demo, target: '_blank', rel: 'noopener' },
 
-          IMG({ loading: 'lazy', src: 'assets/icons/external.svg' }),
+          IMG({ loading: 'lazy', src: 'src/assets/icons/external.svg' }),
           'Demo'
         ),
 
@@ -39,7 +39,7 @@ const renderOverview = function (data) {
                 target: '_blank',
                 rel: 'noopener',
               },
-              IMG({ loading: 'lazy', src: 'assets/icons/external.svg' }),
+              IMG({ loading: 'lazy', src: 'src/assets/icons/external.svg' }),
               'Repo'
             )
           : ''

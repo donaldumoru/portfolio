@@ -30,11 +30,11 @@
 
       "image": {
         "lazy-img": {
-          "src": "assets/images/projects/runet/lazy/homepage-lazy.png",
+          "src": "src/assets/images/projects/runet/lazy/homepage-lazy.png",
           "alt": ""
         },
         "loadimg": {
-          "src": "assets/images/projects/runet/original/runet-home.png",
+          "src": "src/assets/images/projects/runet/original/runet-home.png",
           "alt": ""
         }
       },
@@ -68,11 +68,11 @@
 
       "image": {
         "lazy-img": {
-          "src": "assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
+          "src": "src/assets/images/projects/arrayipsum/lazy/homepage-lazy.jpg",
           "alt": ""
         },
         "loadimg": {
-          "src": "assets/images/projects/arrayipsum/original/arrayipsum-home.png",
+          "src": "src/assets/images/projects/arrayipsum/original/arrayipsum-home.png",
           "alt": ""
         }
       },
@@ -106,11 +106,11 @@
 
       "image": {
         "lazy-img": {
-          "src": "assets/images/projects/rawtentik/lazy/rawtentik-lazy.jpg",
+          "src": "src/assets/images/projects/rawtentik/lazy/rawtentik-lazy.jpg",
           "alt": ""
         },
         "loadimg": {
-          "src": "assets/images/projects/rawtentik/original/rawtentik-home.png",
+          "src": "src/assets/images/projects/rawtentik/original/rawtentik-home.png",
           "alt": ""
         }
       },

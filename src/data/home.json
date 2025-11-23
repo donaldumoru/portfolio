@@ -7,14 +7,17 @@
         "name": "projects",
         "link": "projects",
         "class": "projects-link",
-        "image": { "src": "assets/icons/projects.svg", "alt": "settings icon" }
+        "image": {
+          "src": "src/assets/icons/projects.svg",
+          "alt": "settings icon"
+        }
       },
       {
         "name": "about",
         "link": "about",
         "class": "about-link",
         "image": {
-          "src": "assets/icons/fingerprint.svg",
+          "src": "src/assets/icons/fingerprint.svg",
           "alt": "fingerprint icon"
         }
       }
@@ -32,7 +35,7 @@
       {
         "name": "linkedin",
         "link": "https://www.linkedin.com/in/donald-umoru",
-        "image": { "src": "assets/icons/linkedin.svg", "alt": "" }
+        "image": { "src": "src/assets/icons/linkedin.svg", "alt": "" }
       }
     ],
 
@@ -40,7 +43,7 @@
       {
         "name": "github",
         "link": "https://github.com/donaldumoru",
-        "image": { "src": "assets/icons/github.svg", "alt": "" }
+        "image": { "src": "src/assets/icons/github.svg", "alt": "" }
       }
     ]
   },
