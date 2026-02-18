@@ -88,7 +88,7 @@
     {
       "name": "RawTenTik official website",
       "id": "rawtentik",
-      "short_description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde voluptates quos maxime iusto at nemo iure necessitatibus impedit quaerat aliquam.",
+      "short_description": "Official website for Nigerian rapper TenTik, showcasing his music, releases, and artist profile.",
       "tools_used": [
         {
           "name": "html5",

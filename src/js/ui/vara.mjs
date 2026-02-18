@@ -38,7 +38,6 @@ export default async function (fn, path) {
       if (i < chars.length) {
         requestAnimationFrame(frame);
       } else {
-        console.log(Prism);
         Prism.highlightElement(node);
 
         //////// TODO:::: SET TO SESSION STORAGE TO AVOID RUNNING THIS EVERY TIME USER CLICKS HOME
