@@ -6,8 +6,6 @@ export default async function (fn, path) {
   return ('main'.jsl.eof = SECTION(
     { class: 'projects', id: 'projects' },
 
-    DIV({ class: 'project-img-wrapper' }, IMG({ src: '' })),
-
     DIV(
       { class: 'section-wrapper' },
 
@@ -26,8 +24,8 @@ export default async function (fn, path) {
             project?.tools_used.map((tool, i) =>
               i === project.tools_used.length - 1
                 ? SPAN(`#${tool.name}`)
-                : SPAN(`#${tool.name} • `)
-            )
+                : SPAN(`#${tool.name} • `),
+            ),
           ),
 
           DIV(
@@ -39,7 +37,7 @@ export default async function (fn, path) {
               A(
                 { href: project.link.demo, target: '_blank', rel: 'noopener' },
                 IMG({ src: 'src/assets/icons/external.svg' }),
-                'Demo'
+                'Demo',
               ),
 
               project.link.github
@@ -50,9 +48,9 @@ export default async function (fn, path) {
                       rel: 'noopener',
                     },
                     IMG({ src: 'src/assets/icons/external.svg' }),
-                    'Repo'
+                    'Repo',
                   )
-                : ''
+                : '',
             ),
 
             project.link.read_more
@@ -62,12 +60,12 @@ export default async function (fn, path) {
                     class: 'read-more-btn',
                     'data-blur-on-scroll': true,
                   },
-                  project.link.read_more_btn
+                  project.link.read_more_btn,
                 )
-              : ''
-          )
-        )
-      )
-    )
+              : '',
+          ),
+        ),
+      ),
+    ),
   ));
 }
