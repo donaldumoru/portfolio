@@ -20,3 +20,10 @@ INIT_INTERACTIONS();
 const aboutImg = document
   .querySelector('.about-link-img')
   .classList.add('animate-icon');
+
+const aboutMeWrapper = document.querySelector('.about-img-wrapper');
+const aboutMeImg = aboutMeWrapper.querySelector('img');
+
+aboutMeImg.addEventListener('load', function () {
+  aboutMeWrapper.classList.remove('blur');
+});

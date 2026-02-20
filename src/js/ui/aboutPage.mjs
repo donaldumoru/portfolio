@@ -22,16 +22,17 @@ export default async function (fn, path) {
       DIV(
         { class: 'about-text-wrapper' },
         stringArray.map(str =>
-          P({ class: 'about-text', 'data-blur-on-scroll': true }, str)
-        )
+          P({ class: 'about-text', 'data-blur-on-scroll': true }, str),
+        ),
       ),
       DIV(
-        { class: 'about-img-wrapper' },
+        { class: 'about-img-wrapper blur' },
         IMG({
           src: data.image.loadimg.src,
           alt: data.image.alt,
+          loading: 'lazy',
           // 'data-blur-on-scroll': true,
-        })
+        }),
       ),
 
       SECTION(
@@ -44,12 +45,12 @@ export default async function (fn, path) {
               DIV(
                 { class: 'tooltip1' },
                 P(block.question.text),
-                SPAN(block.question.time)
+                SPAN(block.question.time),
               ),
               DIV(
                 { class: 'tooltip2' },
                 P(block.answer.text),
-                SPAN(block.answer.time)
+                SPAN(block.answer.time),
               ),
             ];
           }),
@@ -63,15 +64,15 @@ export default async function (fn, path) {
                 DIV(
                   { class: 'input-text-group' },
                   DIV({ id: 'input-text', contenteditable: true }),
-                  DIV({ class: 'placeholder' }, 'Send me a message')
-                )
+                  DIV({ class: 'placeholder' }, 'Send me a message'),
+                ),
               ),
 
-              A({ href: '#' }, IMG({ src: 'src/assets/icons/send.svg' }))
-            )
-          )
-        )
-      )
-    )
+              A({ href: '#' }, IMG({ src: 'src/assets/icons/send.svg' })),
+            ),
+          ),
+        ),
+      ),
+    ),
   ));
 }

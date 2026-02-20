@@ -338,6 +338,15 @@ footer.visible {
   /* display: none; */
 }
 
+.about-img-wrapper {
+  transition: filter 3s ease;
+  /* transition: filter var(--transition) ease; */
+}
+
+.blur {
+  filter: blur(4px);
+}
+
 .about-text-wrapper {
   display: flex;
   flex-direction: column;
@@ -559,7 +568,8 @@ footer.visible {
   height: 110px;
   background: var(--text-color);
   border-radius: 50%;
-  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+  box-shadow:
+    inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
     inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
@@ -982,7 +992,8 @@ footer ul {
   border-radius: calc(var(--r) + var(--s));
   border-bottom-right-radius: 0;
   background: border-box linear-gradient(45deg, #075e54, #075e54); /* the coloration */
-  -webkit-mask: radial-gradient(100% 100% at 100% 0, #0000 99%, #000 102%) 100%
+  -webkit-mask:
+    radial-gradient(100% 100% at 100% 0, #0000 99%, #000 102%) 100%
       calc(100% - var(--s)) / var(--s) var(--s) no-repeat border-box,
     linear-gradient(#000 0 0) padding-box;
 }
@@ -1003,7 +1014,8 @@ footer ul {
 
   background: border-box linear-gradient(-45deg, #262828, #262828);
   /* the coloration */
-  -webkit-mask: radial-gradient(100% 100% at 0 0, #0000 99%, #000 102%) 0
+  -webkit-mask:
+    radial-gradient(100% 100% at 0 0, #0000 99%, #000 102%) 0
       calc(100% - var(--s)) / var(--s) var(--s) no-repeat border-box,
     linear-gradient(#000 0 0) padding-box;
 }
@@ -1045,7 +1057,8 @@ footer ul {
 /*****ORBIT****/
 @font-face {
   font-family: 'Orbit';
-  src: url('../assets/fonts/orbit/Orbit-Regular.woff2') format('woff2'),
+  src:
+    url('../assets/fonts/orbit/Orbit-Regular.woff2') format('woff2'),
     url('../assets/fonts/orbit/Orbit-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -1055,7 +1068,8 @@ footer ul {
 /*****SATISFY****/
 @font-face {
   font-family: 'Satisfy';
-  src: url('../assets/fonts/satisfy/Satisfy-Regular.woff2') format('woff2'),
+  src:
+    url('../assets/fonts/satisfy/Satisfy-Regular.woff2') format('woff2'),
     url('../assets/fonts/satisfy/Satisfy-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -1066,7 +1080,8 @@ footer ul {
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff2')
+  src:
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff2')
       format('woff2'),
     url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Medium.woff') format('woff');
   font-weight: 500;
@@ -1076,8 +1091,8 @@ footer ul {
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff2')
-      format('woff2'),
+  src:
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff2') format('woff2'),
     url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
@@ -1086,7 +1101,8 @@ footer ul {
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff2')
+  src:
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff2')
       format('woff2'),
     url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Regular.woff') format('woff');
   font-weight: normal;
@@ -1096,7 +1112,8 @@ footer ul {
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff2')
+  src:
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff2')
       format('woff2'),
     url('../assets/fonts/spaceGrotesk/SpaceGrotesk-SemiBold.woff')
       format('woff');
@@ -1107,8 +1124,8 @@ footer ul {
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff2')
-      format('woff2'),
+  src:
+    url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff2') format('woff2'),
     url('../assets/fonts/spaceGrotesk/SpaceGrotesk-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;

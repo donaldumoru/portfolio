@@ -2,7 +2,7 @@
   "title": "about",
 
   "image": {
-    "lazy-img": { "src": "src/assets/images/about.jpg", "alt": "" },
+    "lazyimg": { "src": "src/assets/images/about.webp", "alt": "" },
     "loadimg": { "src": "src/assets/images/about.jpg", "alt": "" }
   },
 
