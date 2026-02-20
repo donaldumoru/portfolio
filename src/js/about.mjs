@@ -24,6 +24,12 @@ const aboutImg = document
 const aboutMeWrapper = document.querySelector('.about-img-wrapper');
 const aboutMeImg = aboutMeWrapper.querySelector('img');
 
-aboutMeImg.addEventListener('load', function () {
+if (!aboutMeImg.complete) {
+  aboutMeImg.addEventListener('load', function () {
+    console.log(aboutMeImg.complete);
+    aboutMeWrapper.classList.remove('blur');
+  });
+} else {
+  console.log('hmmm');
   aboutMeWrapper.classList.remove('blur');
-});
+}
