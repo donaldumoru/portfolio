@@ -9,27 +9,15 @@ await MAKE_ABOUT_SECTION(fetchData, paths.general.about);
 await MAKE_NAV_AND_FOOTER(fetchData, paths.general.home);
 
 const aboutSection = document.querySelector('.about');
-const nav = document.querySelector('nav');
-const footer = document.querySelector('footer');
-
-//   fadeIn([aboutSection, nav, footer]);
 fadeIn(aboutSection);
-
 INIT_INTERACTIONS();
 
-const aboutImg = document
-  .querySelector('.about-link-img')
-  .classList.add('animate-icon');
-
+document.querySelector('.about-link-img').classList.add('animate-icon');
 const aboutMeWrapper = document.querySelector('.about-img-wrapper');
 const aboutMeImg = aboutMeWrapper.querySelector('img');
 
-if (!aboutMeImg.complete) {
-  aboutMeImg.addEventListener('load', function () {
-    console.log(aboutMeImg.complete);
-    aboutMeWrapper.classList.remove('blur');
-  });
-} else {
-  console.log('hmmm');
-  aboutMeWrapper.classList.remove('blur');
-}
+!aboutMeImg.complete
+  ? aboutMeImg.addEventListener('load', function () {
+      aboutMeWrapper.classList.remove('blur');
+    })
+  : aboutMeWrapper.classList.remove('blur');
