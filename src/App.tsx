@@ -8,6 +8,7 @@ import Footer from './components/Footer.js';
 
 function App() {
   const { profile, links } = content;
+
   return (
     <div className="flex h-full flex-col md:max-w-[40%]">
       <Header profile={profile} />

@@ -5,6 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donald Umoru</title>
+
+    <script>
+      (function () {
+        const html = document.documentElement;
+        const theme = localStorage.getItem('portfolio-theme');
+        if (!theme) {
+          return;
+        }
+
+        html.classList.remove('light', 'dark');
+        html.classList.add(theme);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
