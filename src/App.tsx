@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="flex h-full flex-col md:max-w-[40%]">
-      <Header profile={profile} />
+      <Header />
 
       <main>
         <article className="prose prose-p:my-2 mb-6 selection:bg-(--accent) selection:text-(--background)">
