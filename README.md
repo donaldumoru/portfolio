@@ -1,6 +1,6 @@
 # donaldumoru.com
 
-Source code for my personal website, [donaldumoru.com](htpps://donaldumoru.com).
+Source code for my personal website, [donaldumoru.com](https://donaldumoru.com).
 
 ## History
 
