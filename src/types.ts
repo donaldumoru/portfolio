@@ -1,6 +1,8 @@
 import type { IconType } from 'react-icons';
 import type { ElementType, ReactNode } from 'react';
 
+type Greeting = 'Good morning' | 'Good afternoon' | 'Good evening';
+
 interface Profile {
   name: string;
   location: string;
@@ -35,6 +37,7 @@ interface ContainerProps {
 type ThemeContextType = 'light' | 'dark';
 
 export type {
+  Greeting,
   Profile,
   UserData,
   ButtonProps,

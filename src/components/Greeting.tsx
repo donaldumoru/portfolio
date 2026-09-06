@@ -1,4 +1,4 @@
-type Greeting = 'Good morning' | 'Good afternoon' | 'Good evening';
+import type { Greeting } from '../types';
 
 export default function Greeting() {
   const time = new Date().getHours();

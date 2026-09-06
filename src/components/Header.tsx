@@ -1,8 +1,7 @@
 import { useContext } from 'react';
-
+import ThemeContext from '../ThemeContext';
 import { BsMoonStarsFill } from 'react-icons/bs';
 import { BsSun } from 'react-icons/bs';
-import ThemeContext from '../ThemeContext';
 
 export default function Header({ onSetTheme }: { onSetTheme: () => void }) {
   const currentTheme = useContext(ThemeContext);

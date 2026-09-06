@@ -1,5 +1,5 @@
 export default function Footer() {
-  const year: number = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
     <footer className="mt-10 mb-2 flex items-end justify-between md:mt-12">

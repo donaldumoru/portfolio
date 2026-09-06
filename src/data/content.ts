@@ -11,10 +11,6 @@ const data: UserData = {
   },
 
   links: {
-    email: {
-      link: 'mailto:donaldumoru@gmail.com',
-      icon: IoMail,
-    },
     github: {
       link: 'https://github.com/donaldumoru',
       icon: FaGithub,
@@ -22,6 +18,10 @@ const data: UserData = {
     linkedin: {
       link: 'https://www.linkedin.com/in/donald-umoru/',
       icon: FaLinkedin,
+    },
+    email: {
+      link: 'mailto:donaldumoru@gmail.com',
+      icon: IoMail,
     },
   },
 };

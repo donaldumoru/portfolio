@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const html = document.documentElement;
     setSingleClass(html, theme, ['light', 'dark']);
-    localStorage.setItem('portfolio-theme', theme);
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const { profile, links } = content;

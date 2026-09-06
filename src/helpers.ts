@@ -1,7 +1,7 @@
 import type { ThemeContextType } from './types';
 
 const getTheme = function (): ThemeContextType {
-  const savedTheme = localStorage.getItem('portfolio-theme');
+  const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light' || savedTheme === 'dark') {
     return savedTheme;
   }
