@@ -15,7 +15,7 @@
 }
 
 body {
-  @apply flex justify-center bg-(--light-bg) text-(--text-body) dark:bg-(--dark-bg) dark:text-(--dark-primary);
+  @apply flex justify-center bg-(--light-bg) text-(--dark-bg) dark:bg-(--dark-bg) dark:text-(--dark-primary);
 }
 
 #root {

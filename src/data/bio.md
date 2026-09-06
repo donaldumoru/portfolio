@@ -1,5 +1,3 @@
-Hi there,
-
 Glad you found your way here.
 
 I have a background in Human-Centered Design and currently work as an Application Developer, designing and developing user interfaces for self-service kiosks.

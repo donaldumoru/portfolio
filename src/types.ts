@@ -16,6 +16,7 @@ interface UserData {
   links: {
     github: Link;
     linkedin: Link;
+    email: Link;
   };
 }
 

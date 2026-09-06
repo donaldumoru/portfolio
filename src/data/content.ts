@@ -2,6 +2,7 @@
 import type { UserData } from '../types';
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { IoMail } from 'react-icons/io5';
 
 const data: UserData = {
   profile: {
@@ -10,6 +11,10 @@ const data: UserData = {
   },
 
   links: {
+    email: {
+      link: 'mailto:donaldumoru@gmail.com',
+      icon: IoMail,
+    },
     github: {
       link: 'https://github.com/donaldumoru',
       icon: FaGithub,

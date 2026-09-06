@@ -6,6 +6,7 @@ import ThemeContext from './ThemeContext';
 import type { ThemeContextType } from './types';
 import { getTheme, setSingleClass } from './helpers.js';
 import Header from './components/Header';
+import Greeting from './components/Greeting';
 import Container from './components/Container';
 import Title from './components/Title';
 import Button from './components/Button';
@@ -34,8 +35,9 @@ function App() {
       <Container Tag="main">
         <Container
           Tag="article"
-          className="prose prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) mb-6 selection:bg-(--accent) selection:text-(--light-bg) dark:text-(--dark-primary)"
+          className="prose prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) prose-p:text-(--dark-bg) dark:prose-p:text-(--dark-primary) mb-6 selection:bg-(--accent) selection:text-(--light-bg)"
         >
+          <Greeting />
           <Markdown
             components={{
               a: props => (
@@ -50,7 +52,7 @@ function App() {
         <Container Tag="section">
           <Title title="Connect" />
 
-          <div className="flex gap-2">
+          <Container Tag="div" className="flex gap-2">
             {Object.entries(links).map(item => {
               const [label, socialInfo] = item;
               const Icon = socialInfo.icon;
@@ -64,7 +66,7 @@ function App() {
                 />
               );
             })}
-          </div>
+          </Container>
         </Container>
 
         <Signature profile={profile} />
