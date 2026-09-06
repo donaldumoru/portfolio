@@ -1,20 +1,27 @@
-export interface Profile {
+import type { IconType } from 'react-icons';
+
+interface Profile {
   name: string;
   location: string;
 }
 
-export interface Links {
-  github: string;
-  linkedin: string;
+interface Link {
+  link: string;
+  icon: IconType;
 }
 
-export interface Content {
+interface UserData {
   profile: Profile;
-  links: Links;
+  links: {
+    github: Link;
+    linkedin: Link;
+  };
 }
 
-export interface ButtonProps {
+interface ButtonProps {
   icon?: React.ReactNode;
   label: string;
   link: string;
 }
+
+export type { Profile, UserData, ButtonProps };

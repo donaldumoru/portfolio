@@ -1,9 +1,11 @@
 import Markdown from 'react-markdown';
+import bio from './data/bio.md?raw';
 import content from './data/content.js';
+
 import Header from './components/Header';
 import Title from './components/Title';
 import Button from './components/Button';
-import bio from './data/bio.md?raw';
+import Signature from './components/Signature';
 import Footer from './components/Footer.js';
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
       <Header profile={profile} />
 
       <main>
-        <article className="prose prose-p:my-2 mb-6">
+        <article className="prose prose-p:my-2 mb-6 selection:bg-(--accent) selection:text-(--background)">
           <Markdown
             components={{
               a: props => (
@@ -45,6 +47,8 @@ function App() {
             })}
           </div>
         </section>
+
+        <Signature profile={profile} />
       </main>
 
       <Footer />
