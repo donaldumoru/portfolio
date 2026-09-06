@@ -11,9 +11,9 @@ export default function Header({ onSetTheme }: { onSetTheme: () => void }) {
     <header className="mb-2 md:mt-12 md:mb-6">
       <div className="flex justify-end" onClick={onSetTheme}>
         {currentTheme === 'light' ? (
-          <BsMoonStarsFill className="cursor-pointer" size={20} />
+          <BsMoonStarsFill className="cursor-pointer" size={25} />
         ) : (
-          <BsSun className="cursor-pointer" size={20} />
+          <BsSun className="cursor-pointer" size={25} />
         )}
       </div>
     </header>
