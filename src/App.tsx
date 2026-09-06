@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import Markdown from 'react-markdown';
 import bio from './data/bio.md?raw';
-import content from './data/content.js';
-import ThemeContext from './ThemeContext';
-import type { ThemeContextType } from './types';
+import content from './data/content';
+import type { Theme } from './types';
 import { getTheme, setSingleClass } from './helpers.js';
 import Header from './components/Header';
 import Greeting from './components/Greeting';
@@ -14,7 +13,7 @@ import Signature from './components/Signature';
 import Footer from './components/Footer.js';
 
 function App() {
-  const [theme, setTheme] = useState<ThemeContextType>(getTheme);
+  const [theme, setTheme] = useState<Theme>(getTheme);
 
   function handleSetTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light');
@@ -29,8 +28,8 @@ function App() {
   const { profile, links } = content;
 
   return (
-    <ThemeContext value={theme}>
-      <Header onSetTheme={handleSetTheme} />
+    <>
+      <Header theme={theme} onSetTheme={handleSetTheme} />
 
       <Container Tag="main">
         <Container
@@ -73,7 +72,7 @@ function App() {
       </Container>
 
       <Footer />
-    </ThemeContext>
+    </>
   );
 }
 

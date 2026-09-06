@@ -1,6 +1,6 @@
-import type { ThemeContextType } from './types';
+import type { Theme } from './types';
 
-const getTheme = function (): ThemeContextType {
+const getTheme = function (): Theme {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light' || savedTheme === 'dark') {
     return savedTheme;

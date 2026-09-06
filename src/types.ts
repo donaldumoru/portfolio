@@ -34,13 +34,6 @@ interface ContainerProps {
   className?: string;
 }
 
-type ThemeContextType = 'light' | 'dark';
+type Theme = 'light' | 'dark';
 
-export type {
-  Greeting,
-  Profile,
-  UserData,
-  ButtonProps,
-  ContainerProps,
-  ThemeContextType,
-};
+export type { Greeting, Profile, UserData, ButtonProps, ContainerProps, Theme };
