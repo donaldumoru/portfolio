@@ -1,22 +1,41 @@
+import { useEffect, useState } from 'react';
 import Markdown from 'react-markdown';
 import bio from './data/bio.md?raw';
 import content from './data/content.js';
-
+import ThemeContext from './ThemeContext';
+import type { ThemeContextType } from './types';
+import { getTheme, setSingleClass } from './helpers.js';
 import Header from './components/Header';
+import Container from './components/Container';
 import Title from './components/Title';
 import Button from './components/Button';
 import Signature from './components/Signature';
 import Footer from './components/Footer.js';
 
 function App() {
+  const [theme, setTheme] = useState<ThemeContextType>(getTheme);
+
+  function handleSetTheme() {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  }
+
+  useEffect(() => {
+    const html = document.documentElement;
+    setSingleClass(html, theme, ['light', 'dark']);
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
+
   const { profile, links } = content;
 
   return (
-    <div className="flex h-full flex-col md:max-w-[40%]">
-      <Header />
+    <ThemeContext value={theme}>
+      <Header onSetTheme={handleSetTheme} />
 
-      <main>
-        <article className="prose prose-p:my-2 mb-6 selection:bg-(--accent) selection:text-(--background)">
+      <Container Tag="main">
+        <Container
+          Tag="article"
+          className="prose prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) mb-6 selection:bg-(--accent) selection:text-(--light-bg) dark:text-(--dark-primary)"
+        >
           <Markdown
             components={{
               a: props => (
@@ -26,9 +45,9 @@ function App() {
           >
             {bio}
           </Markdown>
-        </article>
+        </Container>
 
-        <section>
+        <Container Tag="section">
           <Title title="Connect" />
 
           <div className="flex gap-2">
@@ -46,13 +65,13 @@ function App() {
               );
             })}
           </div>
-        </section>
+        </Container>
 
         <Signature profile={profile} />
-      </main>
+      </Container>
 
       <Footer />
-    </div>
+    </ThemeContext>
   );
 }
 

@@ -2,22 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
 
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 @plugin '@tailwindcss/typography';
 
 :root {
   --text-titles: 'Cormorant', serif;
-  --background: #f7f7f7;
+  --text-body: 'Nunito Sans', sans-serif;
+  --light-bg: #f7f7f7;
+  --dark-bg: #0f0d0e;
+  --dark-primary: #abaaa7;
   --accent: #f30c80;
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
-  background-color: var(--background);
+  @apply flex justify-center bg-(--light-bg) text-(--text-body) dark:bg-(--dark-bg) dark:text-(--dark-primary);
 }
 
 #root {
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
+  @apply flex flex-col justify-center p-4 md:max-w-[40%];
 }

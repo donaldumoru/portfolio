@@ -1,0 +1,23 @@
+import type { ThemeContextType } from './types';
+
+const getTheme = function (): ThemeContextType {
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    return savedTheme;
+  }
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
+};
+
+const setSingleClass = function (
+  element: HTMLElement,
+  className: string,
+  classesToRemove: string[],
+): void {
+  element.classList.remove(...classesToRemove);
+  element.classList.add(className);
+};
+
+export { getTheme, setSingleClass };

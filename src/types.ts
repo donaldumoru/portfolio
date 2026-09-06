@@ -1,4 +1,5 @@
 import type { IconType } from 'react-icons';
+import type { ElementType, ReactNode } from 'react';
 
 interface Profile {
   name: string;
@@ -24,4 +25,18 @@ interface ButtonProps {
   link: string;
 }
 
-export type { Profile, UserData, ButtonProps };
+interface ContainerProps {
+  Tag: ElementType;
+  children: ReactNode;
+  className?: string;
+}
+
+type ThemeContextType = 'light' | 'dark';
+
+export type {
+  Profile,
+  UserData,
+  ButtonProps,
+  ContainerProps,
+  ThemeContextType,
+};
