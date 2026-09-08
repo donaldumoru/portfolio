@@ -1,5 +1,3 @@
-import { RoughNotation } from 'react-rough-notation';
-
 export default function Footer() {
   const year = new Date().getFullYear();
 
