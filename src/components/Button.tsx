@@ -4,11 +4,12 @@ import { RoughNotation } from 'react-rough-notation';
 
 export default function Button({ icon, label, link }: ButtonProps) {
   const [hovered, setHovered] = useState(false);
+  const isExternalLink = link.startsWith('http');
 
   return (
     <a
       href={link}
-      target="_blank"
+      target={isExternalLink ? '_blank' : undefined}
       className="group w-fit items-center gap-1 capitalize underline transition-colors duration-300 hover:text-(--light-hover) dark:hover:text-(--dark-hover) [&>span]:flex [&>span]:items-center [&>span]:gap-2"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
