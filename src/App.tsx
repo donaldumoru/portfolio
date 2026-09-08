@@ -51,7 +51,7 @@ function App() {
         <Container Tag="section">
           <Title title="Connect" />
 
-          <Container Tag="div" className="flex gap-4">
+          <Container Tag="div" className="flex flex-col gap-1">
             {Object.entries(links).map(item => {
               const [label, socialInfo] = item;
               const Icon = socialInfo.icon;
