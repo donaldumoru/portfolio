@@ -10,8 +10,12 @@ export default function Header({
   theme: Theme;
 }) {
   return (
-    <header className="mb-2 md:mt-12 md:mb-6">
-      <div className="flex justify-end" onClick={onSetTheme}>
+    <header className="mb-2 flex justify-end sm:mt-12 sm:mb-6">
+      <button
+        onClick={onSetTheme}
+        type="button"
+        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+      >
         {theme === 'light' ? (
           <BsMoonStarsFill
             className="cursor-pointer fill-(--dark-bg)"
@@ -20,7 +24,7 @@ export default function Header({
         ) : (
           <BsSun className="cursor-pointer" size={25} />
         )}
-      </div>
+      </button>
     </header>
   );
 }

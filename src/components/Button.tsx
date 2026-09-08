@@ -12,6 +12,7 @@ export default function Button({ icon, label, link }: ButtonProps) {
       className="group w-fit items-center gap-1 capitalize underline transition-colors duration-300 hover:text-(--light-hover) dark:hover:text-(--dark-hover) [&>span]:flex [&>span]:items-center [&>span]:gap-2"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      rel="noopener noreferrer"
     >
       <RoughNotation
         type="circle"

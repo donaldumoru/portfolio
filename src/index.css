@@ -21,5 +21,5 @@ body {
 }
 
 #root {
-  @apply m-4 flex flex-col justify-center md:max-w-[40%];
+  @apply m-4 flex flex-col justify-center lg:max-w-[40%];
 }
