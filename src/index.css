@@ -10,12 +10,14 @@
   --text-body: 'Nunito Sans', sans-serif;
   --light-bg: #f7f7f7;
   --dark-bg: #0f0d0e;
-  --dark-primary: #abaaa7;
+  --light-hover: #3e393b;
+  --dark-hover: #f0eeee;
+  --dark-primary: #d4d3d3;
   --accent: #f30c80;
 }
 
 body {
-  @apply flex justify-center bg-(--light-bg) text-(--dark-bg) dark:bg-(--dark-bg) dark:text-(--dark-primary);
+  @apply flex justify-center bg-(--light-bg) text-(--dark-bg) selection:bg-(--accent) selection:text-(--light-bg) dark:bg-(--dark-bg) dark:text-(--dark-primary);
 }
 
 #root {

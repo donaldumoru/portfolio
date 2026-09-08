@@ -34,7 +34,7 @@ function App() {
       <Container Tag="main">
         <Container
           Tag="article"
-          className="prose prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) prose-p:text-(--dark-bg) dark:prose-p:text-(--dark-primary) mb-6 selection:bg-(--accent) selection:text-(--light-bg)"
+          className="prose prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) prose-p:text-(--dark-bg) dark:prose-p:text-(--dark-primary) prose-a:hover:text-(--light-hover) dark:prose-a:hover:text-(--dark-hover) prose-a:transition-colors prose-a:duration-300 mb-6"
         >
           <Greeting />
           <Markdown
@@ -51,7 +51,7 @@ function App() {
         <Container Tag="section">
           <Title title="Connect" />
 
-          <Container Tag="div" className="flex gap-2">
+          <Container Tag="div" className="flex gap-4">
             {Object.entries(links).map(item => {
               const [label, socialInfo] = item;
               const Icon = socialInfo.icon;
