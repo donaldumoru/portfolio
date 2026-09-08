@@ -16,7 +16,7 @@ export default function Button({ icon, label, link }: ButtonProps) {
       <a
         href={link}
         target="_blank"
-        className="flex w-fit items-center gap-1 capitalize transition-colors duration-300 hover:text-(--light-hover) dark:hover:text-(--dark-hover)"
+        className="flex w-fit items-center gap-1 capitalize underline transition-colors duration-300 hover:text-(--light-hover) dark:hover:text-(--dark-hover)"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
