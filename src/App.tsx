@@ -45,7 +45,7 @@ function App() {
 
         <Container
           Tag="article"
-          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ${delays[0]} prose prose-p:font-medium prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) prose-p:text-(--dark-bg) dark:prose-p:text-(--dark-primary) prose-a:hover:text-(--light-hover) dark:prose-a:hover:text-(--dark-hover) prose-a:transition-colors prose-a:duration-300 mb-6 ease-in-out`}
+          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ${delays[0]} prose prose-p:font-medium prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) prose-p:text-(--dark-bg) dark:prose-p:text-(--dark-primary) prose-a:hover:text-(--light-hover) dark:prose-a:hover:text-(--dark-hover) prose-a:transition-colors prose-a:duration-300 mb-6 ease-in-out`}
         >
           <Greeting />
           <Markdown
@@ -61,7 +61,7 @@ function App() {
 
         <Container
           Tag="section"
-          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ${delays[1]}`}
+          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ${delays[1]}`}
         >
           <Title title="Connect" />
 
@@ -84,7 +84,7 @@ function App() {
 
         <Signature
           profile={profile}
-          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ${delays[2]}`}
+          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ${delays[2]}`}
         />
       </Container>
 
