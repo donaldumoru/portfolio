@@ -23,3 +23,17 @@ body {
 #root {
   @apply m-4 flex flex-col justify-center lg:max-w-[40%];
 }
+
+@theme {
+  --animate-fade-in: fade-in 1s ease-in-out both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}

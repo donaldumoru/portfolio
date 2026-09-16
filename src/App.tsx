@@ -14,11 +14,15 @@ import Footer from './components/Footer.js';
 
 function App() {
   const [theme, setTheme] = useState<Theme>(getTheme);
-  const [pageLoaded, setPageLoaded] = useState<boolean>(false);
 
-  const delays: string[] = ['delay-0', 'delay-150', 'delay-300'];
+  const delays: string[] = [
+    '[animation-delay:0ms]',
+    '[animation-delay:150ms]',
+    '[animation-delay:300ms]',
+    '[animation-delay:450ms]',
+  ];
 
-  function handleSetTheme() {
+  function handleSetTheme(): void {
     setTheme(theme === 'light' ? 'dark' : 'light');
   }
 
@@ -27,12 +31,6 @@ function App() {
     setSingleClass(html, theme, ['light', 'dark']);
     localStorage.setItem('theme', theme);
   }, [theme]);
-
-  useEffect(() => {
-    (function () {
-      setPageLoaded(true);
-    })();
-  }, []);
 
   const { profile, links } = content;
 
@@ -45,7 +43,7 @@ function App() {
 
         <Container
           Tag="article"
-          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ${delays[0]} prose prose-p:font-medium prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) prose-p:text-(--dark-bg) dark:prose-p:text-(--dark-primary) prose-a:hover:text-(--light-hover) dark:prose-a:hover:text-(--dark-hover) prose-a:transition-colors prose-a:duration-300 mb-6 ease-in-out`}
+          className={`animate-fade-in ${delays[0]} prose prose-p:font-medium prose-p:my-2 prose-p:font-(family-name:--text-body) dark:prose-a:text-(--dark-primary) prose-p:text-(--dark-bg) dark:prose-p:text-(--dark-primary) prose-a:hover:text-(--light-hover) dark:prose-a:hover:text-(--dark-hover) prose-a:transition-colors prose-a:duration-300 mb-6`}
         >
           <Greeting />
           <Markdown
@@ -59,10 +57,7 @@ function App() {
           </Markdown>
         </Container>
 
-        <Container
-          Tag="section"
-          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ${delays[1]}`}
-        >
+        <Container Tag="section" className={`animate-fade-in ${delays[1]}`}>
           <Title title="Connect" />
 
           <Container Tag="div" className="flex flex-col gap-1">
@@ -84,11 +79,11 @@ function App() {
 
         <Signature
           profile={profile}
-          className={`${pageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ${delays[2]}`}
+          className={`animate-fade-in ${delays[2]}`}
         />
       </Container>
 
-      <Footer />
+      <Footer className={`animate-fade-in ${delays[3]}`} />
     </>
   );
 }
